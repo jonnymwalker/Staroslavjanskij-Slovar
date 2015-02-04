@@ -1,0 +1,24 @@
+convert images/OCS-454-A.png -crop 1556x1503+0+0 +repage images/OCS-454-A-0.png
+convert -append images/OCS-453-B-1.png images/OCS-454-A-0.png images/OCS-453-B-1.png
+rm images/OCS-454-A-0.png
+convert images/OCS-454-A.png -crop 1556x393+0+1504 +repage images/OCS-454-A-1.png
+convert images/OCS-454-A.png -crop 1556x539+0+1906 +repage images/OCS-454-A-2.png
+convert images/OCS-454-A.png -crop 1556x861+0+2466 +repage images/OCS-454-A-3.png
+convert images/OCS-454-A.png -crop 1556x313+0+3330 +repage images/OCS-454-A-4.png
+convert images/OCS-454-A.png -crop 1556x387+0+3656 +repage images/OCS-454-A-5.png
+convert images/OCS-454-A.png -crop 1556x240+0+4046 +repage images/OCS-454-A-6.png
+convert images/OCS-454-A.png -crop 1556x246+0+4279 +repage images/OCS-454-A-7.png
+rm images/OCS-454-A.bmp
+convert debug/OCS-454.png -stroke green -strokewidth 7 -draw "line 127,297 1683,297" -draw "line 127,1800 1683,1800" -draw "line 127,1801 1683,1801" -draw "line 127,2194 1683,2194" -draw "line 127,2203 1683,2203" -draw "line 127,2742 1683,2742" -draw "line 127,2763 1683,2763" -draw "line 127,3624 1683,3624" -draw "line 127,3627 1683,3627" -draw "line 127,3940 1683,3940" -draw "line 127,3953 1683,3953" -draw "line 127,4340 1683,4340" -draw "line 127,4343 1683,4343" -draw "line 127,4583 1683,4583" -draw "line 127,4576 1683,4576" -draw "line 127,4822 1683,4822" debug/OCS-454.png
+convert images/OCS-454-B.png -crop 1479x227+0+0 +repage images/OCS-454-B-0.png
+convert -append images/OCS-454-A-7.png images/OCS-454-B-0.png images/OCS-454-A-7.png
+rm images/OCS-454-B-0.png
+convert images/OCS-454-B.png -crop 1479x465+0+238 +repage images/OCS-454-B-1.png
+convert images/OCS-454-B.png -crop 1479x145+0+714 +repage images/OCS-454-B-2.png
+convert images/OCS-454-B.png -crop 1479x235+0+864 +repage images/OCS-454-B-3.png
+convert images/OCS-454-B.png -crop 1479x633+0+1104 +repage images/OCS-454-B-4.png
+convert images/OCS-454-B.png -crop 1479x623+0+1738 +repage images/OCS-454-B-5.png
+convert images/OCS-454-B.png -crop 1479x640+0+2368 +repage images/OCS-454-B-6.png
+convert images/OCS-454-B.png -crop 1479x1508+0+2999 +repage images/OCS-454-B-7.png
+rm images/OCS-454-B.bmp
+convert debug/OCS-454.png -stroke green -strokewidth 7 -draw "line 1767,303 3246,303" -draw "line 1767,530 3246,530" -draw "line 1767,541 3246,541" -draw "line 1767,1006 3246,1006" -draw "line 1767,1017 3246,1017" -draw "line 1767,1162 3246,1162" -draw "line 1767,1167 3246,1167" -draw "line 1767,1402 3246,1402" -draw "line 1767,1407 3246,1407" -draw "line 1767,2040 3246,2040" -draw "line 1767,2041 3246,2041" -draw "line 1767,2664 3246,2664" -draw "line 1767,2671 3246,2671" -draw "line 1767,3311 3246,3311" -draw "line 1767,3302 3246,3302" -draw "line 1767,4810 3246,4810" debug/OCS-454.png

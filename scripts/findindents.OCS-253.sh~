@@ -1,0 +1,21 @@
+convert images/OCS-253-A.png -crop 1509x695+0+0 +repage images/OCS-253-A-0.png
+convert -append images/OCS-252-B-8.png images/OCS-253-A-0.png images/OCS-252-B-8.png
+rm images/OCS-253-A-0.png
+convert images/OCS-253-A.png -crop 1509x317+0+712 +repage images/OCS-253-A-1.png
+convert images/OCS-253-A.png -crop 1509x471+0+1032 +repage images/OCS-253-A-2.png
+convert images/OCS-253-A.png -crop 1509x311+0+1512 +repage images/OCS-253-A-3.png
+convert images/OCS-253-A.png -crop 1509x791+0+1824 +repage images/OCS-253-A-4.png
+convert images/OCS-253-A.png -crop 1509x629+0+2620 +repage images/OCS-253-A-5.png
+convert images/OCS-253-A.png -crop 1509x549+0+3256 +repage images/OCS-253-A-6.png
+convert images/OCS-253-A.png -crop 1509x627+0+3814 +repage images/OCS-253-A-7.png
+rm images/OCS-253-A.bmp
+convert debug/OCS-253.png -stroke green -strokewidth 7 -draw "line 55,281 1564,281" -draw "line 55,976 1564,976" -draw "line 55,993 1564,993" -draw "line 55,1310 1564,1310" -draw "line 55,1313 1564,1313" -draw "line 55,1784 1564,1784" -draw "line 55,1793 1564,1793" -draw "line 55,2104 1564,2104" -draw "line 55,2105 1564,2105" -draw "line 55,2896 1564,2896" -draw "line 55,2901 1564,2901" -draw "line 55,3530 1564,3530" -draw "line 55,3537 1564,3537" -draw "line 55,4086 1564,4086" -draw "line 55,4095 1564,4095" -draw "line 55,4722 1564,4722" debug/OCS-253.png
+convert images/OCS-253-B.png -crop 1575x397+0+0 +repage images/OCS-253-B-0.png
+convert images/OCS-253-B.png -crop 1575x553+0+400 +repage images/OCS-253-B-1.png
+convert images/OCS-253-B.png -crop 1575x1029+0+958 +repage images/OCS-253-B-2.png
+convert images/OCS-253-B.png -crop 1575x389+0+1990 +repage images/OCS-253-B-3.png
+convert images/OCS-253-B.png -crop 1575x1037+0+2380 +repage images/OCS-253-B-4.png
+convert images/OCS-253-B.png -crop 1575x393+0+3424 +repage images/OCS-253-B-5.png
+convert images/OCS-253-B.png -crop 1575x717+0+3818 +repage images/OCS-253-B-6.png
+rm images/OCS-253-B.bmp
+convert debug/OCS-253.png -stroke green -strokewidth 7 -draw "line 1657,275 3232,275" -draw "line 1657,672 3232,672" -draw "line 1657,675 3232,675" -draw "line 1657,1228 3232,1228" -draw "line 1657,1233 3232,1233" -draw "line 1657,2262 3232,2262" -draw "line 1657,2265 3232,2265" -draw "line 1657,2654 3232,2654" -draw "line 1657,2655 3232,2655" -draw "line 1657,3692 3232,3692" -draw "line 1657,3699 3232,3699" -draw "line 1657,4092 3232,4092" -draw "line 1657,4093 3232,4093" -draw "line 1657,4810 3232,4810" debug/OCS-253.png

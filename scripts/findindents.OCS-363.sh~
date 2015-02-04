@@ -1,0 +1,38 @@
+convert images/OCS-363-A.png -crop 1533x447+0+0 +repage images/OCS-363-A-0.png
+convert -append images/OCS-362-B-9.png images/OCS-363-A-0.png images/OCS-362-B-9.png
+rm images/OCS-363-A-0.png
+convert images/OCS-363-A.png -crop 1533x543+0+460 +repage images/OCS-363-A-1.png
+convert images/OCS-363-A.png -crop 1533x779+0+1018 +repage images/OCS-363-A-2.png
+convert images/OCS-363-A.png -crop 1533x383+0+1812 +repage images/OCS-363-A-3.png
+convert images/OCS-363-A.png -crop 1533x307+0+2202 +repage images/OCS-363-A-4.png
+convert images/OCS-363-A.png -crop 1533x311+0+2522 +repage images/OCS-363-A-5.png
+convert images/OCS-363-A.png -crop 1533x547+0+2840 +repage images/OCS-363-A-6.png
+convert images/OCS-363-A.png -crop 1533x67+0+3396 +repage images/OCS-363-A-7.png
+convert images/OCS-363-A.png -crop 1533x73+0+3472 +repage images/OCS-363-A-8.png
+convert images/OCS-363-A.png -crop 1533x75+0+3550 +repage images/OCS-363-A-9.png
+convert images/OCS-363-A.png -crop 1533x71+0+3632 +repage images/OCS-363-A-10.png
+convert images/OCS-363-A.png -crop 1533x73+0+3712 +repage images/OCS-363-A-11.png
+convert images/OCS-363-A.png -crop 1533x71+0+3790 +repage images/OCS-363-A-12.png
+convert images/OCS-363-A.png -crop 1533x73+0+3870 +repage images/OCS-363-A-13.png
+convert images/OCS-363-A.png -crop 1533x69+0+3948 +repage images/OCS-363-A-14.png
+convert images/OCS-363-A.png -crop 1533x69+0+4026 +repage images/OCS-363-A-15.png
+convert images/OCS-363-A.png -crop 1533x71+0+4110 +repage images/OCS-363-A-16.png
+convert images/OCS-363-A.png -crop 1533x71+0+4190 +repage images/OCS-363-A-17.png
+convert images/OCS-363-A.png -crop 1533x77+0+4264 +repage images/OCS-363-A-18.png
+convert images/OCS-363-A.png -crop 1533x71+0+4346 +repage images/OCS-363-A-19.png
+convert images/OCS-363-A.png -crop 1533x77+0+4418 +repage images/OCS-363-A-20.png
+rm images/OCS-363-A.bmp
+convert debug/OCS-363.png -stroke green -strokewidth 7 -draw "line 51,275 1584,275" -draw "line 51,722 1584,722" -draw "line 51,735 1584,735" -draw "line 51,1278 1584,1278" -draw "line 51,1293 1584,1293" -draw "line 51,2072 1584,2072" -draw "line 51,2087 1584,2087" -draw "line 51,2470 1584,2470" -draw "line 51,2477 1584,2477" -draw "line 51,2784 1584,2784" -draw "line 51,2797 1584,2797" -draw "line 51,3108 1584,3108" -draw "line 51,3115 1584,3115" -draw "line 51,3662 1584,3662" -draw "line 51,3671 1584,3671" -draw "line 51,3738 1584,3738" -draw "line 51,3747 1584,3747" -draw "line 51,3820 1584,3820" -draw "line 51,3825 1584,3825" -draw "line 51,3900 1584,3900" -draw "line 51,3907 1584,3907" -draw "line 51,3978 1584,3978" -draw "line 51,3987 1584,3987" -draw "line 51,4060 1584,4060" -draw "line 51,4065 1584,4065" -draw "line 51,4136 1584,4136" -draw "line 51,4145 1584,4145" -draw "line 51,4218 1584,4218" -draw "line 51,4223 1584,4223" -draw "line 51,4292 1584,4292" -draw "line 51,4301 1584,4301" -draw "line 51,4370 1584,4370" -draw "line 51,4385 1584,4385" -draw "line 51,4456 1584,4456" -draw "line 51,4465 1584,4465" -draw "line 51,4536 1584,4536" -draw "line 51,4539 1584,4539" -draw "line 51,4616 1584,4616" -draw "line 51,4621 1584,4621" -draw "line 51,4692 1584,4692" -draw "line 51,4693 1584,4693" -draw "line 51,4770 1584,4770" debug/OCS-363.png
+convert images/OCS-363-B.png -crop 1559x149+0+0 +repage images/OCS-363-B-0.png
+convert -append images/OCS-363-A-20.png images/OCS-363-B-0.png images/OCS-363-A-20.png
+rm images/OCS-363-B-0.png
+convert images/OCS-363-B.png -crop 1559x147+0+160 +repage images/OCS-363-B-1.png
+convert images/OCS-363-B.png -crop 1559x459+0+314 +repage images/OCS-363-B-2.png
+convert images/OCS-363-B.png -crop 1559x309+0+790 +repage images/OCS-363-B-3.png
+convert images/OCS-363-B.png -crop 1559x309+0+1112 +repage images/OCS-363-B-4.png
+convert images/OCS-363-B.png -crop 1559x303+0+1426 +repage images/OCS-363-B-5.png
+convert images/OCS-363-B.png -crop 1559x2059+0+1742 +repage images/OCS-363-B-6.png
+convert images/OCS-363-B.png -crop 1559x535+0+3804 +repage images/OCS-363-B-7.png
+convert images/OCS-363-B.png -crop 1559x145+0+4366 +repage images/OCS-363-B-8.png
+rm images/OCS-363-B.bmp
+convert debug/OCS-363.png -stroke green -strokewidth 7 -draw "line 1681,255 3240,255" -draw "line 1681,404 3240,404" -draw "line 1681,415 3240,415" -draw "line 1681,562 3240,562" -draw "line 1681,569 3240,569" -draw "line 1681,1028 3240,1028" -draw "line 1681,1045 3240,1045" -draw "line 1681,1354 3240,1354" -draw "line 1681,1367 3240,1367" -draw "line 1681,1676 3240,1676" -draw "line 1681,1681 3240,1681" -draw "line 1681,1984 3240,1984" -draw "line 1681,1997 3240,1997" -draw "line 1681,4056 3240,4056" -draw "line 1681,4059 3240,4059" -draw "line 1681,4594 3240,4594" -draw "line 1681,4621 3240,4621" -draw "line 1681,4766 3240,4766" debug/OCS-363.png

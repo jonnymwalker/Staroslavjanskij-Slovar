@@ -1,0 +1,30 @@
+convert images/OCS-249-A.png -crop 1503x767+0+0 +repage images/OCS-249-A-0.png
+convert -append images/OCS-248-B-2.png images/OCS-249-A-0.png images/OCS-248-B-2.png
+rm images/OCS-249-A-0.png
+convert images/OCS-249-A.png -crop 1503x923+0+794 +repage images/OCS-249-A-1.png
+convert images/OCS-249-A.png -crop 1503x625+0+1744 +repage images/OCS-249-A-2.png
+convert images/OCS-249-A.png -crop 1503x225+0+2382 +repage images/OCS-249-A-3.png
+convert images/OCS-249-A.png -crop 1503x305+0+2622 +repage images/OCS-249-A-4.png
+convert images/OCS-249-A.png -crop 1503x51+0+2952 +repage images/OCS-249-A-5.png
+convert images/OCS-249-A.png -crop 1503x311+0+3008 +repage images/OCS-249-A-6.png
+convert images/OCS-249-A.png -crop 1503x237+0+3326 +repage images/OCS-249-A-7.png
+convert images/OCS-249-A.png -crop 1503x391+0+3568 +repage images/OCS-249-A-8.png
+convert images/OCS-249-A.png -crop 1503x69+0+3970 +repage images/OCS-249-A-9.png
+convert images/OCS-249-A.png -crop 1503x79+0+4040 +repage images/OCS-249-A-10.png
+convert images/OCS-249-A.png -crop 1503x73+0+4126 +repage images/OCS-249-A-11.png
+convert images/OCS-249-A.png -crop 1503x71+0+4208 +repage images/OCS-249-A-12.png
+convert images/OCS-249-A.png -crop 1503x65+0+4292 +repage images/OCS-249-A-13.png
+convert images/OCS-249-A.png -crop 1503x73+0+4366 +repage images/OCS-249-A-14.png
+convert images/OCS-249-A.png -crop 1503x67+0+4448 +repage images/OCS-249-A-15.png
+rm images/OCS-249-A.bmp
+convert debug/OCS-249.png -stroke green -strokewidth 7 -draw "line 69,299 1572,299" -draw "line 69,1066 1572,1066" -draw "line 69,1093 1572,1093" -draw "line 69,2016 1572,2016" -draw "line 69,2043 1572,2043" -draw "line 69,2668 1572,2668" -draw "line 69,2681 1572,2681" -draw "line 69,2906 1572,2906" -draw "line 69,2921 1572,2921" -draw "line 69,3226 1572,3226" -draw "line 69,3251 1572,3251" -draw "line 69,3302 1572,3302" -draw "line 69,3307 1572,3307" -draw "line 69,3618 1572,3618" -draw "line 69,3625 1572,3625" -draw "line 69,3862 1572,3862" -draw "line 69,3867 1572,3867" -draw "line 69,4258 1572,4258" -draw "line 69,4269 1572,4269" -draw "line 69,4338 1572,4338" -draw "line 69,4339 1572,4339" -draw "line 69,4418 1572,4418" -draw "line 69,4425 1572,4425" -draw "line 69,4498 1572,4498" -draw "line 69,4507 1572,4507" -draw "line 69,4578 1572,4578" -draw "line 69,4591 1572,4591" -draw "line 69,4656 1572,4656" -draw "line 69,4665 1572,4665" -draw "line 69,4738 1572,4738" -draw "line 69,4747 1572,4747" -draw "line 69,4814 1572,4814" debug/OCS-249.png
+convert images/OCS-249-B.png -crop 1577x469+0+0 +repage images/OCS-249-B-0.png
+convert images/OCS-249-B.png -crop 1577x313+0+474 +repage images/OCS-249-B-1.png
+convert images/OCS-249-B.png -crop 1577x549+0+794 +repage images/OCS-249-B-2.png
+convert images/OCS-249-B.png -crop 1577x1341+0+1350 +repage images/OCS-249-B-3.png
+convert images/OCS-249-B.png -crop 1577x375+0+2700 +repage images/OCS-249-B-4.png
+convert images/OCS-249-B.png -crop 1577x465+0+3100 +repage images/OCS-249-B-5.png
+convert images/OCS-249-B.png -crop 1577x705+0+3576 +repage images/OCS-249-B-6.png
+convert images/OCS-249-B.png -crop 1577x227+0+4294 +repage images/OCS-249-B-7.png
+rm images/OCS-249-B.bmp
+convert debug/OCS-249.png -stroke green -strokewidth 7 -draw "line 1661,291 3238,291" -draw "line 1661,760 3238,760" -draw "line 1661,765 3238,765" -draw "line 1661,1078 3238,1078" -draw "line 1661,1085 3238,1085" -draw "line 1661,1634 3238,1634" -draw "line 1661,1641 3238,1641" -draw "line 1661,2982 3238,2982" -draw "line 1661,2991 3238,2991" -draw "line 1661,3366 3238,3366" -draw "line 1661,3391 3238,3391" -draw "line 1661,3856 3238,3856" -draw "line 1661,3867 3238,3867" -draw "line 1661,4572 3238,4572" -draw "line 1661,4585 3238,4585" -draw "line 1661,4812 3238,4812" debug/OCS-249.png

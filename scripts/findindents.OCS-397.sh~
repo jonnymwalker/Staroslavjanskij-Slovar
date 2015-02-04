@@ -1,0 +1,15 @@
+convert images/OCS-397-A.png -crop 1497x3423+0+0 +repage images/OCS-397-A-0.png
+convert -append images/OCS-396-B-4.png images/OCS-397-A-0.png images/OCS-396-B-4.png
+rm images/OCS-397-A-0.png
+convert images/OCS-397-A.png -crop 1497x869+0+3426 +repage images/OCS-397-A-1.png
+convert images/OCS-397-A.png -crop 1497x239+0+4300 +repage images/OCS-397-A-2.png
+rm images/OCS-397-A.bmp
+convert debug/OCS-397.png -stroke green -strokewidth 7 -draw "line 99,265 1596,265" -draw "line 99,3688 1596,3688" -draw "line 99,3691 1596,3691" -draw "line 99,4560 1596,4560" -draw "line 99,4565 1596,4565" -draw "line 99,4804 1596,4804" debug/OCS-397.png
+convert images/OCS-397-B.png -crop 1579x629+0+0 +repage images/OCS-397-B-0.png
+convert -append images/OCS-397-A-2.png images/OCS-397-B-0.png images/OCS-397-A-2.png
+rm images/OCS-397-B-0.png
+convert images/OCS-397-B.png -crop 1579x717+0+630 +repage images/OCS-397-B-1.png
+convert images/OCS-397-B.png -crop 1579x137+0+1352 +repage images/OCS-397-B-2.png
+convert images/OCS-397-B.png -crop 1579x3019+0+1514 +repage images/OCS-397-B-3.png
+rm images/OCS-397-B.bmp
+convert debug/OCS-397.png -stroke green -strokewidth 7 -draw "line 1677,267 3256,267" -draw "line 1677,896 3256,896" -draw "line 1677,897 3256,897" -draw "line 1677,1614 3256,1614" -draw "line 1677,1619 3256,1619" -draw "line 1677,1756 3256,1756" -draw "line 1677,1781 3256,1781" -draw "line 1677,4800 3256,4800" debug/OCS-397.png

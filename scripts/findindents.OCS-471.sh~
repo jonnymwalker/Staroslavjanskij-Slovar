@@ -1,0 +1,23 @@
+convert images/OCS-471-A.png -crop 1461x1031+0+0 +repage images/OCS-471-A-0.png
+convert -append images/OCS-470-B-10.png images/OCS-471-A-0.png images/OCS-470-B-10.png
+rm images/OCS-471-A-0.png
+convert images/OCS-471-A.png -crop 1461x387+0+1042 +repage images/OCS-471-A-1.png
+convert images/OCS-471-A.png -crop 1461x947+0+1436 +repage images/OCS-471-A-2.png
+convert images/OCS-471-A.png -crop 1461x309+0+2394 +repage images/OCS-471-A-3.png
+convert images/OCS-471-A.png -crop 1461x533+0+2712 +repage images/OCS-471-A-4.png
+convert images/OCS-471-A.png -crop 1461x305+0+3268 +repage images/OCS-471-A-5.png
+convert images/OCS-471-A.png -crop 1461x389+0+3590 +repage images/OCS-471-A-6.png
+convert images/OCS-471-A.png -crop 1461x307+0+3986 +repage images/OCS-471-A-7.png
+convert images/OCS-471-A.png -crop 1461x309+0+4298 +repage images/OCS-471-A-10.png
+rm images/OCS-471-A.bmp
+convert debug/OCS-471.png -stroke green -strokewidth 7 -draw "line 23,281 1484,281" -draw "line 23,1312 1484,1312" -draw "line 23,1323 1484,1323" -draw "line 23,1710 1484,1710" -draw "line 23,1717 1484,1717" -draw "line 23,2664 1484,2664" -draw "line 23,2675 1484,2675" -draw "line 23,2984 1484,2984" -draw "line 23,2993 1484,2993" -draw "line 23,3526 1484,3526" -draw "line 23,3549 1484,3549" -draw "line 23,3854 1484,3854" -draw "line 23,3871 1484,3871" -draw "line 23,4260 1484,4260" -draw "line 23,4267 1484,4267" -draw "line 23,4501 1484,4501" -draw "line 23,4492 1484,4492" -draw "line 23,4574 1484,4574" -draw "line 23,4579 1484,4579" -draw "line 23,4812 1484,4812" -draw "line 23,4821 1484,4821" -draw "line 23,4888 1484,4888" debug/OCS-471.png
+convert images/OCS-471-B.png -crop 1565x3423+0+0 +repage images/OCS-471-B-0.png
+convert -append images/OCS-471-A-10.png images/OCS-471-B-0.png images/OCS-471-A-10.png
+rm images/OCS-471-B-0.png
+convert images/OCS-471-B.png -crop 1565x381+0+3430 +repage images/OCS-471-B-1.png
+convert images/OCS-471-B.png -crop 1565x471+0+3822 +repage images/OCS-471-B-2.png
+convert images/OCS-471-B.png -crop 1565x65+0+4306 +repage images/OCS-471-B-3.png
+convert images/OCS-471-B.png -crop 1565x65+0+4386 +repage images/OCS-471-B-4.png
+convert images/OCS-471-B.png -crop 1565x159+0+4454 +repage images/OCS-471-B-5.png
+rm images/OCS-471-B.bmp
+convert debug/OCS-471.png -stroke green -strokewidth 7 -draw "line 1577,279 3142,279" -draw "line 1577,3702 3142,3702" -draw "line 1577,3709 3142,3709" -draw "line 1577,4090 3142,4090" -draw "line 1577,4101 3142,4101" -draw "line 1577,4572 3142,4572" -draw "line 1577,4585 3142,4585" -draw "line 1577,4650 3142,4650" -draw "line 1577,4665 3142,4665" -draw "line 1577,4730 3142,4730" -draw "line 1577,4733 3142,4733" -draw "line 1577,4892 3142,4892" debug/OCS-471.png

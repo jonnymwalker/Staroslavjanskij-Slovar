@@ -1,0 +1,26 @@
+convert images/OCS-792-A.png -crop 1563x227+0+0 +repage images/OCS-792-A-0.png
+convert -append images/OCS-791-B-17.png images/OCS-792-A-0.png images/OCS-791-B-17.png
+rm images/OCS-792-A-0.png
+convert images/OCS-792-A.png -crop 1563x553+0+234 +repage images/OCS-792-A-1.png
+convert images/OCS-792-A.png -crop 1563x455+0+794 +repage images/OCS-792-A-2.png
+convert images/OCS-792-A.png -crop 1563x927+0+1272 +repage images/OCS-792-A-3.png
+convert images/OCS-792-A.png -crop 1563x1099+0+2224 +repage images/OCS-792-A-4.png
+convert images/OCS-792-A.png -crop 1563x617+0+3336 +repage images/OCS-792-A-5.png
+convert images/OCS-792-A.png -crop 1563x545+0+3968 +repage images/OCS-792-A-6.png
+rm images/OCS-792-A.bmp
+convert debug/OCS-792.png -stroke green -strokewidth 7 -draw "line 91,335 1654,335" -draw "line 91,562 1654,562" -draw "line 91,569 1654,569" -draw "line 91,1122 1654,1122" -draw "line 91,1129 1654,1129" -draw "line 91,1584 1654,1584" -draw "line 91,1607 1654,1607" -draw "line 91,2534 1654,2534" -draw "line 91,2559 1654,2559" -draw "line 91,3658 1654,3658" -draw "line 91,3671 1654,3671" -draw "line 91,4288 1654,4288" -draw "line 91,4303 1654,4303" -draw "line 91,4848 1654,4848" debug/OCS-792.png
+convert images/OCS-792-B.png -crop 1537x164+0+0 +repage images/OCS-792-B-0.png
+convert images/OCS-792-B.png -crop 1537x156+0+163 +repage images/OCS-792-B-1.png
+convert images/OCS-792-B.png -crop 1537x73+0+326 +repage images/OCS-792-B-2.png
+convert images/OCS-792-B.png -crop 1537x147+0+408 +repage images/OCS-792-B-3.png
+convert images/OCS-792-B.png -crop 1537x100+0+562 +repage images/OCS-792-B-4.png
+convert images/OCS-792-B.png -crop 1537x39+0+900 +repage images/OCS-792-B-5.png
+convert images/OCS-792-B.png -crop 1537x57+0+978 +repage images/OCS-792-B-6.png
+convert images/OCS-792-B.png -crop 1537x465+0+1040 +repage images/OCS-792-B-7.png
+convert images/OCS-792-B.png -crop 1537x545+0+1518 +repage images/OCS-792-B-8.png
+convert images/OCS-792-B.png -crop 1537x1023+0+2074 +repage images/OCS-792-B-9.png
+convert images/OCS-792-B.png -crop 1537x319+0+3102 +repage images/OCS-792-B-10.png
+convert images/OCS-792-B.png -crop 1537x465+0+3424 +repage images/OCS-792-B-11.png
+convert images/OCS-792-B.png -crop 1537x629+0+3900 +repage images/OCS-792-B-12.png
+rm images/OCS-792-B.bmp
+convert debug/OCS-792.png -stroke green -strokewidth 7 -draw "line 1749,327 3286,327" -draw "line 1749,491 3286,491" -draw "line 1749,490 3286,490" -draw "line 1749,646 3286,646" -draw "line 1749,653 3286,653" -draw "line 1749,726 3286,726" -draw "line 1749,735 3286,735" -draw "line 1749,882 3286,882" -draw "line 1749,889 3286,889" -draw "line 1749,989 3286,989" -draw "line 1749,1227 3286,1227" -draw "line 1749,1266 3286,1266" -draw "line 1749,1305 3286,1305" -draw "line 1749,1362 3286,1362" -draw "line 1749,1367 3286,1367" -draw "line 1749,1832 3286,1832" -draw "line 1749,1845 3286,1845" -draw "line 1749,2390 3286,2390" -draw "line 1749,2401 3286,2401" -draw "line 1749,3424 3286,3424" -draw "line 1749,3429 3286,3429" -draw "line 1749,3748 3286,3748" -draw "line 1749,3751 3286,3751" -draw "line 1749,4216 3286,4216" -draw "line 1749,4227 3286,4227" -draw "line 1749,4856 3286,4856" debug/OCS-792.png

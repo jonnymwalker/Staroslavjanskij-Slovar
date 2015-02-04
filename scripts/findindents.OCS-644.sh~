@@ -1,0 +1,20 @@
+convert images/OCS-644-A.png -crop 1566x693+0+0 +repage images/OCS-644-A-0.png
+convert -append images/OCS-643-B-3.png images/OCS-644-A-0.png images/OCS-643-B-3.png
+rm images/OCS-644-A-0.png
+convert images/OCS-644-A.png -crop 1566x1491+0+708 +repage images/OCS-644-A-1.png
+convert images/OCS-644-A.png -crop 1566x137+0+2224 +repage images/OCS-644-A-2.png
+convert images/OCS-644-A.png -crop 1566x397+0+2374 +repage images/OCS-644-A-3.png
+convert images/OCS-644-A.png -crop 1566x478+0+2774 +repage images/OCS-644-A-4.png
+convert images/OCS-644-A.png -crop 1566x1270+0+3245 +repage images/OCS-644-A-5.png
+rm images/OCS-644-A.bmp
+convert debug/OCS-644.png -stroke green -strokewidth 7 -draw "line 177,319 1743,319" -draw "line 177,1012 1743,1012" -draw "line 177,1027 1743,1027" -draw "line 177,2518 1743,2518" -draw "line 177,2543 1743,2543" -draw "line 177,2680 1743,2680" -draw "line 177,2693 1743,2693" -draw "line 177,3090 1743,3090" -draw "line 177,3093 1743,3093" -draw "line 177,3571 1743,3571" -draw "line 177,3564 1743,3564" -draw "line 177,4834 1743,4834" debug/OCS-644.png
+convert images/OCS-644-B.png -crop 1571x153+0+0 +repage images/OCS-644-B-0.png
+convert -append images/OCS-644-A-5.png images/OCS-644-B-0.png images/OCS-644-A-5.png
+rm images/OCS-644-B-0.png
+convert images/OCS-644-B.png -crop 1571x391+0+158 +repage images/OCS-644-B-1.png
+convert images/OCS-644-B.png -crop 1571x621+0+554 +repage images/OCS-644-B-2.png
+convert images/OCS-644-B.png -crop 1571x869+0+1192 +repage images/OCS-644-B-3.png
+convert images/OCS-644-B.png -crop 1571x1676+0+2064 +repage images/OCS-644-B-4.png
+convert images/OCS-644-B.png -crop 1571x794+0+3731 +repage images/OCS-644-B-5.png
+rm images/OCS-644-B.bmp
+convert debug/OCS-644.png -stroke green -strokewidth 7 -draw "line 1809,311 3380,311" -draw "line 1809,464 3380,464" -draw "line 1809,469 3380,469" -draw "line 1809,860 3380,860" -draw "line 1809,865 3380,865" -draw "line 1809,1486 3380,1486" -draw "line 1809,1503 3380,1503" -draw "line 1809,2372 3380,2372" -draw "line 1809,2375 3380,2375" -draw "line 1809,4051 3380,4051" -draw "line 1809,4042 3380,4042" -draw "line 1809,4836 3380,4836" debug/OCS-644.png

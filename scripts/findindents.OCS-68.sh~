@@ -1,0 +1,42 @@
+convert images/OCS-68-A.png -crop 1573x227+0+0 +repage images/OCS-68-A-0.png
+convert images/OCS-68-A.png -crop 1573x623+0+240 +repage images/OCS-68-A-1.png
+convert images/OCS-68-A.png -crop 1573x73+0+876 +repage images/OCS-68-A-2.png
+convert images/OCS-68-A.png -crop 1573x71+0+956 +repage images/OCS-68-A-3.png
+convert images/OCS-68-A.png -crop 1573x320+0+1028 +repage images/OCS-68-A-4.png
+convert images/OCS-68-A.png -crop 1573x162+0+1341 +repage images/OCS-68-A-5.png
+convert images/OCS-68-A.png -crop 1573x229+0+1512 +repage images/OCS-68-A-6.png
+convert images/OCS-68-A.png -crop 1573x617+0+1750 +repage images/OCS-68-A-7.png
+convert images/OCS-68-A.png -crop 1573x69+0+2462 +repage images/OCS-68-A-9.png
+convert images/OCS-68-A.png -crop 1573x59+0+2554 +repage images/OCS-68-A-10.png
+convert images/OCS-68-A.png -crop 1573x623+0+2622 +repage images/OCS-68-A-11.png
+convert images/OCS-68-A.png -crop 1573x467+0+3258 +repage images/OCS-68-A-12.png
+convert images/OCS-68-A.png -crop 1573x149+0+3736 +repage images/OCS-68-A-13.png
+convert images/OCS-68-A.png -crop 1573x149+0+3894 +repage images/OCS-68-A-14.png
+convert images/OCS-68-A.png -crop 1573x75+0+4052 +repage images/OCS-68-A-15.png
+convert images/OCS-68-A.png -crop 1573x75+0+4132 +repage images/OCS-68-A-16.png
+convert images/OCS-68-A.png -crop 1573x75+0+4212 +repage images/OCS-68-A-17.png
+convert images/OCS-68-A.png -crop 1573x233+0+4290 +repage images/OCS-68-A-18.png
+rm images/OCS-68-A.bmp
+convert debug/OCS-68.png -stroke green -strokewidth 7 -draw "line 107,353 1680,353" -draw "line 107,580 1680,580" -draw "line 107,593 1680,593" -draw "line 107,1216 1680,1216" -draw "line 107,1229 1680,1229" -draw "line 107,1302 1680,1302" -draw "line 107,1309 1680,1309" -draw "line 107,1380 1680,1380" -draw "line 107,1381 1680,1381" -draw "line 107,1701 1680,1701" -draw "line 107,1694 1680,1694" -draw "line 107,1856 1680,1856" -draw "line 107,1865 1680,1865" -draw "line 107,2094 1680,2094" -draw "line 107,2103 1680,2103" -draw "line 107,2482 1680,2482" -draw "line 107,2499 1680,2499" -draw "line 107,2800 1680,2800" -draw "line 107,2815 1680,2815" -draw "line 107,2884 1680,2884" -draw "line 107,2907 1680,2907" -draw "line 107,2966 1680,2966" -draw "line 107,2975 1680,2975" -draw "line 107,3598 1680,3598" -draw "line 107,3611 1680,3611" -draw "line 107,4078 1680,4078" -draw "line 107,4089 1680,4089" -draw "line 107,4238 1680,4238" -draw "line 107,4247 1680,4247" -draw "line 107,4396 1680,4396" -draw "line 107,4405 1680,4405" -draw "line 107,4480 1680,4480" -draw "line 107,4485 1680,4485" -draw "line 107,4560 1680,4560" -draw "line 107,4565 1680,4565" -draw "line 107,4640 1680,4640" -draw "line 107,4643 1680,4643" -draw "line 107,4876 1680,4876" debug/OCS-68.png
+convert images/OCS-68-B.png -crop 1559x451+0+0 +repage images/OCS-68-B-0.png
+convert -append images/OCS-68-A-18.png images/OCS-68-B-0.png images/OCS-68-A-18.png
+rm images/OCS-68-B-0.png
+convert images/OCS-68-B.png -crop 1559x231+0+476 +repage images/OCS-68-B-1.png
+convert images/OCS-68-B.png -crop 1559x59+0+726 +repage images/OCS-68-B-2.png
+convert images/OCS-68-B.png -crop 1559x313+0+788 +repage images/OCS-68-B-3.png
+convert images/OCS-68-B.png -crop 1559x469+0+1106 +repage images/OCS-68-B-4.png
+convert images/OCS-68-B.png -crop 1559x319+0+1580 +repage images/OCS-68-B-5.png
+convert images/OCS-68-B.png -crop 1559x41+0+1922 +repage images/OCS-68-B-6.png
+convert images/OCS-68-B.png -crop 1559x63+0+1988 +repage images/OCS-68-B-7.png
+convert images/OCS-68-B.png -crop 1559x39+0+2082 +repage images/OCS-68-B-8.png
+convert images/OCS-68-B.png -crop 1559x149+0+2146 +repage images/OCS-68-B-9.png
+convert images/OCS-68-B.png -crop 1559x75+0+2304 +repage images/OCS-68-B-10.png
+convert images/OCS-68-B.png -crop 1559x137+0+2384 +repage images/OCS-68-B-11.png
+convert images/OCS-68-B.png -crop 1559x301+0+2544 +repage images/OCS-68-B-12.png
+convert images/OCS-68-B.png -crop 1559x73+0+2862 +repage images/OCS-68-B-13.png
+convert images/OCS-68-B.png -crop 1559x235+0+2938 +repage images/OCS-68-B-14.png
+convert images/OCS-68-B.png -crop 1559x73+0+3180 +repage images/OCS-68-B-15.png
+convert images/OCS-68-B.png -crop 1559x867+0+3260 +repage images/OCS-68-B-16.png
+convert images/OCS-68-B.png -crop 1559x389+0+4134 +repage images/OCS-68-B-17.png
+rm images/OCS-68-B.bmp
+convert debug/OCS-68.png -stroke green -strokewidth 7 -draw "line 1769,357 3328,357" -draw "line 1769,808 3328,808" -draw "line 1769,833 3328,833" -draw "line 1769,1064 3328,1064" -draw "line 1769,1083 3328,1083" -draw "line 1769,1142 3328,1142" -draw "line 1769,1145 3328,1145" -draw "line 1769,1458 3328,1458" -draw "line 1769,1463 3328,1463" -draw "line 1769,1932 3328,1932" -draw "line 1769,1937 3328,1937" -draw "line 1769,2256 3328,2256" -draw "line 1769,2279 3328,2279" -draw "line 1769,2320 3328,2320" -draw "line 1769,2345 3328,2345" -draw "line 1769,2408 3328,2408" -draw "line 1769,2439 3328,2439" -draw "line 1769,2478 3328,2478" -draw "line 1769,2503 3328,2503" -draw "line 1769,2652 3328,2652" -draw "line 1769,2661 3328,2661" -draw "line 1769,2736 3328,2736" -draw "line 1769,2741 3328,2741" -draw "line 1769,2878 3328,2878" -draw "line 1769,2901 3328,2901" -draw "line 1769,3202 3328,3202" -draw "line 1769,3219 3328,3219" -draw "line 1769,3292 3328,3292" -draw "line 1769,3295 3328,3295" -draw "line 1769,3530 3328,3530" -draw "line 1769,3537 3328,3537" -draw "line 1769,3610 3328,3610" -draw "line 1769,3617 3328,3617" -draw "line 1769,4484 3328,4484" -draw "line 1769,4491 3328,4491" -draw "line 1769,4880 3328,4880" debug/OCS-68.png

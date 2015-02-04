@@ -1,0 +1,20 @@
+convert images/OCS-445-A.png -crop 1449x385+0+0 +repage images/OCS-445-A-0.png
+convert -append images/OCS-444-B-17.png images/OCS-445-A-0.png images/OCS-444-B-17.png
+rm images/OCS-445-A-0.png
+convert images/OCS-445-A.png -crop 1449x1039+0+385 +repage images/OCS-445-A-0.png
+convert images/OCS-445-A.png -crop 1449x381+0+1424 +repage images/OCS-445-A-1.png
+convert images/OCS-445-A.png -crop 1449x227+0+1822 +repage images/OCS-445-A-2.png
+convert images/OCS-445-A.png -crop 1449x1971+0+2062 +repage images/OCS-445-A-3.png
+convert images/OCS-445-A.png -crop 1449x475+0+4034 +repage images/OCS-445-A-4.png
+rm images/OCS-445-A.bmp
+convert debug/OCS-445.png -stroke green -strokewidth 7 -draw "line 59,331 1508,331" -draw "line 59,1748 1508,1748" -draw "line 59,1755 1508,1755" -draw "line 59,2136 1508,2136" -draw "line 59,2153 1508,2153" -draw "line 59,2380 1508,2380" -draw "line 59,2393 1508,2393" -draw "line 59,4364 1508,4364" -draw "line 59,4365 1508,4365" -draw "line 59,4840 1508,4840" debug/OCS-445.png
+convert images/OCS-445-B.png -crop 1557x315+0+0 +repage images/OCS-445-B-0.png
+convert -append images/OCS-445-A-4.png images/OCS-445-B-0.png images/OCS-445-A-4.png
+rm images/OCS-445-B-0.png
+convert images/OCS-445-B.png -crop 1557x307+0+316 +repage images/OCS-445-B-1.png
+convert images/OCS-445-B.png -crop 1557x309+0+636 +repage images/OCS-445-B-2.png
+convert images/OCS-445-B.png -crop 1557x467+0+954 +repage images/OCS-445-B-3.png
+convert images/OCS-445-B.png -crop 1557x467+0+1430 +repage images/OCS-445-B-4.png
+convert images/OCS-445-B.png -crop 1557x2621+0+1904 +repage images/OCS-445-B-5.png
+rm images/OCS-445-B.bmp
+convert debug/OCS-445.png -stroke green -strokewidth 7 -draw "line 1611,325 3168,325" -draw "line 1611,640 3168,640" -draw "line 1611,641 3168,641" -draw "line 1611,948 3168,948" -draw "line 1611,961 3168,961" -draw "line 1611,1270 3168,1270" -draw "line 1611,1279 3168,1279" -draw "line 1611,1746 3168,1746" -draw "line 1611,1755 3168,1755" -draw "line 1611,2222 3168,2222" -draw "line 1611,2229 3168,2229" -draw "line 1611,4850 3168,4850" debug/OCS-445.png

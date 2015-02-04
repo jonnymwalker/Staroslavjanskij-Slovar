@@ -1,0 +1,31 @@
+convert images/OCS-371-A.png -crop 1531x149+0+0 +repage images/OCS-371-A-0.png
+convert -append images/OCS-370-B-9.png images/OCS-371-A-0.png images/OCS-370-B-9.png
+rm images/OCS-371-A-0.png
+convert images/OCS-371-A.png -crop 1531x137+0+160 +repage images/OCS-371-A-1.png
+convert images/OCS-371-A.png -crop 1531x469+0+322 +repage images/OCS-371-A-2.png
+convert images/OCS-371-A.png -crop 1531x391+0+794 +repage images/OCS-371-A-3.png
+convert images/OCS-371-A.png -crop 1531x1108+0+1194 +repage images/OCS-371-A-4.png
+convert images/OCS-371-A.png -crop 1531x242+0+2297 +repage images/OCS-371-A-5.png
+convert images/OCS-371-A.png -crop 1531x135+0+2546 +repage images/OCS-371-A-6.png
+convert images/OCS-371-A.png -crop 1531x393+0+2702 +repage images/OCS-371-A-7.png
+convert images/OCS-371-A.png -crop 1531x473+0+3100 +repage images/OCS-371-A-9.png
+convert images/OCS-371-A.png -crop 1531x154+0+3576 +repage images/OCS-371-A-10.png
+convert images/OCS-371-A.png -crop 1531x396+0+3729 +repage images/OCS-371-A-11.png
+convert images/OCS-371-A.png -crop 1531x239+0+4132 +repage images/OCS-371-A-12.png
+convert images/OCS-371-A.png -crop 1531x149+0+4376 +repage images/OCS-371-A-15.png
+#
+#/OCS-371.png
+convert images/OCS-371-B.png -crop 1551x147+0+0 +repage images/OCS-371-B-0.png
+convert -append images/OCS-371-A-15.png images/OCS-371-B-0.png images/OCS-371-A-15.png
+rm images/OCS-371-B-0.png
+convert images/OCS-371-B.png -crop 1551x625+0+152 +repage images/OCS-371-B-1.png
+convert images/OCS-371-B.png -crop 1551x625+0+786 +repage images/OCS-371-B-2.png
+convert images/OCS-371-B.png -crop 1551x621+0+1422 +repage images/OCS-371-B-3.png
+convert images/OCS-371-B.png -crop 1551x69+0+2064 +repage images/OCS-371-B-4.png
+convert images/OCS-371-B.png -crop 1551x791+0+2140 +repage images/OCS-371-B-5.png
+convert images/OCS-371-B.png -crop 1551x389+0+2938 +repage images/OCS-371-B-6.png
+convert images/OCS-371-B.png -crop 1551x387+0+3342 +repage images/OCS-371-B-7.png
+convert images/OCS-371-B.png -crop 1551x473+0+3734 +repage images/OCS-371-B-8.png
+convert images/OCS-371-B.png -crop 1551x315+0+4212 +repage images/OCS-371-B-9.png
+#
+#/OCS-371.png

@@ -1,0 +1,31 @@
+convert images/OCS-563-A.png -crop 1541x151+0+0 +repage images/OCS-563-A-0.png
+convert -append images/OCS-562-A-9.png images/OCS-563-A-0.png images/OCS-562-A-9.png
+rm images/OCS-563-A-0.png
+convert images/OCS-563-A.png -crop 1541x375+0+160 +repage images/OCS-563-A-1.png
+convert images/OCS-563-A.png -crop 1541x469+0+558 +repage images/OCS-563-A-2.png
+convert images/OCS-563-A.png -crop 1541x375+0+1034 +repage images/OCS-563-A-3.png
+convert images/OCS-563-A.png -crop 1541x391+0+1432 +repage images/OCS-563-A-4.png
+convert images/OCS-563-A.png -crop 1541x945+0+1830 +repage images/OCS-563-A-5.png
+convert images/OCS-563-A.png -crop 1541x67+0+2784 +repage images/OCS-563-A-6.png
+convert images/OCS-563-A.png -crop 1541x63+0+2864 +repage images/OCS-563-A-7.png
+convert images/OCS-563-A.png -crop 1541x63+0+2944 +repage images/OCS-563-A-8.png
+convert images/OCS-563-A.png -crop 1541x63+0+3024 +repage images/OCS-563-A-9.png
+convert images/OCS-563-A.png -crop 1541x55+0+3104 +repage images/OCS-563-A-10.png
+convert images/OCS-563-A.png -crop 1541x316+0+3182 +repage images/OCS-563-A-11.png
+convert images/OCS-563-A.png -crop 1541x170+0+3886 +repage images/OCS-563-A-12.png
+convert images/OCS-563-A.png -crop 1541x165+0+4446 +repage images/OCS-563-A-13.png
+rm images/OCS-563-A.bmp
+convert debug/OCS-563.png -stroke green -strokewidth 7 -draw "line 45,291 1586,291" -draw "line 45,442 1586,442" -draw "line 45,451 1586,451" -draw "line 45,826 1586,826" -draw "line 45,849 1586,849" -draw "line 45,1318 1586,1318" -draw "line 45,1325 1586,1325" -draw "line 45,1700 1586,1700" -draw "line 45,1723 1586,1723" -draw "line 45,2114 1586,2114" -draw "line 45,2121 1586,2121" -draw "line 45,3066 1586,3066" -draw "line 45,3075 1586,3075" -draw "line 45,3142 1586,3142" -draw "line 45,3155 1586,3155" -draw "line 45,3218 1586,3218" -draw "line 45,3235 1586,3235" -draw "line 45,3298 1586,3298" -draw "line 45,3315 1586,3315" -draw "line 45,3378 1586,3378" -draw "line 45,3395 1586,3395" -draw "line 45,3450 1586,3450" -draw "line 45,3473 1586,3473" -draw "line 45,3915 1586,3915" -draw "line 45,4737 1586,4737" -draw "line 45,4902 1586,4902" debug/OCS-563.png
+convert images/OCS-563-B.png -crop 1557x151+0+0 +repage images/OCS-563-B-0.png
+convert -append images/OCS-563-A-13.png images/OCS-563-B-0.png images/OCS-563-A-13.png
+rm images/OCS-563-B-0.png
+convert images/OCS-563-B.png -crop 1557x155+0+160 +repage images/OCS-563-B-1.png
+convert images/OCS-563-B.png -crop 1557x1189+0+318 +repage images/OCS-563-B-2.png
+convert images/OCS-563-B.png -crop 1557x73+0+1516 +repage images/OCS-563-B-3.png
+convert images/OCS-563-B.png -crop 1557x73+0+1596 +repage images/OCS-563-B-4.png
+convert images/OCS-563-B.png -crop 1557x783+0+1672 +repage images/OCS-563-B-5.png
+convert images/OCS-563-B.png -crop 1557x705+0+2468 +repage images/OCS-563-B-6.png
+convert images/OCS-563-B.png -crop 1557x231+0+3186 +repage images/OCS-563-B-7.png
+convert images/OCS-563-B.png -crop 1557x1189+0+3422 +repage images/OCS-563-B-8.png
+rm images/OCS-563-B.bmp
+convert debug/OCS-563.png -stroke green -strokewidth 7 -draw "line 1677,287 3234,287" -draw "line 1677,438 3234,438" -draw "line 1677,447 3234,447" -draw "line 1677,602 3234,602" -draw "line 1677,605 3234,605" -draw "line 1677,1794 3234,1794" -draw "line 1677,1803 3234,1803" -draw "line 1677,1876 3234,1876" -draw "line 1677,1883 3234,1883" -draw "line 1677,1956 3234,1956" -draw "line 1677,1959 3234,1959" -draw "line 1677,2742 3234,2742" -draw "line 1677,2755 3234,2755" -draw "line 1677,3460 3234,3460" -draw "line 1677,3473 3234,3473" -draw "line 1677,3704 3234,3704" -draw "line 1677,3709 3234,3709" -draw "line 1677,4898 3234,4898" debug/OCS-563.png

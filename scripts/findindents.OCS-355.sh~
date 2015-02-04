@@ -1,0 +1,22 @@
+convert images/OCS-355-A.png -crop 1501x711+0+0 +repage images/OCS-355-A-0.png
+convert images/OCS-355-A.png -crop 1501x867+0+720 +repage images/OCS-355-A-1.png
+convert images/OCS-355-A.png -crop 1501x309+0+1590 +repage images/OCS-355-A-2.png
+convert images/OCS-355-A.png -crop 1501x303+0+1910 +repage images/OCS-355-A-3.png
+convert images/OCS-355-A.png -crop 1501x1103+0+2228 +repage images/OCS-355-A-4.png
+convert images/OCS-355-A.png -crop 1501x309+0+3336 +repage images/OCS-355-A-5.png
+convert images/OCS-355-A.png -crop 1501x459+0+3652 +repage images/OCS-355-A-6.png
+convert images/OCS-355-A.png -crop 1501x71+0+4130 +repage images/OCS-355-A-7.png
+convert images/OCS-355-A.png -crop 1501x69+0+4212 +repage images/OCS-355-A-8.png
+convert images/OCS-355-A.png -crop 1501x69+0+4290 +repage images/OCS-355-A-9.png
+convert images/OCS-355-A.png -crop 1501x67+0+4370 +repage images/OCS-355-A-10.png
+convert images/OCS-355-A.png -crop 1501x69+0+4454 +repage images/OCS-355-A-11.png
+rm images/OCS-355-A.bmp
+convert debug/OCS-355.png -stroke green -strokewidth 7 -draw "line 81,301 1582,301" -draw "line 81,1012 1582,1012" -draw "line 81,1021 1582,1021" -draw "line 81,1888 1582,1888" -draw "line 81,1891 1582,1891" -draw "line 81,2200 1582,2200" -draw "line 81,2211 1582,2211" -draw "line 81,2514 1582,2514" -draw "line 81,2529 1582,2529" -draw "line 81,3632 1582,3632" -draw "line 81,3637 1582,3637" -draw "line 81,3946 1582,3946" -draw "line 81,3953 1582,3953" -draw "line 81,4412 1582,4412" -draw "line 81,4431 1582,4431" -draw "line 81,4502 1582,4502" -draw "line 81,4513 1582,4513" -draw "line 81,4582 1582,4582" -draw "line 81,4591 1582,4591" -draw "line 81,4660 1582,4660" -draw "line 81,4671 1582,4671" -draw "line 81,4738 1582,4738" -draw "line 81,4755 1582,4755" -draw "line 81,4824 1582,4824" debug/OCS-355.png
+convert images/OCS-355-B.png -crop 1557x315+0+0 +repage images/OCS-355-B-0.png
+convert images/OCS-355-B.png -crop 1557x2053+0+326 +repage images/OCS-355-B-1.png
+convert images/OCS-355-B.png -crop 1557x471+0+2380 +repage images/OCS-355-B-2.png
+convert images/OCS-355-B.png -crop 1557x945+0+2864 +repage images/OCS-355-B-3.png
+convert images/OCS-355-B.png -crop 1557x311+0+3812 +repage images/OCS-355-B-4.png
+convert images/OCS-355-B.png -crop 1557x395+0+4124 +repage images/OCS-355-B-5.png
+rm images/OCS-355-B.bmp
+convert debug/OCS-355.png -stroke green -strokewidth 7 -draw "line 1679,301 3236,301" -draw "line 1679,616 3236,616" -draw "line 1679,627 3236,627" -draw "line 1679,2680 3236,2680" -draw "line 1679,2681 3236,2681" -draw "line 1679,3152 3236,3152" -draw "line 1679,3165 3236,3165" -draw "line 1679,4110 3236,4110" -draw "line 1679,4113 3236,4113" -draw "line 1679,4424 3236,4424" -draw "line 1679,4425 3236,4425" -draw "line 1679,4820 3236,4820" debug/OCS-355.png

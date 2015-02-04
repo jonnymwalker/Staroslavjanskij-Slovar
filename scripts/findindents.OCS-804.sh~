@@ -1,0 +1,22 @@
+convert images/OCS-804-A.png -crop 1551x145+0+0 +repage images/OCS-804-A-0.png
+convert -append images/OCS-803-B-10.png images/OCS-804-A-0.png images/OCS-803-B-10.png
+rm images/OCS-804-A-0.png
+convert images/OCS-804-A.png -crop 1551x2289+0+160 +repage images/OCS-804-A-1.png
+convert images/OCS-804-A.png -crop 1551x1023+0+2464 +repage images/OCS-804-A-2.png
+convert images/OCS-804-A.png -crop 1551x1027+0+3494 +repage images/OCS-804-A-3.png
+rm images/OCS-804-A.bmp
+convert debug/OCS-804.png -stroke green -strokewidth 7 -draw "line 115,331 1666,331" -draw "line 115,476 1666,476" -draw "line 115,491 1666,491" -draw "line 115,2780 1666,2780" -draw "line 115,2795 1666,2795" -draw "line 115,3818 1666,3818" -draw "line 115,3825 1666,3825" -draw "line 115,4852 1666,4852" debug/OCS-804.png
+convert images/OCS-804-B.png -crop 1545x387+0+0 +repage images/OCS-804-B-0.png
+convert -append images/OCS-804-A-3.png images/OCS-804-B-0.png images/OCS-804-A-3.png
+rm images/OCS-804-B-0.png
+convert images/OCS-804-B.png -crop 1545x475+0+392 +repage images/OCS-804-B-1.png
+convert images/OCS-804-B.png -crop 1545x473+0+1662 +repage images/OCS-804-B-2.png
+convert images/OCS-804-B.png -crop 1545x785+0+2146 +repage images/OCS-804-B-3.png
+convert images/OCS-804-B.png -crop 1545x553+0+2934 +repage images/OCS-804-B-4.png
+convert images/OCS-804-B.png -crop 1545x233+0+3492 +repage images/OCS-804-B-5.png
+convert images/OCS-804-B.png -crop 1545x231+0+3732 +repage images/OCS-804-B-6.png
+convert images/OCS-804-B.png -crop 1545x311+0+3970 +repage images/OCS-804-B-7.png
+convert images/OCS-804-B.png -crop 1545x75+0+4288 +repage images/OCS-804-B-8.png
+convert images/OCS-804-B.png -crop 1545x151+0+4368 +repage images/OCS-804-B-9.png
+rm images/OCS-804-B.bmp
+convert debug/OCS-804.png -stroke green -strokewidth 7 -draw "line 1765,333 3310,333" -draw "line 1765,720 3310,720" -draw "line 1765,725 3310,725" -draw "line 1765,1200 3310,1200" -draw "line 1765,1995 3310,1995" -draw "line 1765,2468 3310,2468" -draw "line 1765,2479 3310,2479" -draw "line 1765,3264 3310,3264" -draw "line 1765,3267 3310,3267" -draw "line 1765,3820 3310,3820" -draw "line 1765,3825 3310,3825" -draw "line 1765,4058 3310,4058" -draw "line 1765,4065 3310,4065" -draw "line 1765,4296 3310,4296" -draw "line 1765,4303 3310,4303" -draw "line 1765,4614 3310,4614" -draw "line 1765,4621 3310,4621" -draw "line 1765,4696 3310,4696" -draw "line 1765,4701 3310,4701" -draw "line 1765,4852 3310,4852" debug/OCS-804.png

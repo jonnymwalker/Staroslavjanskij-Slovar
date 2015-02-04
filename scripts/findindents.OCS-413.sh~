@@ -1,0 +1,18 @@
+convert images/OCS-413-A.png -crop 1451x4521+0+0 +repage images/OCS-413-A-0.png
+convert -append images/OCS-412-B-11.png images/OCS-413-A-0.png images/OCS-412-B-11.png
+rm images/OCS-413-A-0.png
+rm images/OCS-413-A.bmp
+convert debug/OCS-413.png -stroke green -strokewidth 7 -draw "line 65,327 1516,327" -draw "line 65,4606 1516,4606" -draw "line 65,4619 1516,4619" -draw "line 65,4688 1516,4688" -draw "line 65,4695 1516,4695" -draw "line 65,4766 1516,4766" -draw "line 65,4771 1516,4771" -draw "line 65,4848 1516,4848" debug/OCS-413.png
+convert images/OCS-413-B.png -crop 1553x2047+0+0 +repage images/OCS-413-B-0.png
+convert -append images/OCS-412-B-11.png images/OCS-413-B-0.png images/OCS-412-B-11.png
+rm images/OCS-413-B-0.png
+convert images/OCS-413-B.png -crop 1553x231+0+2066 +repage images/OCS-413-B-1.png
+convert images/OCS-413-B.png -crop 1553x319+0+2304 +repage images/OCS-413-B-2.png
+convert images/OCS-413-B.png -crop 1553x67+0+2630 +repage images/OCS-413-B-3.png
+convert images/OCS-413-B.png -crop 1553x67+0+2708 +repage images/OCS-413-B-4.png
+convert images/OCS-413-B.png -crop 1553x311+0+2780 +repage images/OCS-413-B-5.png
+convert images/OCS-413-B.png -crop 1553x467+0+3098 +repage images/OCS-413-B-6.png
+convert images/OCS-413-B.png -crop 1553x627+0+3578 +repage images/OCS-413-B-7.png
+convert images/OCS-413-B.png -crop 1553x315+0+4214 +repage images/OCS-413-B-8.png
+rm images/OCS-413-B.bmp
+convert debug/OCS-413.png -stroke green -strokewidth 7 -draw "line 1605,323 3158,323" -draw "line 1605,2370 3158,2370" -draw "line 1605,2389 3158,2389" -draw "line 1605,2620 3158,2620" -draw "line 1605,2627 3158,2627" -draw "line 1605,2946 3158,2946" -draw "line 1605,2953 3158,2953" -draw "line 1605,3020 3158,3020" -draw "line 1605,3031 3158,3031" -draw "line 1605,3098 3158,3098" -draw "line 1605,3103 3158,3103" -draw "line 1605,3414 3158,3414" -draw "line 1605,3421 3158,3421" -draw "line 1605,3888 3158,3888" -draw "line 1605,3901 3158,3901" -draw "line 1605,4528 3158,4528" -draw "line 1605,4537 3158,4537" -draw "line 1605,4852 3158,4852" debug/OCS-413.png

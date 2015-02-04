@@ -1,0 +1,20 @@
+convert images/OCS-127-A.png -crop 1507x3331+0+0 +repage images/OCS-127-A-0.png
+convert -append images/OCS-126-A-9.png images/OCS-127-A-0.png images/OCS-126-A-9.png
+rm images/OCS-127-A-0.png
+convert images/OCS-127-A.png -crop 1507x69+0+3340 +repage images/OCS-127-A-1.png
+convert images/OCS-127-A.png -crop 1507x393+0+3414 +repage images/OCS-127-A-2.png
+convert images/OCS-127-A.png -crop 1507x393+0+3810 +repage images/OCS-127-A-3.png
+convert images/OCS-127-A.png -crop 1507x233+0+4212 +repage images/OCS-127-A-6.png
+convert images/OCS-127-A.png -crop 1507x71+0+4454 +repage images/OCS-127-A-9.png
+#
+#/OCS-127.png
+convert images/OCS-127-B.png -crop 1581x309+0+0 +repage images/OCS-127-B-0.png
+convert -append images/OCS-127-A-9.png images/OCS-127-B-0.png images/OCS-127-A-9.png
+rm images/OCS-127-B-0.png
+convert images/OCS-127-B.png -crop 1581x1344+0+316 +repage images/OCS-127-B-1.png
+convert images/OCS-127-B.png -crop 1581x392+0+1651 +repage images/OCS-127-B-2.png
+convert images/OCS-127-B.png -crop 1581x707+0+2060 +repage images/OCS-127-B-3.png
+convert images/OCS-127-B.png -crop 1581x383+0+2768 +repage images/OCS-127-B-4.png
+convert images/OCS-127-B.png -crop 1581x1361+0+3166 +repage images/OCS-127-B-5.png
+#
+#/OCS-127.png

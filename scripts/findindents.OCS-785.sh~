@@ -1,0 +1,22 @@
+convert images/OCS-785-A.png -crop 1557x153+0+0 +repage images/OCS-785-A-0.png
+convert -append images/OCS-784-B-9.png images/OCS-785-A-0.png images/OCS-784-B-9.png
+rm images/OCS-785-A-0.png
+convert images/OCS-785-A.png -crop 1557x707+0+156 +repage images/OCS-785-A-1.png
+convert images/OCS-785-A.png -crop 1557x1417+0+880 +repage images/OCS-785-A-2.png
+convert images/OCS-785-A.png -crop 1557x2234+0+2308 +repage images/OCS-785-A-3.png
+convert images/OCS-785-A.png -crop 1557x51+0+4590 +repage images/OCS-785-A-4.png
+rm images/OCS-785-A.bmp
+convert debug/OCS-785.png -stroke green -strokewidth 7 -draw "line 63,319 1620,319" -draw "line 63,472 1620,472" -draw "line 63,475 1620,475" -draw "line 63,1182 1620,1182" -draw "line 63,1199 1620,1199" -draw "line 63,2616 1620,2616" -draw "line 63,2627 1620,2627" -draw "line 63,4861 1620,4861" -draw "line 63,4909 1620,4909" -draw "line 63,4960 1620,4960" debug/OCS-785.png
+convert images/OCS-785-B.png -crop 1579x1023+0+0 +repage images/OCS-785-B-0.png
+convert -append images/OCS-785-A-4.png images/OCS-785-B-0.png images/OCS-785-A-4.png
+rm images/OCS-785-B-0.png
+convert images/OCS-785-B.png -crop 1579x71+0+1032 +repage images/OCS-785-B-1.png
+convert images/OCS-785-B.png -crop 1579x69+0+1112 +repage images/OCS-785-B-2.png
+convert images/OCS-785-B.png -crop 1579x320+0+1182 +repage images/OCS-785-B-3.png
+convert images/OCS-785-B.png -crop 1579x404+0+1493 +repage images/OCS-785-B-4.png
+convert images/OCS-785-B.png -crop 1579x469+0+1902 +repage images/OCS-785-B-5.png
+convert images/OCS-785-B.png -crop 1579x859+0+2382 +repage images/OCS-785-B-6.png
+convert images/OCS-785-B.png -crop 1579x473+0+3252 +repage images/OCS-785-B-7.png
+convert images/OCS-785-B.png -crop 1579x785+0+3732 +repage images/OCS-785-B-8.png
+rm images/OCS-785-B.bmp
+convert debug/OCS-785.png -stroke green -strokewidth 7 -draw "line 1719,323 3298,323" -draw "line 1719,1346 3298,1346" -draw "line 1719,1355 3298,1355" -draw "line 1719,1426 3298,1426" -draw "line 1719,1435 3298,1435" -draw "line 1719,1504 3298,1504" -draw "line 1719,1505 3298,1505" -draw "line 1719,1825 3298,1825" -draw "line 1719,1816 3298,1816" -draw "line 1719,2220 3298,2220" -draw "line 1719,2225 3298,2225" -draw "line 1719,2694 3298,2694" -draw "line 1719,2705 3298,2705" -draw "line 1719,3564 3298,3564" -draw "line 1719,3575 3298,3575" -draw "line 1719,4048 3298,4048" -draw "line 1719,4055 3298,4055" -draw "line 1719,4840 3298,4840" debug/OCS-785.png

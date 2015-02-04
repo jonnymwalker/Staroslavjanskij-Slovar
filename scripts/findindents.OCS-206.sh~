@@ -1,0 +1,30 @@
+convert images/OCS-206-A.png -crop 1578x147+0+0 +repage images/OCS-206-A-0.png
+convert -append images/OCS-205-B-5.png images/OCS-206-A-0.png images/OCS-205-B-5.png
+rm images/OCS-206-A-0.png
+convert images/OCS-206-A.png -crop 1578x157+0+154 +repage images/OCS-206-A-1.png
+convert images/OCS-206-A.png -crop 1578x71+0+320 +repage images/OCS-206-A-2.png
+convert images/OCS-206-A.png -crop 1578x707+0+398 +repage images/OCS-206-A-3.png
+convert images/OCS-206-A.png -crop 1578x628+0+1114 +repage images/OCS-206-A-4.png
+convert images/OCS-206-A.png -crop 1578x266+0+1988 +repage images/OCS-206-A-5.png
+convert images/OCS-206-A.png -crop 1578x478+0+2296 +repage images/OCS-206-A-6.png
+convert images/OCS-206-A.png -crop 1578x882+0+2765 +repage images/OCS-206-A-7.png
+convert images/OCS-206-A.png -crop 1578x473+0+3650 +repage images/OCS-206-A-8.png
+convert images/OCS-206-A.png -crop 1578x395+0+4130 +repage images/OCS-206-A-9.png
+rm images/OCS-206-A.bmp
+convert debug/OCS-206.png -stroke green -strokewidth 7 -draw "line 171,305 1749,305" -draw "line 171,452 1749,452" -draw "line 171,459 1749,459" -draw "line 171,616 1749,616" -draw "line 171,625 1749,625" -draw "line 171,696 1749,696" -draw "line 171,703 1749,703" -draw "line 171,1410 1749,1410" -draw "line 171,1419 1749,1419" -draw "line 171,2047 1749,2047" -draw "line 171,2293 1749,2293" -draw "line 171,2559 1749,2559" -draw "line 171,2601 1749,2601" -draw "line 171,3079 1749,3079" -draw "line 171,3070 1749,3070" -draw "line 171,3952 1749,3952" -draw "line 171,3955 1749,3955" -draw "line 171,4428 1749,4428" -draw "line 171,4435 1749,4435" -draw "line 171,4830 1749,4830" debug/OCS-206.png
+convert images/OCS-206-B.png -crop 1503x953+0+0 +repage images/OCS-206-B-0.png
+convert -append images/OCS-206-A-9.png images/OCS-206-B-0.png images/OCS-206-A-9.png
+rm images/OCS-206-B-0.png
+convert images/OCS-206-B.png -crop 1503x320+0+958 +repage images/OCS-206-B-1.png
+convert images/OCS-206-B.png -crop 1503x720+0+1269 +repage images/OCS-206-B-2.png
+convert images/OCS-206-B.png -crop 1503x399+0+1994 +repage images/OCS-206-B-3.png
+convert images/OCS-206-B.png -crop 1503x233+0+2398 +repage images/OCS-206-B-4.png
+convert images/OCS-206-B.png -crop 1503x313+0+2638 +repage images/OCS-206-B-5.png
+convert images/OCS-206-B.png -crop 1503x61+0+2954 +repage images/OCS-206-B-6.png
+convert images/OCS-206-B.png -crop 1503x231+0+3034 +repage images/OCS-206-B-7.png
+convert images/OCS-206-B.png -crop 1503x71+0+3274 +repage images/OCS-206-B-8.png
+convert images/OCS-206-B.png -crop 1503x309+0+3350 +repage images/OCS-206-B-9.png
+convert images/OCS-206-B.png -crop 1503x631+0+3662 +repage images/OCS-206-B-10.png
+convert images/OCS-206-B.png -crop 1503x239+0+4300 +repage images/OCS-206-B-11.png
+rm images/OCS-206-B.bmp
+convert debug/OCS-206.png -stroke green -strokewidth 7 -draw "line 1845,293 3348,293" -draw "line 1845,1246 3348,1246" -draw "line 1845,1251 3348,1251" -draw "line 1845,1571 3348,1571" -draw "line 1845,1562 3348,1562" -draw "line 1845,2282 3348,2282" -draw "line 1845,2287 3348,2287" -draw "line 1845,2686 3348,2686" -draw "line 1845,2691 3348,2691" -draw "line 1845,2924 3348,2924" -draw "line 1845,2931 3348,2931" -draw "line 1845,3244 3348,3244" -draw "line 1845,3247 3348,3247" -draw "line 1845,3308 3348,3308" -draw "line 1845,3327 3348,3327" -draw "line 1845,3558 3348,3558" -draw "line 1845,3567 3348,3567" -draw "line 1845,3638 3348,3638" -draw "line 1845,3643 3348,3643" -draw "line 1845,3952 3348,3952" -draw "line 1845,3955 3348,3955" -draw "line 1845,4586 3348,4586" -draw "line 1845,4593 3348,4593" -draw "line 1845,4832 3348,4832" debug/OCS-206.png

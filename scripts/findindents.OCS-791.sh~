@@ -1,0 +1,35 @@
+convert images/OCS-791-A.png -crop 1560x133+0+0 +repage images/OCS-791-A-0.png
+convert -append images/OCS-790-B-10.png images/OCS-791-A-0.png images/OCS-790-B-10.png
+rm images/OCS-791-A-0.png
+convert images/OCS-791-A.png -crop 1560x49+0+162 +repage images/OCS-791-A-1.png
+convert images/OCS-791-A.png -crop 1560x389+0+222 +repage images/OCS-791-A-2.png
+convert images/OCS-791-A.png -crop 1560x465+0+620 +repage images/OCS-791-A-3.png
+convert images/OCS-791-A.png -crop 1560x1183+0+1094 +repage images/OCS-791-A-4.png
+convert images/OCS-791-A.png -crop 1560x375+0+2286 +repage images/OCS-791-A-5.png
+convert images/OCS-791-A.png -crop 1560x463+0+2672 +repage images/OCS-791-A-6.png
+convert images/OCS-791-A.png -crop 1560x53+0+3166 +repage images/OCS-791-A-7.png
+convert images/OCS-791-A.png -crop 1560x549+0+3224 +repage images/OCS-791-A-8.png
+convert images/OCS-791-A.png -crop 1560x549+0+3782 +repage images/OCS-791-A-9.png
+convert images/OCS-791-A.png -crop 1560x151+0+4340 +repage images/OCS-791-A-10.png
+rm images/OCS-791-A.bmp
+convert debug/OCS-791.png -stroke green -strokewidth 7 -draw "line 90,321 1650,321" -draw "line 90,454 1650,454" -draw "line 90,483 1650,483" -draw "line 90,532 1650,532" -draw "line 90,543 1650,543" -draw "line 90,932 1650,932" -draw "line 90,941 1650,941" -draw "line 90,1406 1650,1406" -draw "line 90,1415 1650,1415" -draw "line 90,2598 1650,2598" -draw "line 90,2607 1650,2607" -draw "line 90,2982 1650,2982" -draw "line 90,2993 1650,2993" -draw "line 90,3456 1650,3456" -draw "line 90,3487 1650,3487" -draw "line 90,3540 1650,3540" -draw "line 90,3545 1650,3545" -draw "line 90,4094 1650,4094" -draw "line 90,4103 1650,4103" -draw "line 90,4652 1650,4652" -draw "line 90,4661 1650,4661" -draw "line 90,4812 1650,4812" debug/OCS-791.png
+convert images/OCS-791-B.png -crop 1555x211+0+0 +repage images/OCS-791-B-0.png
+convert images/OCS-791-B.png -crop 1555x73+0+232 +repage images/OCS-791-B-1.png
+convert images/OCS-791-B.png -crop 1555x155+0+390 +repage images/OCS-791-B-2.png
+convert images/OCS-791-B.png -crop 1555x67+0+552 +repage images/OCS-791-B-3.png
+convert images/OCS-791-B.png -crop 1555x67+0+630 +repage images/OCS-791-B-4.png
+convert images/OCS-791-B.png -crop 1555x63+0+712 +repage images/OCS-791-B-5.png
+convert images/OCS-791-B.png -crop 1555x63+0+792 +repage images/OCS-791-B-6.png
+convert images/OCS-791-B.png -crop 1555x71+0+866 +repage images/OCS-791-B-7.png
+convert images/OCS-791-B.png -crop 1555x76+0+1336 +repage images/OCS-791-B-8.png
+convert images/OCS-791-B.png -crop 1555x92+0+1403 +repage images/OCS-791-B-9.png
+convert images/OCS-791-B.png -crop 1555x227+0+1500 +repage images/OCS-791-B-10.png
+convert images/OCS-791-B.png -crop 1555x781+0+1736 +repage images/OCS-791-B-11.png
+convert images/OCS-791-B.png -crop 1555x145+0+2528 +repage images/OCS-791-B-12.png
+convert images/OCS-791-B.png -crop 1555x65+0+2692 +repage images/OCS-791-B-13.png
+convert images/OCS-791-B.png -crop 1555x53+0+2784 +repage images/OCS-791-B-14.png
+convert images/OCS-791-B.png -crop 1555x307+0+2844 +repage images/OCS-791-B-15.png
+convert images/OCS-791-B.png -crop 1555x371+0+3162 +repage images/OCS-791-B-16.png
+convert images/OCS-791-B.png -crop 1555x631+0+3554 +repage images/OCS-791-B-17.png
+rm images/OCS-791-B.bmp
+convert debug/OCS-791.png -stroke green -strokewidth 7 -draw "line 1749,625 3304,625" -draw "line 1749,836 3304,836" -draw "line 1749,857 3304,857" -draw "line 1749,930 3304,930" -draw "line 1749,1015 3304,1015" -draw "line 1749,1170 3304,1170" -draw "line 1749,1177 3304,1177" -draw "line 1749,1244 3304,1244" -draw "line 1749,1255 3304,1255" -draw "line 1749,1322 3304,1322" -draw "line 1749,1337 3304,1337" -draw "line 1749,1400 3304,1400" -draw "line 1749,1417 3304,1417" -draw "line 1749,1480 3304,1480" -draw "line 1749,1491 3304,1491" -draw "line 1749,1562 3304,1562" -draw "line 1749,1961 3304,1961" -draw "line 1749,2037 3304,2037" -draw "line 1749,2028 3304,2028" -draw "line 1749,2120 3304,2120" -draw "line 1749,2125 3304,2125" -draw "line 1749,2352 3304,2352" -draw "line 1749,2361 3304,2361" -draw "line 1749,3142 3304,3142" -draw "line 1749,3153 3304,3153" -draw "line 1749,3298 3304,3298" -draw "line 1749,3317 3304,3317" -draw "line 1749,3382 3304,3382" -draw "line 1749,3409 3304,3409" -draw "line 1749,3462 3304,3462" -draw "line 1749,3469 3304,3469" -draw "line 1749,3776 3304,3776" -draw "line 1749,3787 3304,3787" -draw "line 1749,4158 3304,4158" -draw "line 1749,4179 3304,4179" -draw "line 1749,4810 3304,4810" debug/OCS-791.png

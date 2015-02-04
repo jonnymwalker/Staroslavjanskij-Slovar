@@ -1,0 +1,17 @@
+convert images/OCS-455-A.png -crop 1461x233+0+0 +repage images/OCS-455-A-0.png
+convert images/OCS-455-A.png -crop 1461x400+0+233 +repage images/OCS-455-A-0.png
+convert images/OCS-455-A.png -crop 1461x878+0+636 +repage images/OCS-455-A-1.png
+convert images/OCS-455-A.png -crop 1461x864+0+1507 +repage images/OCS-455-A-2.png
+convert images/OCS-455-A.png -crop 1461x797+0+2386 +repage images/OCS-455-A-3.png
+convert images/OCS-455-A.png -crop 1461x553+0+3184 +repage images/OCS-455-A-4.png
+convert images/OCS-455-A.png -crop 1461x391+0+3748 +repage images/OCS-455-A-5.png
+convert images/OCS-455-A.png -crop 1461x473+0+4140 +repage images/OCS-455-A-6.png
+rm images/OCS-455-A.bmp
+convert debug/OCS-455.png -stroke green -strokewidth 7 -draw "line 51,241 1512,241" -draw "line 51,874 1512,874" -draw "line 51,877 1512,877" -draw "line 51,1755 1512,1755" -draw "line 51,1748 1512,1748" -draw "line 51,2612 1512,2612" -draw "line 51,2627 1512,2627" -draw "line 51,3424 1512,3424" -draw "line 51,3425 1512,3425" -draw "line 51,3978 1512,3978" -draw "line 51,3989 1512,3989" -draw "line 51,4380 1512,4380" -draw "line 51,4381 1512,4381" -draw "line 51,4854 1512,4854" debug/OCS-455.png
+convert images/OCS-455-B.png -crop 1551x307+0+0 +repage images/OCS-455-B-0.png
+convert images/OCS-455-B.png -crop 1551x873+0+308 +repage images/OCS-455-B-1.png
+convert images/OCS-455-B.png -crop 1551x1438+0+1182 +repage images/OCS-455-B-2.png
+convert images/OCS-455-B.png -crop 1551x480+0+2611 +repage images/OCS-455-B-3.png
+convert images/OCS-455-B.png -crop 1551x1511+0+3092 +repage images/OCS-455-B-4.png
+rm images/OCS-455-B.bmp
+convert debug/OCS-455.png -stroke green -strokewidth 7 -draw "line 1619,251 3170,251" -draw "line 1619,558 3170,558" -draw "line 1619,559 3170,559" -draw "line 1619,1432 3170,1432" -draw "line 1619,1433 3170,1433" -draw "line 1619,2871 3170,2871" -draw "line 1619,2862 3170,2862" -draw "line 1619,3342 3170,3342" -draw "line 1619,3343 3170,3343" -draw "line 1619,4854 3170,4854" debug/OCS-455.png

@@ -1,0 +1,35 @@
+convert images/OCS-446-A.png -crop 1548x373+0+0 +repage images/OCS-446-A-0.png
+convert -append images/OCS-445-B-5.png images/OCS-446-A-0.png images/OCS-445-B-5.png
+rm images/OCS-446-A-0.png
+convert images/OCS-446-A.png -crop 1548x1739+0+394 +repage images/OCS-446-A-1.png
+convert images/OCS-446-A.png -crop 1548x67+0+2142 +repage images/OCS-446-A-2.png
+convert images/OCS-446-A.png -crop 1548x785+0+2218 +repage images/OCS-446-A-3.png
+convert images/OCS-446-A.png -crop 1548x699+0+3004 +repage images/OCS-446-A-4.png
+convert images/OCS-446-A.png -crop 1548x53+0+3742 +repage images/OCS-446-A-5.png
+convert images/OCS-446-A.png -crop 1548x63+0+3806 +repage images/OCS-446-A-6.png
+convert images/OCS-446-A.png -crop 1548x231+0+3882 +repage images/OCS-446-A-7.png
+convert images/OCS-446-A.png -crop 1548x315+0+4116 +repage images/OCS-446-A-8.png
+convert images/OCS-446-A.png -crop 1548x69+0+4442 +repage images/OCS-446-A-9.png
+#
+#/OCS-446.png
+convert images/OCS-446-B.png -crop 1455x151+0+0 +repage images/OCS-446-B-0.png
+convert -append images/OCS-446-A-9.png images/OCS-446-B-0.png images/OCS-446-A-9.png
+rm images/OCS-446-B-0.png
+convert images/OCS-446-B.png -crop 1455x313+0+160 +repage images/OCS-446-B-1.png
+convert images/OCS-446-B.png -crop 1455x393+0+476 +repage images/OCS-446-B-2.png
+convert images/OCS-446-B.png -crop 1455x465+0+876 +repage images/OCS-446-B-3.png
+convert images/OCS-446-B.png -crop 1455x467+0+1354 +repage images/OCS-446-B-4.png
+convert images/OCS-446-B.png -crop 1455x237+0+1824 +repage images/OCS-446-B-5.png
+convert images/OCS-446-B.png -crop 1455x67+0+2070 +repage images/OCS-446-B-6.png
+convert images/OCS-446-B.png -crop 1455x463+0+2152 +repage images/OCS-446-B-7.png
+convert images/OCS-446-B.png -crop 1455x393+0+2618 +repage images/OCS-446-B-8.png
+convert images/OCS-446-B.png -crop 1455x67+0+3024 +repage images/OCS-446-B-9.png
+convert images/OCS-446-B.png -crop 1455x229+0+3100 +repage images/OCS-446-B-10.png
+convert images/OCS-446-B.png -crop 1455x39+0+3354 +repage images/OCS-446-B-11.png
+convert images/OCS-446-B.png -crop 1455x465+0+3418 +repage images/OCS-446-B-12.png
+convert images/OCS-446-B.png -crop 1455x313+0+3888 +repage images/OCS-446-B-13.png
+convert images/OCS-446-B.png -crop 1455x67+0+4214 +repage images/OCS-446-B-14.png
+convert images/OCS-446-B.png -crop 1455x145+0+4292 +repage images/OCS-446-B-15.png
+convert images/OCS-446-B.png -crop 1455x69+0+4450 +repage images/OCS-446-B-16.png
+#
+#/OCS-446.png

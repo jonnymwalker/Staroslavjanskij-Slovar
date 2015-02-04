@@ -1,0 +1,32 @@
+convert images/OCS-417-A.png -crop 1457x158+0+0 +repage images/OCS-417-A-0.png
+convert -append images/OCS-416-B-7.png images/OCS-417-A-0.png images/OCS-416-B-7.png
+rm images/OCS-417-A-0.png
+convert images/OCS-417-A.png -crop 1457x396+0+160 +repage images/OCS-417-A-0.png
+convert images/OCS-417-A.png -crop 1457x549+0+556 +repage images/OCS-417-A-1.png
+convert images/OCS-417-A.png -crop 1457x307+0+1112 +repage images/OCS-417-A-2.png
+convert images/OCS-417-A.png -crop 1457x133+0+1432 +repage images/OCS-417-A-3.png
+convert images/OCS-417-A.png -crop 1457x73+0+1590 +repage images/OCS-417-A-4.png
+convert images/OCS-417-A.png -crop 1457x467+0+1668 +repage images/OCS-417-A-5.png
+convert images/OCS-417-A.png -crop 1457x389+0+2142 +repage images/OCS-417-A-6.png
+convert images/OCS-417-A.png -crop 1457x385+0+2540 +repage images/OCS-417-A-7.png
+convert images/OCS-417-A.png -crop 1457x69+0+2938 +repage images/OCS-417-A-8.png
+convert images/OCS-417-A.png -crop 1457x467+0+3016 +repage images/OCS-417-A-9.png
+convert images/OCS-417-A.png -crop 1457x1034+0+3494 +repage images/OCS-417-A-10.png
+rm images/OCS-417-A.bmp
+convert debug/OCS-417.png -stroke green -strokewidth 7 -draw "line 79,319 1536,319" -draw "line 79,864 1536,864" -draw "line 79,875 1536,875" -draw "line 79,1424 1536,1424" -draw "line 79,1431 1536,1431" -draw "line 79,1738 1536,1738" -draw "line 79,1751 1536,1751" -draw "line 79,1884 1536,1884" -draw "line 79,1909 1536,1909" -draw "line 79,1982 1536,1982" -draw "line 79,1987 1536,1987" -draw "line 79,2454 1536,2454" -draw "line 79,2461 1536,2461" -draw "line 79,2850 1536,2850" -draw "line 79,2859 1536,2859" -draw "line 79,3244 1536,3244" -draw "line 79,3257 1536,3257" -draw "line 79,3326 1536,3326" -draw "line 79,3335 1536,3335" -draw "line 79,3802 1536,3802" -draw "line 79,3813 1536,3813" -draw "line 79,4847 1536,4847" debug/OCS-417.png
+convert images/OCS-417-B.png -crop 1557x469+0+0 +repage images/OCS-417-B-0.png
+convert -append images/OCS-417-A-10.png images/OCS-417-B-0.png images/OCS-417-A-10.png
+rm images/OCS-417-B-0.png
+convert images/OCS-417-B.png -crop 1557x393+0+470 +repage images/OCS-417-B-1.png
+convert images/OCS-417-B.png -crop 1557x471+0+868 +repage images/OCS-417-B-2.png
+convert images/OCS-417-B.png -crop 1557x787+0+1348 +repage images/OCS-417-B-3.png
+convert images/OCS-417-B.png -crop 1557x239+0+2138 +repage images/OCS-417-B-4.png
+convert images/OCS-417-B.png -crop 1557x67+0+2380 +repage images/OCS-417-B-5.png
+convert images/OCS-417-B.png -crop 1557x309+0+2460 +repage images/OCS-417-B-6.png
+convert images/OCS-417-B.png -crop 1557x314+0+2778 +repage images/OCS-417-B-7.png
+convert images/OCS-417-B.png -crop 1557x326+0+3083 +repage images/OCS-417-B-8.png
+convert images/OCS-417-B.png -crop 1557x297+0+3414 +repage images/OCS-417-B-9.png
+convert images/OCS-417-B.png -crop 1557x307+0+3730 +repage images/OCS-417-B-10.png
+convert images/OCS-417-B.png -crop 1557x477+0+4040 +repage images/OCS-417-B-11.png
+rm images/OCS-417-B.bmp
+convert debug/OCS-417.png -stroke green -strokewidth 7 -draw "line 1643,319 3200,319" -draw "line 1643,788 3200,788" -draw "line 1643,789 3200,789" -draw "line 1643,1182 3200,1182" -draw "line 1643,1187 3200,1187" -draw "line 1643,1658 3200,1658" -draw "line 1643,1667 3200,1667" -draw "line 1643,2454 3200,2454" -draw "line 1643,2457 3200,2457" -draw "line 1643,2696 3200,2696" -draw "line 1643,2699 3200,2699" -draw "line 1643,2766 3200,2766" -draw "line 1643,2779 3200,2779" -draw "line 1643,3088 3200,3088" -draw "line 1643,3097 3200,3097" -draw "line 1643,3411 3200,3411" -draw "line 1643,3402 3200,3402" -draw "line 1643,3728 3200,3728" -draw "line 1643,3733 3200,3733" -draw "line 1643,4030 3200,4030" -draw "line 1643,4049 3200,4049" -draw "line 1643,4356 3200,4356" -draw "line 1643,4359 3200,4359" -draw "line 1643,4836 3200,4836" debug/OCS-417.png

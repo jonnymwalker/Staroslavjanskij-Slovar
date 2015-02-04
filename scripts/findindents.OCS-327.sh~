@@ -1,0 +1,26 @@
+convert images/OCS-327-A.png -crop 1519x1341+0+0 +repage images/OCS-327-A-0.png
+convert -append images/OCS-326-B-5.png images/OCS-327-A-0.png images/OCS-326-B-5.png
+rm images/OCS-327-A-0.png
+convert images/OCS-327-A.png -crop 1519x473+0+1346 +repage images/OCS-327-A-1.png
+convert images/OCS-327-A.png -crop 1519x233+0+1828 +repage images/OCS-327-A-2.png
+convert images/OCS-327-A.png -crop 1519x1023+0+2066 +repage images/OCS-327-A-3.png
+convert images/OCS-327-A.png -crop 1519x77+0+3098 +repage images/OCS-327-A-4.png
+convert images/OCS-327-A.png -crop 1519x627+0+3180 +repage images/OCS-327-A-5.png
+convert images/OCS-327-A.png -crop 1519x393+0+3812 +repage images/OCS-327-A-6.png
+convert images/OCS-327-A.png -crop 1519x71+0+4208 +repage images/OCS-327-A-7.png
+convert images/OCS-327-A.png -crop 1519x69+0+4292 +repage images/OCS-327-A-8.png
+convert images/OCS-327-A.png -crop 1519x69+0+4374 +repage images/OCS-327-A-9.png
+convert images/OCS-327-A.png -crop 1519x67+0+4452 +repage images/OCS-327-A-10.png
+rm images/OCS-327-A.bmp
+convert debug/OCS-327.png -stroke green -strokewidth 7 -draw "line 53,289 1572,289" -draw "line 53,1630 1572,1630" -draw "line 53,1635 1572,1635" -draw "line 53,2108 1572,2108" -draw "line 53,2117 1572,2117" -draw "line 53,2350 1572,2350" -draw "line 53,2355 1572,2355" -draw "line 53,3378 1572,3378" -draw "line 53,3387 1572,3387" -draw "line 53,3464 1572,3464" -draw "line 53,3469 1572,3469" -draw "line 53,4096 1572,4096" -draw "line 53,4101 1572,4101" -draw "line 53,4494 1572,4494" -draw "line 53,4497 1572,4497" -draw "line 53,4568 1572,4568" -draw "line 53,4581 1572,4581" -draw "line 53,4650 1572,4650" -draw "line 53,4663 1572,4663" -draw "line 53,4732 1572,4732" -draw "line 53,4741 1572,4741" -draw "line 53,4808 1572,4808" debug/OCS-327.png
+convert images/OCS-327-B.png -crop 1569x1097+0+0 +repage images/OCS-327-B-0.png
+convert -append images/OCS-327-A-10.png images/OCS-327-B-0.png images/OCS-327-A-10.png
+rm images/OCS-327-B-0.png
+convert images/OCS-327-B.png -crop 1569x309+0+1106 +repage images/OCS-327-B-1.png
+convert images/OCS-327-B.png -crop 1569x627+0+1422 +repage images/OCS-327-B-2.png
+convert images/OCS-327-B.png -crop 1569x307+0+2056 +repage images/OCS-327-B-3.png
+convert images/OCS-327-B.png -crop 1569x395+0+2364 +repage images/OCS-327-B-4.png
+convert images/OCS-327-B.png -crop 1569x1579+0+2772 +repage images/OCS-327-B-5.png
+convert images/OCS-327-B.png -crop 1569x151+0+4360 +repage images/OCS-327-B-6.png
+rm images/OCS-327-B.bmp
+convert debug/OCS-327.png -stroke green -strokewidth 7 -draw "line 1663,299 3232,299" -draw "line 1663,1396 3232,1396" -draw "line 1663,1405 3232,1405" -draw "line 1663,1714 3232,1714" -draw "line 1663,1721 3232,1721" -draw "line 1663,2348 3232,2348" -draw "line 1663,2355 3232,2355" -draw "line 1663,2662 3232,2662" -draw "line 1663,2663 3232,2663" -draw "line 1663,3058 3232,3058" -draw "line 1663,3071 3232,3071" -draw "line 1663,4650 3232,4650" -draw "line 1663,4659 3232,4659" -draw "line 1663,4810 3232,4810" debug/OCS-327.png

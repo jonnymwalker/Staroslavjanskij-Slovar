@@ -1,0 +1,31 @@
+convert images/OCS-287-A.png -crop 1525x1341+0+0 +repage images/OCS-287-A-0.png
+convert -append images/OCS-286-B-9.png images/OCS-287-A-0.png images/OCS-286-B-9.png
+rm images/OCS-287-A-0.png
+convert images/OCS-287-A.png -crop 1525x389+0+1352 +repage images/OCS-287-A-1.png
+convert images/OCS-287-A.png -crop 1525x229+0+1748 +repage images/OCS-287-A-2.png
+convert images/OCS-287-A.png -crop 1525x315+0+1984 +repage images/OCS-287-A-3.png
+convert images/OCS-287-A.png -crop 1525x309+0+2302 +repage images/OCS-287-A-4.png
+convert images/OCS-287-A.png -crop 1525x395+0+2618 +repage images/OCS-287-A-5.png
+convert images/OCS-287-A.png -crop 1525x307+0+3024 +repage images/OCS-287-A-6.png
+convert images/OCS-287-A.png -crop 1525x391+0+3336 +repage images/OCS-287-A-7.png
+convert images/OCS-287-A.png -crop 1525x307+0+3734 +repage images/OCS-287-A-8.png
+convert images/OCS-287-A.png -crop 1525x71+0+4054 +repage images/OCS-287-A-9.png
+convert images/OCS-287-A.png -crop 1525x55+0+4154 +repage images/OCS-287-A-10.png
+convert images/OCS-287-A.png -crop 1525x73+0+4214 +repage images/OCS-287-A-11.png
+convert images/OCS-287-A.png -crop 1525x71+0+4294 +repage images/OCS-287-A-12.png
+convert images/OCS-287-A.png -crop 1525x53+0+4392 +repage images/OCS-287-A-13.png
+convert images/OCS-287-A.png -crop 1525x73+0+4454 +repage images/OCS-287-A-14.png
+rm images/OCS-287-A.bmp
+convert debug/OCS-287.png -stroke green -strokewidth 7 -draw "line 77,269 1602,269" -draw "line 77,1610 1602,1610" -draw "line 77,1621 1602,1621" -draw "line 77,2010 1602,2010" -draw "line 77,2017 1602,2017" -draw "line 77,2246 1602,2246" -draw "line 77,2253 1602,2253" -draw "line 77,2568 1602,2568" -draw "line 77,2571 1602,2571" -draw "line 77,2880 1602,2880" -draw "line 77,2887 1602,2887" -draw "line 77,3282 1602,3282" -draw "line 77,3293 1602,3293" -draw "line 77,3600 1602,3600" -draw "line 77,3605 1602,3605" -draw "line 77,3996 1602,3996" -draw "line 77,4003 1602,4003" -draw "line 77,4310 1602,4310" -draw "line 77,4323 1602,4323" -draw "line 77,4394 1602,4394" -draw "line 77,4423 1602,4423" -draw "line 77,4478 1602,4478" -draw "line 77,4483 1602,4483" -draw "line 77,4556 1602,4556" -draw "line 77,4563 1602,4563" -draw "line 77,4634 1602,4634" -draw "line 77,4661 1602,4661" -draw "line 77,4714 1602,4714" -draw "line 77,4723 1602,4723" -draw "line 77,4796 1602,4796" debug/OCS-287.png
+convert images/OCS-287-B.png -crop 1562x311+0+0 +repage images/OCS-287-B-0.png
+convert images/OCS-287-B.png -crop 1562x233+0+320 +repage images/OCS-287-B-1.png
+convert images/OCS-287-B.png -crop 1562x393+0+562 +repage images/OCS-287-B-2.png
+convert images/OCS-287-B.png -crop 1562x558+0+960 +repage images/OCS-287-B-3.png
+convert images/OCS-287-B.png -crop 1562x396+0+1509 +repage images/OCS-287-B-4.png
+convert images/OCS-287-B.png -crop 1562x71+0+1918 +repage images/OCS-287-B-5.png
+convert images/OCS-287-B.png -crop 1562x375+0+1998 +repage images/OCS-287-B-6.png
+convert images/OCS-287-B.png -crop 1562x475+0+2384 +repage images/OCS-287-B-7.png
+convert images/OCS-287-B.png -crop 1562x307+0+2870 +repage images/OCS-287-B-8.png
+convert images/OCS-287-B.png -crop 1562x1337+0+3188 +repage images/OCS-287-B-9.png
+rm images/OCS-287-B.bmp
+convert debug/OCS-287.png -stroke green -strokewidth 7 -draw "line 1704,263 3266,263" -draw "line 1704,574 3266,574" -draw "line 1704,583 3266,583" -draw "line 1704,816 3266,816" -draw "line 1704,825 3266,825" -draw "line 1704,1218 3266,1218" -draw "line 1704,1223 3266,1223" -draw "line 1704,1781 3266,1781" -draw "line 1704,1772 3266,1772" -draw "line 1704,2168 3266,2168" -draw "line 1704,2181 3266,2181" -draw "line 1704,2252 3266,2252" -draw "line 1704,2261 3266,2261" -draw "line 1704,2636 3266,2636" -draw "line 1704,2647 3266,2647" -draw "line 1704,3122 3266,3122" -draw "line 1704,3133 3266,3133" -draw "line 1704,3440 3266,3440" -draw "line 1704,3451 3266,3451" -draw "line 1704,4788 3266,4788" debug/OCS-287.png

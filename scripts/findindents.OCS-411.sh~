@@ -1,0 +1,29 @@
+convert images/OCS-411-A.png -crop 1459x1411+0+0 +repage images/OCS-411-A-0.png
+convert -append images/OCS-410-B-8.png images/OCS-411-A-0.png images/OCS-410-B-8.png
+rm images/OCS-411-A-0.png
+convert images/OCS-411-A.png -crop 1459x229+0+1420 +repage images/OCS-411-A-1.png
+convert images/OCS-411-A.png -crop 1459x317+0+1652 +repage images/OCS-411-A-2.png
+convert images/OCS-411-A.png -crop 1459x689+0+1976 +repage images/OCS-411-A-3.png
+convert images/OCS-411-A.png -crop 1459x59+0+2690 +repage images/OCS-411-A-4.png
+convert images/OCS-411-A.png -crop 1459x71+0+2770 +repage images/OCS-411-A-5.png
+convert images/OCS-411-A.png -crop 1459x69+0+2848 +repage images/OCS-411-A-6.png
+convert images/OCS-411-A.png -crop 1459x1511+0+2920 +repage images/OCS-411-A-7.png
+convert images/OCS-411-A.png -crop 1459x71+0+4436 +repage images/OCS-411-A-21.png
+rm images/OCS-411-A.bmp
+convert debug/OCS-411.png -stroke green -strokewidth 7 -draw "line 73,309 1532,309" -draw "line 73,1720 1532,1720" -draw "line 73,1729 1532,1729" -draw "line 73,1958 1532,1958" -draw "line 73,1961 1532,1961" -draw "line 73,2278 1532,2278" -draw "line 73,2285 1532,2285" -draw "line 73,2974 1532,2974" -draw "line 73,2999 1532,2999" -draw "line 73,3058 1532,3058" -draw "line 73,3079 1532,3079" -draw "line 73,3150 1532,3150" -draw "line 73,3157 1532,3157" -draw "line 73,3226 1532,3226" -draw "line 73,3229 1532,3229" -draw "line 73,3462 1532,3462" -draw "line 73,3471 1532,3471" -draw "line 73,3624 1532,3624" -draw "line 73,3633 1532,3633" -draw "line 73,3786 1532,3786" -draw "line 73,3791 1532,3791" -draw "line 73,3864 1532,3864" -draw "line 73,3871 1532,3871" -draw "line 73,3942 1532,3942" -draw "line 73,3947 1532,3947" -draw "line 73,4014 1532,4014" -draw "line 73,4027 1532,4027" -draw "line 73,4096 1532,4096" -draw "line 73,4101 1532,4101" -draw "line 73,4182 1532,4182" -draw "line 73,4189 1532,4189" -draw "line 73,4263 1532,4263" -draw "line 73,4254 1532,4254" -draw "line 73,4338 1532,4338" -draw "line 73,4357 1532,4357" -draw "line 73,4422 1532,4422" -draw "line 73,4435 1532,4435" -draw "line 73,4581 1532,4581" -draw "line 73,4572 1532,4572" -draw "line 73,4654 1532,4654" -draw "line 73,4655 1532,4655" -draw "line 73,4740 1532,4740" -draw "line 73,4745 1532,4745" -draw "line 73,4816 1532,4816" debug/OCS-411.png
+convert images/OCS-411-B.png -crop 1561x240+0+0 +repage images/OCS-411-B-0.png
+convert -append images/OCS-411-A-21.png images/OCS-411-B-0.png images/OCS-411-A-21.png
+rm images/OCS-411-B-0.png
+convert images/OCS-411-B.png -crop 1561x628+0+231 +repage images/OCS-411-B-1.png
+convert images/OCS-411-B.png -crop 1561x391+0+872 +repage images/OCS-411-B-2.png
+convert images/OCS-411-B.png -crop 1561x375+0+1268 +repage images/OCS-411-B-3.png
+convert images/OCS-411-B.png -crop 1561x315+0+1660 +repage images/OCS-411-B-4.png
+convert images/OCS-411-B.png -crop 1561x137+0+1982 +repage images/OCS-411-B-5.png
+convert images/OCS-411-B.png -crop 1561x227+0+2142 +repage images/OCS-411-B-6.png
+convert images/OCS-411-B.png -crop 1561x307+0+2378 +repage images/OCS-411-B-7.png
+convert images/OCS-411-B.png -crop 1561x131+0+2696 +repage images/OCS-411-B-8.png
+convert images/OCS-411-B.png -crop 1561x1099+0+2854 +repage images/OCS-411-B-9.png
+convert images/OCS-411-B.png -crop 1561x389+0+3962 +repage images/OCS-411-B-10.png
+convert images/OCS-411-B.png -crop 1561x151+0+4360 +repage images/OCS-411-B-11.png
+rm images/OCS-411-B.bmp
+convert debug/OCS-411.png -stroke green -strokewidth 7 -draw "line 1637,305 3198,305" -draw "line 1637,545 3198,545" -draw "line 1637,536 3198,536" -draw "line 1637,1164 3198,1164" -draw "line 1637,1177 3198,1177" -draw "line 1637,1568 3198,1568" -draw "line 1637,1573 3198,1573" -draw "line 1637,1948 3198,1948" -draw "line 1637,1965 3198,1965" -draw "line 1637,2280 3198,2280" -draw "line 1637,2287 3198,2287" -draw "line 1637,2424 3198,2424" -draw "line 1637,2447 3198,2447" -draw "line 1637,2674 3198,2674" -draw "line 1637,2683 3198,2683" -draw "line 1637,2990 3198,2990" -draw "line 1637,3001 3198,3001" -draw "line 1637,3132 3198,3132" -draw "line 1637,3159 3198,3159" -draw "line 1637,4258 3198,4258" -draw "line 1637,4267 3198,4267" -draw "line 1637,4656 3198,4656" -draw "line 1637,4665 3198,4665" -draw "line 1637,4816 3198,4816" debug/OCS-411.png

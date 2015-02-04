@@ -1,0 +1,23 @@
+convert images/OCS-673-A.png -crop 1557x1581+0+0 +repage images/OCS-673-A-0.png
+convert -append images/OCS-672-B-8.png images/OCS-673-A-0.png images/OCS-672-B-8.png
+rm images/OCS-673-A-0.png
+convert images/OCS-673-A.png -crop 1557x397+0+1582 +repage images/OCS-673-A-1.png
+convert images/OCS-673-A.png -crop 1557x71+0+1986 +repage images/OCS-673-A-2.png
+convert images/OCS-673-A.png -crop 1557x783+0+2062 +repage images/OCS-673-A-3.png
+convert images/OCS-673-A.png -crop 1557x1028+0+2854 +repage images/OCS-673-A-4.png
+convert images/OCS-673-A.png -crop 1557x394+0+3873 +repage images/OCS-673-A-5.png
+convert images/OCS-673-A.png -crop 1557x233+0+4282 +repage images/OCS-673-A-6.png
+rm images/OCS-673-A.bmp
+convert debug/OCS-673.png -stroke green -strokewidth 7 -draw "line 75,357 1632,357" -draw "line 75,1938 1632,1938" -draw "line 75,1939 1632,1939" -draw "line 75,2336 1632,2336" -draw "line 75,2343 1632,2343" -draw "line 75,2414 1632,2414" -draw "line 75,2419 1632,2419" -draw "line 75,3202 1632,3202" -draw "line 75,3211 1632,3211" -draw "line 75,4239 1632,4239" -draw "line 75,4230 1632,4230" -draw "line 75,4624 1632,4624" -draw "line 75,4639 1632,4639" -draw "line 75,4907 1632,4907" -draw "line 75,4955 1632,4955" -draw "line 75,5012 1632,5012" debug/OCS-673.png
+convert images/OCS-673-B.png -crop 1571x221+0+0 +repage images/OCS-673-B-0.png
+convert -append images/OCS-673-A-6.png images/OCS-673-B-0.png images/OCS-673-A-6.png
+rm images/OCS-673-B-0.png
+convert images/OCS-673-B.png -crop 1571x707+0+230 +repage images/OCS-673-B-1.png
+convert images/OCS-673-B.png -crop 1571x235+0+940 +repage images/OCS-673-B-2.png
+convert images/OCS-673-B.png -crop 1571x465+0+1180 +repage images/OCS-673-B-3.png
+convert images/OCS-673-B.png -crop 1571x865+0+1654 +repage images/OCS-673-B-4.png
+convert images/OCS-673-B.png -crop 1571x1165+0+2528 +repage images/OCS-673-B-5.png
+convert images/OCS-673-B.png -crop 1571x309+0+3718 +repage images/OCS-673-B-6.png
+convert images/OCS-673-B.png -crop 1571x467+0+4034 +repage images/OCS-673-B-7.png
+rm images/OCS-673-B.bmp
+convert debug/OCS-673.png -stroke green -strokewidth 7 -draw "line 1719,367 3290,367" -draw "line 1719,588 3290,588" -draw "line 1719,597 3290,597" -draw "line 1719,1304 3290,1304" -draw "line 1719,1307 3290,1307" -draw "line 1719,1542 3290,1542" -draw "line 1719,1547 3290,1547" -draw "line 1719,2012 3290,2012" -draw "line 1719,2021 3290,2021" -draw "line 1719,2886 3290,2886" -draw "line 1719,2895 3290,2895" -draw "line 1719,4060 3290,4060" -draw "line 1719,4085 3290,4085" -draw "line 1719,4394 3290,4394" -draw "line 1719,4401 3290,4401" -draw "line 1719,4868 3290,4868" debug/OCS-673.png

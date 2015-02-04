@@ -1,0 +1,29 @@
+convert images/OCS-439-A.png -crop 1459x554+0+0 +repage images/OCS-439-A-0.png
+convert images/OCS-439-A.png -crop 1459x786+0+550 +repage images/OCS-439-A-1.png
+convert images/OCS-439-A.png -crop 1459x213+0+1362 +repage images/OCS-439-A-2.png
+convert images/OCS-439-A.png -crop 1459x37+0+1614 +repage images/OCS-439-A-3.png
+convert images/OCS-439-A.png -crop 1459x303+0+1668 +repage images/OCS-439-A-4.png
+convert images/OCS-439-A.png -crop 1459x1019+0+1996 +repage images/OCS-439-A-5.png
+convert images/OCS-439-A.png -crop 1459x707+0+3022 +repage images/OCS-439-A-6.png
+convert images/OCS-439-A.png -crop 1459x787+0+3736 +repage images/OCS-439-A-7.png
+rm images/OCS-439-A.bmp
+convert debug/OCS-439.png -stroke green -strokewidth 7 -draw "line 27,289 1486,289" -draw "line 27,1624 1486,1624" -draw "line 27,1651 1486,1651" -draw "line 27,1864 1486,1864" -draw "line 27,1903 1486,1903" -draw "line 27,1940 1486,1940" -draw "line 27,1957 1486,1957" -draw "line 27,2260 1486,2260" -draw "line 27,2285 1486,2285" -draw "line 27,3304 1486,3304" -draw "line 27,3311 1486,3311" -draw "line 27,4018 1486,4018" -draw "line 27,4025 1486,4025" -draw "line 27,4812 1486,4812" debug/OCS-439.png
+convert images/OCS-439-B.png -crop 1581x471+0+0 +repage images/OCS-439-B-0.png
+convert images/OCS-439-B.png -crop 1581x555+0+474 +repage images/OCS-439-B-1.png
+convert images/OCS-439-B.png -crop 1581x317+0+1034 +repage images/OCS-439-B-2.png
+convert images/OCS-439-B.png -crop 1581x71+0+1354 +repage images/OCS-439-B-3.png
+convert images/OCS-439-B.png -crop 1581x69+0+1434 +repage images/OCS-439-B-4.png
+convert images/OCS-439-B.png -crop 1581x51+0+1532 +repage images/OCS-439-B-5.png
+convert images/OCS-439-B.png -crop 1581x137+0+1592 +repage images/OCS-439-B-6.png
+convert images/OCS-439-B.png -crop 1581x453+0+1750 +repage images/OCS-439-B-7.png
+convert images/OCS-439-B.png -crop 1581x235+0+2220 +repage images/OCS-439-B-8.png
+convert images/OCS-439-B.png -crop 1581x156+0+2455 +repage images/OCS-439-B-9.png
+convert images/OCS-439-B.png -crop 1581x235+0+3170 +repage images/OCS-439-B-10.png
+convert images/OCS-439-B.png -crop 1581x135+0+3416 +repage images/OCS-439-B-11.png
+convert images/OCS-439-B.png -crop 1581x71+0+3576 +repage images/OCS-439-B-12.png
+convert images/OCS-439-B.png -crop 1581x135+0+3654 +repage images/OCS-439-B-13.png
+convert images/OCS-439-B.png -crop 1581x71+0+3814 +repage images/OCS-439-B-14.png
+convert images/OCS-439-B.png -crop 1581x235+0+3890 +repage images/OCS-439-B-15.png
+convert images/OCS-439-B.png -crop 1581x389+0+4130 +repage images/OCS-439-B-16.png
+rm images/OCS-439-B.bmp
+convert debug/OCS-439.png -stroke green -strokewidth 7 -draw "line 1589,287 3170,287" -draw "line 1589,758 3170,758" -draw "line 1589,761 3170,761" -draw "line 1589,1316 3170,1316" -draw "line 1589,1321 3170,1321" -draw "line 1589,1638 3170,1638" -draw "line 1589,1641 3170,1641" -draw "line 1589,1712 3170,1712" -draw "line 1589,1721 3170,1721" -draw "line 1589,1790 3170,1790" -draw "line 1589,1819 3170,1819" -draw "line 1589,1870 3170,1870" -draw "line 1589,1879 3170,1879" -draw "line 1589,2016 3170,2016" -draw "line 1589,2037 3170,2037" -draw "line 1589,2490 3170,2490" -draw "line 1589,2507 3170,2507" -draw "line 1589,2742 3170,2742" -draw "line 1589,3457 3170,3457" -draw "line 1589,3692 3170,3692" -draw "line 1589,3703 3170,3703" -draw "line 1589,3838 3170,3838" -draw "line 1589,3863 3170,3863" -draw "line 1589,3934 3170,3934" -draw "line 1589,3941 3170,3941" -draw "line 1589,4076 3170,4076" -draw "line 1589,4101 3170,4101" -draw "line 1589,4172 3170,4172" -draw "line 1589,4177 3170,4177" -draw "line 1589,4412 3170,4412" -draw "line 1589,4417 3170,4417" -draw "line 1589,4806 3170,4806" debug/OCS-439.png

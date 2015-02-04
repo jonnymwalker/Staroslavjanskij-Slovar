@@ -1,0 +1,30 @@
+convert images/OCS-442-A.png -crop 1556x223+0+0 +repage images/OCS-442-A-0.png
+convert -append images/OCS-441-B-8.png images/OCS-442-A-0.png images/OCS-441-B-8.png
+rm images/OCS-442-A-0.png
+convert images/OCS-442-A.png -crop 1556x305+0+238 +repage images/OCS-442-A-1.png
+convert images/OCS-442-A.png -crop 1556x309+0+556 +repage images/OCS-442-A-2.png
+convert images/OCS-442-A.png -crop 1556x71+0+874 +repage images/OCS-442-A-3.png
+convert images/OCS-442-A.png -crop 1556x211+0+954 +repage images/OCS-442-A-4.png
+convert images/OCS-442-A.png -crop 1556x385+0+1190 +repage images/OCS-442-A-5.png
+convert images/OCS-442-A.png -crop 1556x313+0+1586 +repage images/OCS-442-A-6.png
+convert images/OCS-442-A.png -crop 1556x305+0+1906 +repage images/OCS-442-A-7.png
+convert images/OCS-442-A.png -crop 1556x460+0+2220 +repage images/OCS-442-A-8.png
+convert images/OCS-442-A.png -crop 1556x340+0+2675 +repage images/OCS-442-A-9.png
+convert images/OCS-442-A.png -crop 1556x785+0+3020 +repage images/OCS-442-A-10.png
+convert images/OCS-442-A.png -crop 1556x393+0+3814 +repage images/OCS-442-A-11.png
+convert images/OCS-442-A.png -crop 1556x317+0+4214 +repage images/OCS-442-A-12.png
+rm images/OCS-442-A.bmp
+#/OCS-442.png
+convert images/OCS-442-B.png -crop 1452x73+0+0 +repage images/OCS-442-B-0.png
+convert images/OCS-442-B.png -crop 1452x313+0+78 +repage images/OCS-442-B-1.png
+convert images/OCS-442-B.png -crop 1452x393+0+394 +repage images/OCS-442-B-2.png
+convert images/OCS-442-B.png -crop 1452x383+0+796 +repage images/OCS-442-B-3.png
+convert images/OCS-442-B.png -crop 1452x309+0+1194 +repage images/OCS-442-B-4.png
+convert images/OCS-442-B.png -crop 1452x151+0+1510 +repage images/OCS-442-B-5.png
+convert images/OCS-442-B.png -crop 1452x309+0+1666 +repage images/OCS-442-B-6.png
+convert images/OCS-442-B.png -crop 1452x625+0+1986 +repage images/OCS-442-B-7.png
+convert images/OCS-442-B.png -crop 1452x309+0+2620 +repage images/OCS-442-B-8.png
+convert images/OCS-442-B.png -crop 1452x67+0+2940 +repage images/OCS-442-B-9.png
+convert images/OCS-442-B.png -crop 1452x1507+0+3012 +repage images/OCS-442-B-10.png
+rm images/OCS-442-B.bmp
+#/OCS-442.png

@@ -1,0 +1,47 @@
+convert images/OCS-375-A.png -crop 1529x865+0+0 +repage images/OCS-375-A-0.png
+convert -append images/OCS-374-B-9.png images/OCS-375-A-0.png images/OCS-374-B-9.png
+rm images/OCS-375-A-0.png
+convert images/OCS-375-A.png -crop 1529x299+0+876 +repage images/OCS-375-A-1.png
+convert images/OCS-375-A.png -crop 1529x233+0+1194 +repage images/OCS-375-A-2.png
+convert images/OCS-375-A.png -crop 1529x465+0+1432 +repage images/OCS-375-A-3.png
+convert images/OCS-375-A.png -crop 1529x133+0+1910 +repage images/OCS-375-A-4.png
+convert images/OCS-375-A.png -crop 1529x315+0+2062 +repage images/OCS-375-A-5.png
+convert images/OCS-375-A.png -crop 1529x379+0+2380 +repage images/OCS-375-A-6.png
+convert images/OCS-375-A.png -crop 1529x151+0+2784 +repage images/OCS-375-A-7.png
+convert images/OCS-375-A.png -crop 1529x73+0+2938 +repage images/OCS-375-A-8.png
+convert images/OCS-375-A.png -crop 1529x75+0+3020 +repage images/OCS-375-A-9.png
+convert images/OCS-375-A.png -crop 1529x65+0+3102 +repage images/OCS-375-A-10.png
+convert images/OCS-375-A.png -crop 1529x69+0+3180 +repage images/OCS-375-A-11.png
+convert images/OCS-375-A.png -crop 1529x73+0+3258 +repage images/OCS-375-A-12.png
+convert images/OCS-375-A.png -crop 1529x71+0+3342 +repage images/OCS-375-A-13.png
+convert images/OCS-375-A.png -crop 1529x73+0+3494 +repage images/OCS-375-A-14.png
+convert images/OCS-375-A.png -crop 1529x71+0+3576 +repage images/OCS-375-A-15.png
+convert images/OCS-375-A.png -crop 1529x71+0+3656 +repage images/OCS-375-A-16.png
+convert images/OCS-375-A.png -crop 1529x67+0+3738 +repage images/OCS-375-A-17.png
+convert images/OCS-375-A.png -crop 1529x67+0+3816 +repage images/OCS-375-A-18.png
+convert images/OCS-375-A.png -crop 1529x71+0+3894 +repage images/OCS-375-A-19.png
+convert images/OCS-375-A.png -crop 1529x69+0+3976 +repage images/OCS-375-A-20.png
+convert images/OCS-375-A.png -crop 1529x71+0+4054 +repage images/OCS-375-A-21.png
+convert images/OCS-375-A.png -crop 1529x71+0+4212 +repage images/OCS-375-A-22.png
+convert images/OCS-375-A.png -crop 1529x71+0+4292 +repage images/OCS-375-A-23.png
+convert images/OCS-375-A.png -crop 1529x65+0+4374 +repage images/OCS-375-A-24.png
+convert images/OCS-375-A.png -crop 1529x75+0+4448 +repage images/OCS-375-A-25.png
+rm images/OCS-375-A.bmp
+convert debug/OCS-375.png -stroke green -strokewidth 7 -draw "line 57,267 1586,267" -draw "line 57,1132 1586,1132" -draw "line 57,1143 1586,1143" -draw "line 57,1442 1586,1442" -draw "line 57,1461 1586,1461" -draw "line 57,1694 1586,1694" -draw "line 57,1699 1586,1699" -draw "line 57,2164 1586,2164" -draw "line 57,2177 1586,2177" -draw "line 57,2310 1586,2310" -draw "line 57,2329 1586,2329" -draw "line 57,2644 1586,2644" -draw "line 57,2647 1586,2647" -draw "line 57,3026 1586,3026" -draw "line 57,3051 1586,3051" -draw "line 57,3202 1586,3202" -draw "line 57,3205 1586,3205" -draw "line 57,3278 1586,3278" -draw "line 57,3287 1586,3287" -draw "line 57,3362 1586,3362" -draw "line 57,3369 1586,3369" -draw "line 57,3434 1586,3434" -draw "line 57,3447 1586,3447" -draw "line 57,3516 1586,3516" -draw "line 57,3525 1586,3525" -draw "line 57,3598 1586,3598" -draw "line 57,3609 1586,3609" -draw "line 57,3680 1586,3680" -draw "line 57,3761 1586,3761" -draw "line 57,3834 1586,3834" -draw "line 57,3843 1586,3843" -draw "line 57,3914 1586,3914" -draw "line 57,3923 1586,3923" -draw "line 57,3994 1586,3994" -draw "line 57,4005 1586,4005" -draw "line 57,4072 1586,4072" -draw "line 57,4083 1586,4083" -draw "line 57,4150 1586,4150" -draw "line 57,4161 1586,4161" -draw "line 57,4232 1586,4232" -draw "line 57,4243 1586,4243" -draw "line 57,4312 1586,4312" -draw "line 57,4321 1586,4321" -draw "line 57,4392 1586,4392" -draw "line 57,4479 1586,4479" -draw "line 57,4550 1586,4550" -draw "line 57,4559 1586,4559" -draw "line 57,4630 1586,4630" -draw "line 57,4641 1586,4641" -draw "line 57,4706 1586,4706" -draw "line 57,4715 1586,4715" -draw "line 57,4790 1586,4790" debug/OCS-375.png
+convert images/OCS-375-B.png -crop 1649x149+0+0 +repage images/OCS-375-B-0.png
+convert -append images/OCS-375-A-25.png images/OCS-375-B-0.png images/OCS-375-A-25.png
+rm images/OCS-375-B-0.png
+convert images/OCS-375-B.png -crop 1649x309+0+158 +repage images/OCS-375-B-1.png
+convert images/OCS-375-B.png -crop 1649x871+0+474 +repage images/OCS-375-B-2.png
+convert images/OCS-375-B.png -crop 1649x223+0+1352 +repage images/OCS-375-B-3.png
+convert images/OCS-375-B.png -crop 1649x393+0+1586 +repage images/OCS-375-B-4.png
+convert images/OCS-375-B.png -crop 1649x383+0+1986 +repage images/OCS-375-B-5.png
+convert images/OCS-375-B.png -crop 1649x465+0+2386 +repage images/OCS-375-B-6.png
+convert images/OCS-375-B.png -crop 1649x301+0+2856 +repage images/OCS-375-B-7.png
+convert images/OCS-375-B.png -crop 1649x311+0+3176 +repage images/OCS-375-B-8.png
+convert images/OCS-375-B.png -crop 1649x475+0+3494 +repage images/OCS-375-B-9.png
+convert images/OCS-375-B.png -crop 1649x313+0+3972 +repage images/OCS-375-B-10.png
+convert images/OCS-375-B.png -crop 1649x135+0+4298 +repage images/OCS-375-B-11.png
+convert images/OCS-375-B.png -crop 1649x77+0+4448 +repage images/OCS-375-B-12.png
+rm images/OCS-375-B.bmp
+convert debug/OCS-375.png -stroke green -strokewidth 7 -draw "line 1679,265 3328,265" -draw "line 1679,414 3328,414" -draw "line 1679,423 3328,423" -draw "line 1679,732 3328,732" -draw "line 1679,739 3328,739" -draw "line 1679,1610 3328,1610" -draw "line 1679,1617 3328,1617" -draw "line 1679,1840 3328,1840" -draw "line 1679,1851 3328,1851" -draw "line 1679,2244 3328,2244" -draw "line 1679,2251 3328,2251" -draw "line 1679,2634 3328,2634" -draw "line 1679,2651 3328,2651" -draw "line 1679,3116 3328,3116" -draw "line 1679,3121 3328,3121" -draw "line 1679,3422 3328,3422" -draw "line 1679,3441 3328,3441" -draw "line 1679,3752 3328,3752" -draw "line 1679,3759 3328,3759" -draw "line 1679,4234 3328,4234" -draw "line 1679,4237 3328,4237" -draw "line 1679,4550 3328,4550" -draw "line 1679,4563 3328,4563" -draw "line 1679,4698 3328,4698" -draw "line 1679,4713 3328,4713" -draw "line 1679,4790 3328,4790" debug/OCS-375.png

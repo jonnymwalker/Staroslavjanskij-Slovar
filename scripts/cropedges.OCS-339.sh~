@@ -1,0 +1,8 @@
+convert images/OCS-339-A.png -crop 1529x4442+69+443 +repage images/OCS-339-A.png
+rm images/OCS-339-A.bmp
+convert images/OCS-339-A.png BMP3:images/OCS-339-A.bmp
+convert debug/OCS-339.png -stroke blue -strokewidth 7 -draw "line 69,0 69,5032" -draw "line 1598,0 1598,5032" -draw "line 0,443 1682,443" -draw "line 0,4885 1682,4885" debug/OCS-339.png
+convert images/OCS-339-B.png -crop 1583x4534+3+355 +repage images/OCS-339-B.png
+rm images/OCS-339-B.bmp
+convert images/OCS-339-B.png BMP3:images/OCS-339-B.bmp
+convert debug/OCS-339.png -stroke blue -strokewidth 7 -draw "line 1685,0 1685,5032" -draw "line 3268,0 3268,5032" -draw "line 1682,355 3364,355" -draw "line 1682,4889 3364,4889" debug/OCS-339.png

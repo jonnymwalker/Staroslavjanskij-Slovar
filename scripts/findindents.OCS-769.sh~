@@ -1,0 +1,23 @@
+convert images/OCS-769-A.png -crop 1549x547+0+0 +repage images/OCS-769-A-0.png
+convert -append images/OCS-768-B-8.png images/OCS-769-A-0.png images/OCS-768-B-8.png
+rm images/OCS-769-A-0.png
+convert images/OCS-769-A.png -crop 1549x311+0+556 +repage images/OCS-769-A-1.png
+convert images/OCS-769-A.png -crop 1549x71+0+876 +repage images/OCS-769-A-2.png
+convert images/OCS-769-A.png -crop 1549x2063+0+954 +repage images/OCS-769-A-3.png
+convert images/OCS-769-A.png -crop 1549x309+0+3022 +repage images/OCS-769-A-4.png
+convert images/OCS-769-A.png -crop 1549x233+0+3340 +repage images/OCS-769-A-5.png
+convert images/OCS-769-A.png -crop 1549x966+0+3576 +repage images/OCS-769-A-6.png
+convert images/OCS-769-A.png -crop 1549x53+0+4588 +repage images/OCS-769-A-7.png
+rm images/OCS-769-A.bmp
+convert debug/OCS-769.png -stroke green -strokewidth 7 -draw "line 67,301 1616,301" -draw "line 67,848 1616,848" -draw "line 67,857 1616,857" -draw "line 67,1168 1616,1168" -draw "line 67,1177 1616,1177" -draw "line 67,1248 1616,1248" -draw "line 67,1255 1616,1255" -draw "line 67,3318 1616,3318" -draw "line 67,3323 1616,3323" -draw "line 67,3632 1616,3632" -draw "line 67,3641 1616,3641" -draw "line 67,3874 1616,3874" -draw "line 67,3877 1616,3877" -draw "line 67,4843 1616,4843" -draw "line 67,4889 1616,4889" -draw "line 67,4942 1616,4942" debug/OCS-769.png
+convert images/OCS-769-B.png -crop 1569x313+0+0 +repage images/OCS-769-B-0.png
+convert -append images/OCS-769-A-7.png images/OCS-769-B-0.png images/OCS-769-A-7.png
+rm images/OCS-769-B-0.png
+convert images/OCS-769-B.png -crop 1569x551+0+314 +repage images/OCS-769-B-1.png
+convert images/OCS-769-B.png -crop 1569x869+0+870 +repage images/OCS-769-B-2.png
+convert images/OCS-769-B.png -crop 1569x469+0+1748 +repage images/OCS-769-B-3.png
+convert images/OCS-769-B.png -crop 1569x309+0+2226 +repage images/OCS-769-B-4.png
+convert images/OCS-769-B.png -crop 1569x916+0+2540 +repage images/OCS-769-B-5.png
+convert images/OCS-769-B.png -crop 1569x789+0+3728 +repage images/OCS-769-B-6.png
+rm images/OCS-769-B.bmp
+convert debug/OCS-769.png -stroke green -strokewidth 7 -draw "line 1721,299 3290,299" -draw "line 1721,612 3290,612" -draw "line 1721,613 3290,613" -draw "line 1721,1164 3290,1164" -draw "line 1721,1169 3290,1169" -draw "line 1721,2038 3290,2038" -draw "line 1721,2047 3290,2047" -draw "line 1721,2516 3290,2516" -draw "line 1721,2525 3290,2525" -draw "line 1721,2834 3290,2834" -draw "line 1721,2839 3290,2839" -draw "line 1721,3755 3290,3755" -draw "line 1721,4027 3290,4027" -draw "line 1721,4816 3290,4816" debug/OCS-769.png

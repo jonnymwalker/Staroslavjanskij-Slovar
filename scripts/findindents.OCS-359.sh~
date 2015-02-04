@@ -1,0 +1,35 @@
+convert images/OCS-359-A.png -crop 1513x1563+0+0 +repage images/OCS-359-A-0.png
+convert -append images/OCS-358-B-3.png images/OCS-359-A-0.png images/OCS-358-B-3.png
+rm images/OCS-359-A-0.png
+convert images/OCS-359-A.png -crop 1513x69+0+1586 +repage images/OCS-359-A-1.png
+convert images/OCS-359-A.png -crop 1513x311+0+1658 +repage images/OCS-359-A-2.png
+convert images/OCS-359-A.png -crop 1513x1411+0+1984 +repage images/OCS-359-A-3.png
+convert images/OCS-359-A.png -crop 1513x233+0+3404 +repage images/OCS-359-A-4.png
+convert images/OCS-359-A.png -crop 1513x69+0+3644 +repage images/OCS-359-A-5.png
+convert images/OCS-359-A.png -crop 1513x76+0+3724 +repage images/OCS-359-A-6.png
+convert images/OCS-359-A.png -crop 1513x80+0+3791 +repage images/OCS-359-A-7.png
+convert images/OCS-359-A.png -crop 1513x69+0+3880 +repage images/OCS-359-A-8.png
+convert images/OCS-359-A.png -crop 1513x71+0+3960 +repage images/OCS-359-A-9.png
+convert images/OCS-359-A.png -crop 1513x69+0+4038 +repage images/OCS-359-A-10.png
+convert images/OCS-359-A.png -crop 1513x81+0+4112 +repage images/OCS-359-A-11.png
+convert images/OCS-359-A.png -crop 1513x77+0+4194 +repage images/OCS-359-A-12.png
+convert images/OCS-359-A.png -crop 1513x69+0+4278 +repage images/OCS-359-A-13.png
+convert images/OCS-359-A.png -crop 1513x71+0+4358 +repage images/OCS-359-A-14.png
+convert images/OCS-359-A.png -crop 1513x69+0+4438 +repage images/OCS-359-A-15.png
+rm images/OCS-359-A.bmp
+convert debug/OCS-359.png -stroke green -strokewidth 7 -draw "line 55,301 1568,301" -draw "line 55,1864 1568,1864" -draw "line 55,1887 1568,1887" -draw "line 55,1956 1568,1956" -draw "line 55,1959 1568,1959" -draw "line 55,2270 1568,2270" -draw "line 55,2285 1568,2285" -draw "line 55,3696 1568,3696" -draw "line 55,3705 1568,3705" -draw "line 55,3938 1568,3938" -draw "line 55,3945 1568,3945" -draw "line 55,4014 1568,4014" -draw "line 55,4025 1568,4025" -draw "line 55,4101 1568,4101" -draw "line 55,4092 1568,4092" -draw "line 55,4172 1568,4172" -draw "line 55,4181 1568,4181" -draw "line 55,4250 1568,4250" -draw "line 55,4261 1568,4261" -draw "line 55,4332 1568,4332" -draw "line 55,4339 1568,4339" -draw "line 55,4408 1568,4408" -draw "line 55,4413 1568,4413" -draw "line 55,4494 1568,4494" -draw "line 55,4495 1568,4495" -draw "line 55,4572 1568,4572" -draw "line 55,4579 1568,4579" -draw "line 55,4648 1568,4648" -draw "line 55,4659 1568,4659" -draw "line 55,4730 1568,4730" -draw "line 55,4739 1568,4739" -draw "line 55,4808 1568,4808" debug/OCS-359.png
+convert images/OCS-359-B.png -crop 1557x305+0+0 +repage images/OCS-359-B-0.png
+convert -append images/OCS-359-A-15.png images/OCS-359-B-0.png images/OCS-359-A-15.png
+rm images/OCS-359-B-0.png
+convert images/OCS-359-B.png -crop 1557x145+0+316 +repage images/OCS-359-B-1.png
+convert images/OCS-359-B.png -crop 1557x313+0+470 +repage images/OCS-359-B-2.png
+convert images/OCS-359-B.png -crop 1557x1663+0+786 +repage images/OCS-359-B-3.png
+convert images/OCS-359-B.png -crop 1557x465+0+2456 +repage images/OCS-359-B-4.png
+convert images/OCS-359-B.png -crop 1557x145+0+2934 +repage images/OCS-359-B-5.png
+convert images/OCS-359-B.png -crop 1557x467+0+3092 +repage images/OCS-359-B-6.png
+convert images/OCS-359-B.png -crop 1557x305+0+3564 +repage images/OCS-359-B-7.png
+convert images/OCS-359-B.png -crop 1557x67+0+3884 +repage images/OCS-359-B-8.png
+convert images/OCS-359-B.png -crop 1557x313+0+3954 +repage images/OCS-359-B-9.png
+convert images/OCS-359-B.png -crop 1557x233+0+4280 +repage images/OCS-359-B-10.png
+rm images/OCS-359-B.bmp
+convert debug/OCS-359.png -stroke green -strokewidth 7 -draw "line 1667,303 3224,303" -draw "line 1667,608 3224,608" -draw "line 1667,619 3224,619" -draw "line 1667,764 3224,764" -draw "line 1667,773 3224,773" -draw "line 1667,1086 3224,1086" -draw "line 1667,1089 3224,1089" -draw "line 1667,2752 3224,2752" -draw "line 1667,2759 3224,2759" -draw "line 1667,3224 3224,3224" -draw "line 1667,3237 3224,3237" -draw "line 1667,3382 3224,3382" -draw "line 1667,3395 3224,3395" -draw "line 1667,3862 3224,3862" -draw "line 1667,3867 3224,3867" -draw "line 1667,4172 3224,4172" -draw "line 1667,4187 3224,4187" -draw "line 1667,4254 3224,4254" -draw "line 1667,4257 3224,4257" -draw "line 1667,4570 3224,4570" -draw "line 1667,4583 3224,4583" -draw "line 1667,4816 3224,4816" debug/OCS-359.png

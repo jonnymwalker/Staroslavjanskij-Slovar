@@ -1,0 +1,36 @@
+convert images/OCS-212-A.png -crop 1562x233+0+0 +repage images/OCS-212-A-0.png
+convert -append images/OCS-211-B-18.png images/OCS-212-A-0.png images/OCS-211-B-18.png
+rm images/OCS-212-A-0.png
+convert images/OCS-212-A.png -crop 1562x73+0+240 +repage images/OCS-212-A-1.png
+convert images/OCS-212-A.png -crop 1562x73+0+320 +repage images/OCS-212-A-2.png
+convert images/OCS-212-A.png -crop 1562x71+0+400 +repage images/OCS-212-A-3.png
+convert images/OCS-212-A.png -crop 1562x309+0+472 +repage images/OCS-212-A-4.png
+convert images/OCS-212-A.png -crop 1562x457+0+792 +repage images/OCS-212-A-5.png
+convert images/OCS-212-A.png -crop 1562x385+0+1266 +repage images/OCS-212-A-6.png
+convert images/OCS-212-A.png -crop 1562x135+0+1666 +repage images/OCS-212-A-7.png
+convert images/OCS-212-A.png -crop 1562x71+0+1826 +repage images/OCS-212-A-8.png
+convert images/OCS-212-A.png -crop 1562x67+0+1906 +repage images/OCS-212-A-9.png
+convert images/OCS-212-A.png -crop 1562x71+0+1982 +repage images/OCS-212-A-10.png
+convert images/OCS-212-A.png -crop 1562x317+0+2054 +repage images/OCS-212-A-11.png
+convert images/OCS-212-A.png -crop 1562x389+0+2376 +repage images/OCS-212-A-12.png
+convert images/OCS-212-A.png -crop 1562x385+0+2768 +repage images/OCS-212-A-13.png
+convert images/OCS-212-A.png -crop 1562x309+0+3166 +repage images/OCS-212-A-14.png
+convert images/OCS-212-A.png -crop 1562x385+0+3482 +repage images/OCS-212-A-15.png
+convert images/OCS-212-A.png -crop 1562x319+0+3878 +repage images/OCS-212-A-16.png
+convert images/OCS-212-A.png -crop 1562x315+0+4202 +repage images/OCS-212-A-17.png
+rm images/OCS-212-A.bmp
+convert debug/OCS-212.png -stroke green -strokewidth 7 -draw "line 99,259 1661,259" -draw "line 99,492 1661,492" -draw "line 99,499 1661,499" -draw "line 99,572 1661,572" -draw "line 99,579 1661,579" -draw "line 99,652 1661,652" -draw "line 99,659 1661,659" -draw "line 99,730 1661,730" -draw "line 99,731 1661,731" -draw "line 99,1040 1661,1040" -draw "line 99,1051 1661,1051" -draw "line 99,1508 1661,1508" -draw "line 99,1525 1661,1525" -draw "line 99,1910 1661,1910" -draw "line 99,1925 1661,1925" -draw "line 99,2060 1661,2060" -draw "line 99,2085 1661,2085" -draw "line 99,2156 1661,2156" -draw "line 99,2165 1661,2165" -draw "line 99,2232 1661,2232" -draw "line 99,2241 1661,2241" -draw "line 99,2312 1661,2312" -draw "line 99,2313 1661,2313" -draw "line 99,2630 1661,2630" -draw "line 99,2635 1661,2635" -draw "line 99,3024 1661,3024" -draw "line 99,3027 1661,3027" -draw "line 99,3412 1661,3412" -draw "line 99,3425 1661,3425" -draw "line 99,3734 1661,3734" -draw "line 99,3741 1661,3741" -draw "line 99,4126 1661,4126" -draw "line 99,4137 1661,4137" -draw "line 99,4456 1661,4456" -draw "line 99,4461 1661,4461" -draw "line 99,4776 1661,4776" debug/OCS-212.png
+convert images/OCS-212-B.png -crop 1457x309+0+0 +repage images/OCS-212-B-0.png
+convert images/OCS-212-B.png -crop 1457x309+0+314 +repage images/OCS-212-B-1.png
+convert images/OCS-212-B.png -crop 1457x456+0+632 +repage images/OCS-212-B-2.png
+convert images/OCS-212-B.png -crop 1457x149+0+1344 +repage images/OCS-212-B-3.png
+convert images/OCS-212-B.png -crop 1457x227+0+1504 +repage images/OCS-212-B-4.png
+convert images/OCS-212-B.png -crop 1457x383+0+1744 +repage images/OCS-212-B-5.png
+convert images/OCS-212-B.png -crop 1457x619+0+2144 +repage images/OCS-212-B-6.png
+convert images/OCS-212-B.png -crop 1457x309+0+2774 +repage images/OCS-212-B-7.png
+convert images/OCS-212-B.png -crop 1457x469+0+3090 +repage images/OCS-212-B-8.png
+convert images/OCS-212-B.png -crop 1457x213+0+3582 +repage images/OCS-212-B-9.png
+convert images/OCS-212-B.png -crop 1457x67+0+3806 +repage images/OCS-212-B-10.png
+convert images/OCS-212-B.png -crop 1457x627+0+3884 +repage images/OCS-212-B-11.png
+rm images/OCS-212-B.bmp
+convert debug/OCS-212.png -stroke green -strokewidth 7 -draw "line 1749,257 3206,257" -draw "line 1749,566 3206,566" -draw "line 1749,571 3206,571" -draw "line 1749,880 3206,880" -draw "line 1749,889 3206,889" -draw "line 1749,1345 3206,1345" -draw "line 1749,1601 3206,1601" -draw "line 1749,1750 3206,1750" -draw "line 1749,1761 3206,1761" -draw "line 1749,1988 3206,1988" -draw "line 1749,2001 3206,2001" -draw "line 1749,2384 3206,2384" -draw "line 1749,2401 3206,2401" -draw "line 1749,3020 3206,3020" -draw "line 1749,3031 3206,3031" -draw "line 1749,3340 3206,3340" -draw "line 1749,3347 3206,3347" -draw "line 1749,3816 3206,3816" -draw "line 1749,3839 3206,3839" -draw "line 1749,4052 3206,4052" -draw "line 1749,4063 3206,4063" -draw "line 1749,4130 3206,4130" -draw "line 1749,4141 3206,4141" -draw "line 1749,4768 3206,4768" debug/OCS-212.png

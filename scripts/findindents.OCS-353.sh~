@@ -1,0 +1,40 @@
+convert images/OCS-353-A.png -crop 1525x465+0+0 +repage images/OCS-353-A-0.png
+convert -append images/OCS-352-B-2.png images/OCS-353-A-0.png images/OCS-352-B-2.png
+rm images/OCS-353-A-0.png
+convert images/OCS-353-A.png -crop 1525x787+0+478 +repage images/OCS-353-A-1.png
+convert images/OCS-353-A.png -crop 1525x1033+0+1266 +repage images/OCS-353-A-2.png
+convert images/OCS-353-A.png -crop 1525x314+0+2306 +repage images/OCS-353-A-3.png
+convert images/OCS-353-A.png -crop 1525x484+0+2613 +repage images/OCS-353-A-4.png
+convert images/OCS-353-A.png -crop 1525x67+0+3104 +repage images/OCS-353-A-5.png
+convert images/OCS-353-A.png -crop 1525x67+0+3184 +repage images/OCS-353-A-6.png
+convert images/OCS-353-A.png -crop 1525x55+0+3282 +repage images/OCS-353-A-7.png
+convert images/OCS-353-A.png -crop 1525x75+0+3342 +repage images/OCS-353-A-8.png
+convert images/OCS-353-A.png -crop 1525x63+0+3426 +repage images/OCS-353-A-9.png
+convert images/OCS-353-A.png -crop 1525x75+0+3500 +repage images/OCS-353-A-10.png
+convert images/OCS-353-A.png -crop 1525x73+0+3578 +repage images/OCS-353-A-11.png
+convert images/OCS-353-A.png -crop 1525x73+0+3660 +repage images/OCS-353-A-12.png
+convert images/OCS-353-A.png -crop 1525x71+0+3736 +repage images/OCS-353-A-13.png
+convert images/OCS-353-A.png -crop 1525x77+0+3816 +repage images/OCS-353-A-14.png
+convert images/OCS-353-A.png -crop 1525x67+0+3900 +repage images/OCS-353-A-15.png
+convert images/OCS-353-A.png -crop 1525x69+0+3976 +repage images/OCS-353-A-16.png
+convert images/OCS-353-A.png -crop 1525x59+0+4072 +repage images/OCS-353-A-17.png
+convert images/OCS-353-A.png -crop 1525x69+0+4138 +repage images/OCS-353-A-18.png
+convert images/OCS-353-A.png -crop 1525x67+0+4220 +repage images/OCS-353-A-19.png
+convert images/OCS-353-A.png -crop 1525x73+0+4294 +repage images/OCS-353-A-20.png
+convert images/OCS-353-A.png -crop 1525x71+0+4376 +repage images/OCS-353-A-21.png
+convert images/OCS-353-A.png -crop 1525x84+0+4454 +repage images/OCS-353-A-22.png
+rm images/OCS-353-A.bmp
+convert debug/OCS-353.png -stroke green -strokewidth 7 -draw "line 33,297 1558,297" -draw "line 33,762 1558,762" -draw "line 33,775 1558,775" -draw "line 33,1562 1558,1562" -draw "line 33,1563 1558,1563" -draw "line 33,2596 1558,2596" -draw "line 33,2603 1558,2603" -draw "line 33,2917 1558,2917" -draw "line 33,2910 1558,2910" -draw "line 33,3394 1558,3394" -draw "line 33,3401 1558,3401" -draw "line 33,3468 1558,3468" -draw "line 33,3481 1558,3481" -draw "line 33,3548 1558,3548" -draw "line 33,3579 1558,3579" -draw "line 33,3634 1558,3634" -draw "line 33,3639 1558,3639" -draw "line 33,3714 1558,3714" -draw "line 33,3723 1558,3723" -draw "line 33,3786 1558,3786" -draw "line 33,3797 1558,3797" -draw "line 33,3872 1558,3872" -draw "line 33,3875 1558,3875" -draw "line 33,3948 1558,3948" -draw "line 33,3957 1558,3957" -draw "line 33,4030 1558,4030" -draw "line 33,4033 1558,4033" -draw "line 33,4104 1558,4104" -draw "line 33,4113 1558,4113" -draw "line 33,4190 1558,4190" -draw "line 33,4197 1558,4197" -draw "line 33,4264 1558,4264" -draw "line 33,4273 1558,4273" -draw "line 33,4342 1558,4342" -draw "line 33,4369 1558,4369" -draw "line 33,4428 1558,4428" -draw "line 33,4435 1558,4435" -draw "line 33,4504 1558,4504" -draw "line 33,4517 1558,4517" -draw "line 33,4584 1558,4584" -draw "line 33,4591 1558,4591" -draw "line 33,4664 1558,4664" -draw "line 33,4673 1558,4673" -draw "line 33,4744 1558,4744" -draw "line 33,4751 1558,4751" -draw "line 33,4835 1558,4835" debug/OCS-353.png
+convert images/OCS-353-B.png -crop 1561x459+0+0 +repage images/OCS-353-B-0.png
+convert -append images/OCS-353-A-22.png images/OCS-353-B-0.png images/OCS-353-A-22.png
+rm images/OCS-353-B-0.png
+convert images/OCS-353-B.png -crop 1561x71+0+476 +repage images/OCS-353-B-1.png
+convert images/OCS-353-B.png -crop 1561x303+0+556 +repage images/OCS-353-B-2.png
+convert images/OCS-353-B.png -crop 1561x549+0+872 +repage images/OCS-353-B-3.png
+convert images/OCS-353-B.png -crop 1561x629+0+1430 +repage images/OCS-353-B-4.png
+convert images/OCS-353-B.png -crop 1561x467+0+2062 +repage images/OCS-353-B-5.png
+convert images/OCS-353-B.png -crop 1561x863+0+2544 +repage images/OCS-353-B-6.png
+convert images/OCS-353-B.png -crop 1561x385+0+3418 +repage images/OCS-353-B-7.png
+convert images/OCS-353-B.png -crop 1561x703+0+3816 +repage images/OCS-353-B-8.png
+rm images/OCS-353-B.bmp
+convert debug/OCS-353.png -stroke green -strokewidth 7 -draw "line 1659,301 3220,301" -draw "line 1659,760 3220,760" -draw "line 1659,777 3220,777" -draw "line 1659,848 3220,848" -draw "line 1659,857 3220,857" -draw "line 1659,1160 3220,1160" -draw "line 1659,1173 3220,1173" -draw "line 1659,1722 3220,1722" -draw "line 1659,1731 3220,1731" -draw "line 1659,2360 3220,2360" -draw "line 1659,2363 3220,2363" -draw "line 1659,2830 3220,2830" -draw "line 1659,2845 3220,2845" -draw "line 1659,3708 3220,3708" -draw "line 1659,3719 3220,3719" -draw "line 1659,4104 3220,4104" -draw "line 1659,4117 3220,4117" -draw "line 1659,4820 3220,4820" debug/OCS-353.png

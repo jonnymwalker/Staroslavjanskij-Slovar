@@ -1,0 +1,32 @@
+convert images/OCS-361-A.png -crop 1517x149+0+0 +repage images/OCS-361-A-0.png
+convert -append images/OCS-360-B-10.png images/OCS-361-A-0.png images/OCS-360-B-10.png
+rm images/OCS-361-A-0.png
+convert images/OCS-361-A.png -crop 1517x391+0+154 +repage images/OCS-361-A-1.png
+convert images/OCS-361-A.png -crop 1517x717+0+548 +repage images/OCS-361-A-2.png
+convert images/OCS-361-A.png -crop 1517x555+0+1270 +repage images/OCS-361-A-3.png
+convert images/OCS-361-A.png -crop 1517x461+0+1828 +repage images/OCS-361-A-4.png
+convert images/OCS-361-A.png -crop 1517x315+0+2304 +repage images/OCS-361-A-5.png
+convert images/OCS-361-A.png -crop 1517x145+0+2632 +repage images/OCS-361-A-6.png
+convert images/OCS-361-A.png -crop 1517x477+0+2780 +repage images/OCS-361-A-7.png
+convert images/OCS-361-A.png -crop 1517x635+0+3258 +repage images/OCS-361-A-8.png
+convert images/OCS-361-A.png -crop 1517x67+0+3902 +repage images/OCS-361-A-9.png
+convert images/OCS-361-A.png -crop 1517x77+0+3974 +repage images/OCS-361-A-10.png
+convert images/OCS-361-A.png -crop 1517x78+0+4056 +repage images/OCS-361-A-11.png
+convert images/OCS-361-A.png -crop 1517x82+0+4127 +repage images/OCS-361-A-12.png
+convert images/OCS-361-A.png -crop 1517x77+0+4212 +repage images/OCS-361-A-13.png
+convert images/OCS-361-A.png -crop 1517x77+0+4294 +repage images/OCS-361-A-14.png
+convert images/OCS-361-A.png -crop 1517x69+0+4376 +repage images/OCS-361-A-15.png
+convert images/OCS-361-A.png -crop 1517x71+0+4458 +repage images/OCS-361-A-16.png
+rm images/OCS-361-A.bmp
+convert debug/OCS-361.png -stroke green -strokewidth 7 -draw "line 81,307 1598,307" -draw "line 81,456 1598,456" -draw "line 81,461 1598,461" -draw "line 81,852 1598,852" -draw "line 81,855 1598,855" -draw "line 81,1572 1598,1572" -draw "line 81,1577 1598,1577" -draw "line 81,2132 1598,2132" -draw "line 81,2135 1598,2135" -draw "line 81,2596 1598,2596" -draw "line 81,2611 1598,2611" -draw "line 81,2926 1598,2926" -draw "line 81,2939 1598,2939" -draw "line 81,3084 1598,3084" -draw "line 81,3087 1598,3087" -draw "line 81,3564 1598,3564" -draw "line 81,3565 1598,3565" -draw "line 81,4200 1598,4200" -draw "line 81,4209 1598,4209" -draw "line 81,4276 1598,4276" -draw "line 81,4281 1598,4281" -draw "line 81,4358 1598,4358" -draw "line 81,4363 1598,4363" -draw "line 81,4441 1598,4441" -draw "line 81,4434 1598,4434" -draw "line 81,4516 1598,4516" -draw "line 81,4519 1598,4519" -draw "line 81,4596 1598,4596" -draw "line 81,4601 1598,4601" -draw "line 81,4678 1598,4678" -draw "line 81,4683 1598,4683" -draw "line 81,4752 1598,4752" -draw "line 81,4765 1598,4765" -draw "line 81,4836 1598,4836" debug/OCS-361.png
+convert images/OCS-361-B.png -crop 1577x553+0+8 +repage images/OCS-361-B-0.png
+convert images/OCS-361-B.png -crop 1577x799+0+564 +repage images/OCS-361-B-1.png
+convert images/OCS-361-B.png -crop 1577x73+0+1368 +repage images/OCS-361-B-2.png
+convert images/OCS-361-B.png -crop 1577x791+0+1442 +repage images/OCS-361-B-3.png
+convert images/OCS-361-B.png -crop 1577x539+0+2236 +repage images/OCS-361-B-4.png
+convert images/OCS-361-B.png -crop 1577x461+0+2790 +repage images/OCS-361-B-5.png
+convert images/OCS-361-B.png -crop 1577x317+0+3264 +repage images/OCS-361-B-6.png
+convert images/OCS-361-B.png -crop 1577x473+0+3584 +repage images/OCS-361-B-7.png
+convert images/OCS-361-B.png -crop 1577x473+0+4060 +repage images/OCS-361-B-8.png
+rm images/OCS-361-B.bmp
+convert debug/OCS-361.png -stroke green -strokewidth 7 -draw "line 1687,305 3264,305" -draw "line 1687,858 3264,858" -draw "line 1687,861 3264,861" -draw "line 1687,1660 3264,1660" -draw "line 1687,1665 3264,1665" -draw "line 1687,1738 3264,1738" -draw "line 1687,1739 3264,1739" -draw "line 1687,2530 3264,2530" -draw "line 1687,2533 3264,2533" -draw "line 1687,3072 3264,3072" -draw "line 1687,3087 3264,3087" -draw "line 1687,3548 3264,3548" -draw "line 1687,3561 3264,3561" -draw "line 1687,3878 3264,3878" -draw "line 1687,3881 3264,3881" -draw "line 1687,4354 3264,4354" -draw "line 1687,4357 3264,4357" -draw "line 1687,4830 3264,4830" debug/OCS-361.png

@@ -1,0 +1,10 @@
+convert images/OCS-76-A.png -crop 1571x4639+0+0 +repage images/OCS-76-A-0.png
+convert -append images/OCS-75-B-11.png images/OCS-76-A-0.png images/OCS-75-B-11.png
+rm images/OCS-76-A-0.png
+rm images/OCS-76-A.bmp
+convert debug/OCS-76.png -stroke green -strokewidth 7 -draw "line 101,357 1672,357" -draw "line 101,4996 1672,4996" debug/OCS-76.png
+convert images/OCS-76-B.png -crop 1553x4525+0+0 +repage images/OCS-76-B-0.png
+convert -append images/OCS-75-B-11.png images/OCS-76-B-0.png images/OCS-75-B-11.png
+rm images/OCS-76-B-0.png
+rm images/OCS-76-B.bmp
+convert debug/OCS-76.png -stroke green -strokewidth 7 -draw "line 1769,359 3322,359" -draw "line 1769,4884 3322,4884" debug/OCS-76.png

@@ -1,0 +1,24 @@
+convert images/OCS-805-A.png -crop 1568x1383+0+0 +repage images/OCS-805-A-0.png
+convert -append images/OCS-804-B-9.png images/OCS-805-A-0.png images/OCS-804-B-9.png
+rm images/OCS-805-A-0.png
+convert images/OCS-805-A.png -crop 1568x1101+0+1406 +repage images/OCS-805-A-1.png
+convert images/OCS-805-A.png -crop 1568x391+0+2514 +repage images/OCS-805-A-2.png
+convert images/OCS-805-A.png -crop 1568x625+0+2912 +repage images/OCS-805-A-3.png
+convert images/OCS-805-A.png -crop 1568x953+0+3542 +repage images/OCS-805-A-4.png
+rm images/OCS-805-A.bmp
+convert debug/OCS-805.png -stroke green -strokewidth 7 -draw "line 46,375 1614,375" -draw "line 46,1758 1614,1758" -draw "line 46,1781 1614,1781" -draw "line 46,2882 1614,2882" -draw "line 46,2889 1614,2889" -draw "line 46,3280 1614,3280" -draw "line 46,3287 1614,3287" -draw "line 46,3912 1614,3912" -draw "line 46,3917 1614,3917" -draw "line 46,4870 1614,4870" debug/OCS-805.png
+convert images/OCS-805-B.png -crop 1569x309+0+0 +repage images/OCS-805-B-0.png
+convert -append images/OCS-805-A-4.png images/OCS-805-B-0.png images/OCS-805-A-4.png
+rm images/OCS-805-B-0.png
+convert images/OCS-805-B.png -crop 1569x305+0+318 +repage images/OCS-805-B-1.png
+convert images/OCS-805-B.png -crop 1569x533+0+636 +repage images/OCS-805-B-2.png
+convert images/OCS-805-B.png -crop 1569x465+0+1190 +repage images/OCS-805-B-3.png
+convert images/OCS-805-B.png -crop 1569x783+0+1664 +repage images/OCS-805-B-4.png
+convert images/OCS-805-B.png -crop 1569x369+0+2456 +repage images/OCS-805-B-5.png
+convert images/OCS-805-B.png -crop 1569x387+0+2852 +repage images/OCS-805-B-6.png
+convert images/OCS-805-B.png -crop 1569x147+0+3254 +repage images/OCS-805-B-7.png
+convert images/OCS-805-B.png -crop 1569x541+0+3412 +repage images/OCS-805-B-8.png
+convert images/OCS-805-B.png -crop 1569x315+0+3958 +repage images/OCS-805-B-9.png
+convert images/OCS-805-B.png -crop 1569x237+0+4278 +repage images/OCS-805-B-10.png
+rm images/OCS-805-B.bmp
+convert debug/OCS-805.png -stroke green -strokewidth 7 -draw "line 1697,363 3266,363" -draw "line 1697,672 3266,672" -draw "line 1697,681 3266,681" -draw "line 1697,986 3266,986" -draw "line 1697,999 3266,999" -draw "line 1697,1532 3266,1532" -draw "line 1697,1553 3266,1553" -draw "line 1697,2018 3266,2018" -draw "line 1697,2027 3266,2027" -draw "line 1697,2810 3266,2810" -draw "line 1697,2819 3266,2819" -draw "line 1697,3188 3266,3188" -draw "line 1697,3215 3266,3215" -draw "line 1697,3602 3266,3602" -draw "line 1697,3617 3266,3617" -draw "line 1697,3764 3266,3764" -draw "line 1697,3775 3266,3775" -draw "line 1697,4316 3266,4316" -draw "line 1697,4321 3266,4321" -draw "line 1697,4636 3266,4636" -draw "line 1697,4641 3266,4641" -draw "line 1697,4878 3266,4878" debug/OCS-805.png

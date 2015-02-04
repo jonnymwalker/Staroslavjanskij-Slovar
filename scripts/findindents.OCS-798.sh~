@@ -1,0 +1,15 @@
+convert images/OCS-798-A.png -crop 1557x307+0+0 +repage images/OCS-798-A-0.png
+convert images/OCS-798-A.png -crop 1557x699+0+322 +repage images/OCS-798-A-1.png
+convert images/OCS-798-A.png -crop 1557x399+0+1024 +repage images/OCS-798-A-2.png
+convert images/OCS-798-A.png -crop 1557x1655+0+1432 +repage images/OCS-798-A-3.png
+convert images/OCS-798-A.png -crop 1557x311+0+3098 +repage images/OCS-798-A-4.png
+convert images/OCS-798-A.png -crop 1557x469+0+3418 +repage images/OCS-798-A-5.png
+convert images/OCS-798-A.png -crop 1557x623+0+3898 +repage images/OCS-798-A-6.png
+rm images/OCS-798-A.bmp
+convert debug/OCS-798.png -stroke green -strokewidth 7 -draw "line 121,351 1678,351" -draw "line 121,658 1678,658" -draw "line 121,673 1678,673" -draw "line 121,1372 1678,1372" -draw "line 121,1375 1678,1375" -draw "line 121,1774 1678,1774" -draw "line 121,1783 1678,1783" -draw "line 121,3438 1678,3438" -draw "line 121,3449 1678,3449" -draw "line 121,3760 1678,3760" -draw "line 121,3769 1678,3769" -draw "line 121,4238 1678,4238" -draw "line 121,4249 1678,4249" -draw "line 121,4872 1678,4872" debug/OCS-798.png
+convert images/OCS-798-B.png -crop 1545x467+0+0 +repage images/OCS-798-B-0.png
+convert images/OCS-798-B.png -crop 1545x59+0+948 +repage images/OCS-798-B-1.png
+convert images/OCS-798-B.png -crop 1545x3333+0+1030 +repage images/OCS-798-B-2.png
+convert images/OCS-798-B.png -crop 1545x147+0+4372 +repage images/OCS-798-B-3.png
+rm images/OCS-798-B.bmp
+convert debug/OCS-798.png -stroke green -strokewidth 7 -draw "line 1775,351 3320,351" -draw "line 1775,818 3320,818" -draw "line 1775,1299 3320,1299" -draw "line 1775,1358 3320,1358" -draw "line 1775,1381 3320,1381" -draw "line 1775,4714 3320,4714" -draw "line 1775,4723 3320,4723" -draw "line 1775,4870 3320,4870" debug/OCS-798.png

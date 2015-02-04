@@ -1,0 +1,16 @@
+convert images/OCS-712-A.png -crop 1559x155+0+0 +repage images/OCS-712-A-0.png
+convert -append images/OCS-711-B-7.png images/OCS-712-A-0.png images/OCS-711-B-7.png
+rm images/OCS-712-A-0.png
+convert images/OCS-712-A.png -crop 1559x307+0+160 +repage images/OCS-712-A-1.png
+convert images/OCS-712-A.png -crop 1559x1875+0+478 +repage images/OCS-712-A-2.png
+convert images/OCS-712-A.png -crop 1559x629+0+2374 +repage images/OCS-712-A-3.png
+convert images/OCS-712-A.png -crop 1559x1501+0+3008 +repage images/OCS-712-A-4.png
+rm images/OCS-712-A.bmp
+convert debug/OCS-712.png -stroke green -strokewidth 7 -draw "line 73,271 1632,271" -draw "line 73,426 1632,426" -draw "line 73,431 1632,431" -draw "line 73,738 1632,738" -draw "line 73,749 1632,749" -draw "line 73,2624 1632,2624" -draw "line 73,2645 1632,2645" -draw "line 73,3274 1632,3274" -draw "line 73,3279 1632,3279" -draw "line 73,4900 1632,4900" debug/OCS-712.png
+convert images/OCS-712-B.png -crop 1549x3629+0+0 +repage images/OCS-712-B-0.png
+convert -append images/OCS-712-A-4.png images/OCS-712-B-0.png images/OCS-712-A-4.png
+rm images/OCS-712-B-0.png
+convert images/OCS-712-B.png -crop 1549x307+0+3644 +repage images/OCS-712-B-1.png
+convert images/OCS-712-B.png -crop 1549x557+0+3958 +repage images/OCS-712-B-2.png
+rm images/OCS-712-B.bmp
+convert debug/OCS-712.png -stroke green -strokewidth 7 -draw "line 1735,267 3284,267" -draw "line 1735,3896 3284,3896" -draw "line 1735,3911 3284,3911" -draw "line 1735,4218 3284,4218" -draw "line 1735,4225 3284,4225" -draw "line 1735,4782 3284,4782" debug/OCS-712.png

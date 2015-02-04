@@ -1,0 +1,12 @@
+convert images/OCS-453-A.png -crop 1459x147+0+0 +repage images/OCS-453-A-0.png
+convert -append images/OCS-452-B-12.png images/OCS-453-A-0.png images/OCS-452-B-12.png
+rm images/OCS-453-A-0.png
+convert images/OCS-453-A.png -crop 1459x71+0+160 +repage images/OCS-453-A-1.png
+convert images/OCS-453-A.png -crop 1459x4279+0+232 +repage images/OCS-453-A-2.png
+rm images/OCS-453-A.bmp
+convert debug/OCS-453.png -stroke green -strokewidth 7 -draw "line 57,279 1516,279" -draw "line 57,426 1516,426" -draw "line 57,439 1516,439" -draw "line 57,510 1516,510" -draw "line 57,511 1516,511" -draw "line 57,3198 1516,3198" -draw "line 57,3207 1516,3207" -draw "line 57,4790 1516,4790" debug/OCS-453.png
+convert images/OCS-453-B.png -crop 1547x4521+0+0 +repage images/OCS-453-B-0.png
+convert -append images/OCS-453-A-2.png images/OCS-453-B-0.png images/OCS-453-A-2.png
+rm images/OCS-453-B-0.png
+rm images/OCS-453-B.bmp
+convert debug/OCS-453.png -stroke green -strokewidth 7 -draw "line 1617,271 3164,271" -draw "line 1617,3527 3164,3527" -draw "line 1617,3520 3164,3520" -draw "line 1617,4792 3164,4792" debug/OCS-453.png

@@ -1,0 +1,18 @@
+convert images/OCS-344-A.png -crop 1560x783+0+0 +repage images/OCS-344-A-0.png
+convert -append images/OCS-343-B-7.png images/OCS-344-A-0.png images/OCS-343-B-7.png
+rm images/OCS-344-A-0.png
+convert images/OCS-344-A.png -crop 1560x449+0+794 +repage images/OCS-344-A-1.png
+convert images/OCS-344-A.png -crop 1560x789+0+1262 +repage images/OCS-344-A-2.png
+convert images/OCS-344-A.png -crop 1560x635+0+2052 +repage images/OCS-344-A-3.png
+convert images/OCS-344-A.png -crop 1560x307+0+2694 +repage images/OCS-344-A-4.png
+convert images/OCS-344-A.png -crop 1560x1501+0+3002 +repage images/OCS-344-A-5.png
+rm images/OCS-344-A.bmp
+convert debug/OCS-344.png -stroke green -strokewidth 7 -draw "line 139,305 1699,305" -draw "line 139,1088 1699,1088" -draw "line 139,1099 1699,1099" -draw "line 139,1548 1699,1548" -draw "line 139,1567 1699,1567" -draw "line 139,2356 1699,2356" -draw "line 139,2357 1699,2357" -draw "line 139,2992 1699,2992" -draw "line 139,2999 1699,2999" -draw "line 139,3306 1699,3306" -draw "line 139,3307 1699,3307" -draw "line 139,4808 1699,4808" debug/OCS-344.png
+convert images/OCS-344-B.png -crop 1503x705+0+0 +repage images/OCS-344-B-0.png
+convert images/OCS-344-B.png -crop 1503x701+0+716 +repage images/OCS-344-B-1.png
+convert images/OCS-344-B.png -crop 1503x391+0+1424 +repage images/OCS-344-B-2.png
+convert images/OCS-344-B.png -crop 1503x67+0+1824 +repage images/OCS-344-B-3.png
+convert images/OCS-344-B.png -crop 1503x471+0+2368 +repage images/OCS-344-B-4.png
+convert images/OCS-344-B.png -crop 1503x1657+0+2846 +repage images/OCS-344-B-5.png
+rm images/OCS-344-B.bmp
+convert debug/OCS-344.png -stroke green -strokewidth 7 -draw "line 1793,303 3296,303" -draw "line 1793,1008 3296,1008" -draw "line 1793,1019 3296,1019" -draw "line 1793,1720 3296,1720" -draw "line 1793,1727 3296,1727" -draw "line 1793,2118 3296,2118" -draw "line 1793,2127 3296,2127" -draw "line 1793,2194 3296,2194" -draw "line 1793,2671 3296,2671" -draw "line 1793,3142 3296,3142" -draw "line 1793,3149 3296,3149" -draw "line 1793,4806 3296,4806" debug/OCS-344.png
