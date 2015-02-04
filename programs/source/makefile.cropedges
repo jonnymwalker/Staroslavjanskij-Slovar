@@ -1,0 +1,2 @@
+all:
+	gcc -Wall -g -std=c99 cropedges.c bmphelpers.c bmpimage.c -o ../cropedges

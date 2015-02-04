@@ -1,0 +1,2 @@
+all:
+	gcc -g -std=c99 findletters.c ocsstring.c alphabet.c bmpimage.c bmphelpers.c -o ../findletters -lm

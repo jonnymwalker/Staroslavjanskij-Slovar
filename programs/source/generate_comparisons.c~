@@ -1,0 +1,143 @@
+/* 
+ *	generate_comparisons.c
+ *
+ *	Jonathan Walker, j.walker@cantab.net
+ *
+ *	A program to find similarity scores between OCS letters and store the results 
+ * 	in a text file for reference by lemmata.c
+ */
+	
+/*
+ 	Borrowed from findletters.c. Gives a similarity score for black and white images (containing letters)
+ */
+
+#include "alphabet.c"
+#include "bmphelpers.c"
+#include "bmpimage.c"
+#include "bmp.h"
+
+double HowGoodIsThisMatch(BMPImage* imageA, BlackArea* blackarea, BMPImage* imageB);
+
+int main(void)
+{
+	MyAlphabet* largealphabet = InitialiseMyAlphabet('l');
+	MyAlphabet* smallalphabet = InitialiseMyAlphabet('s');
+	if (largealphabet == NULL || smallalphabet == NULL)
+	{
+		fprintf(stderr, "Error! An alphabet failed to initialise! Extiing...\n");
+		return 1;
+	}
+	
+	FILE* fp = fopen("programs/source/alphabet/comparisons.txt", "w");
+	if (fp == NULL)
+	{
+		fprintf(stderr, "Error! Failed to open an output file, comparisons.txt! Exiting...\n");
+		return 2;
+	}
+
+	double largecomparisonscores[2500];
+	double smallcomparisonscores[2500];
+	int firstlargeletter[2500];
+	int secondlargeletter[2500];
+	int firstsmallletter[2500];
+	int secondsmallletter[2500];
+	for (int i = 0; i < 2500; i++)
+	{
+		largecomparisonscores[i] = 0;
+		smallcomparisonscores[i] = 0;
+		firstlargeletter[i] = 0;
+		secondlargeletter[i] = 0;
+		firstsmallletter[i] = 0;
+		secondsmallletter[i] = 0;		
+	}	
+
+	int index = 0;
+	for (int i = 1; i < ALPHABET_SIZE-1; i++) // -1 because the last 'letter' is actually a fragment of a letter
+	{
+		for (int j = 1; j < i; j++)
+		{
+			firstlargeletter[index] = i;
+			secondlargeletter[index] = j;
+			BlackArea blackarea;
+			blackarea.ymin = 0;
+			blackarea.xmin = 0;
+			blackarea.ymax = largealphabet->letters[i]->bi.biHeight-1;
+			blackarea.xmax = largealphabet->letters[i]->bi.biWidth-1;
+			largecomparisonscores[index] = HowGoodIsThisMatch(largealphabet->letters[i], &blackarea, largealphabet->letters[j]);
+			index++;
+		}
+	}
+
+	index = 0;	
+	for (int i = 1; i < ALPHABET_SIZE-1; i++) // -1 because the last 'letter' is actually a fragment of a letter
+	{
+		for (int j = 1; j < i; j++)
+		{
+			firstsmallletter[index] = i;
+			secondsmallletter[index] = j;
+			BlackArea blackarea;
+			blackarea.ymin = 0;
+			blackarea.xmin = 0;
+			blackarea.ymax = smallalphabet->letters[i]->bi.biHeight-1;
+			blackarea.xmax = smallalphabet->letters[i]->bi.biWidth-1;
+			smallcomparisonscores[index] = HowGoodIsThisMatch(smallalphabet->letters[i], &blackarea, smallalphabet->letters[j]);
+			index++;
+		}
+	}
+
+	// this simple but slow algorithm is fine because I'm using this program once only.
+	for (int i = 0; i < 2500; i++)
+	{
+		double max = 0;
+		int maxindex;
+		for (int j = 0; j < 2500; j++)
+		{
+			if (largecomparisonscores[j] > max)
+			{
+				maxindex = j;
+				max = largecomparisonscores[j];
+			}
+		}
+		if (max > 0)
+		{	
+			fprintf(fp, "%d\t%d\t%f\n", firstlargeletter[maxindex], secondlargeletter[maxindex], largecomparisonscores[maxindex]);
+			largecomparisonscores[maxindex] = 0;
+		}
+	} 
+	fclose(fp);
+	DestroyMyAlphabet(largealphabet);
+	DestroyMyAlphabet(smallalphabet);
+	return 0;
+}
+
+
+double HowGoodIsThisMatch(BMPImage* imageA, BlackArea* blackarea, BMPImage* imageB)
+{
+	int matches = 0;
+	int misses = 0;
+	int referencex = 0;
+	double suspectx = 0;
+	int suspectletterheight = 1 + blackarea->ymax - blackarea->ymin;
+	int suspectletterwidth = 1 + blackarea->xmax - blackarea->xmin;
+	while (referencex < imageB->bi.biWidth && suspectx < suspectletterwidth) //scanning across
+	{
+		int referencey = 0;
+		double suspecty = 0;
+		while (referencey < imageB->bi.biHeight && suspecty < suspectletterheight) // scanning down
+		{
+			if (imageA->pixels[(int) (blackarea->ymin + suspecty)][(int) (blackarea->xmin + suspectx)] == imageB->pixels[referencey][referencex])
+			{
+				matches++;
+			}
+			else
+			{
+				misses++;
+			}
+			referencey++;
+			suspecty += (double) suspectletterheight/imageB->bi.biHeight;
+		}
+		referencex++;
+		suspectx += (double) suspectletterwidth/imageB->bi.biWidth;
+	}
+	return (double) matches/(misses + 1);
+}

@@ -1,0 +1,2 @@
+all:
+	gcc -g -std=c99 generate_comparisons.c -o ../generate_comparisons

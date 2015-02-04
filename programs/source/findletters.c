@@ -1,0 +1,599 @@
+/****************************************************************************
+ * findletters.c
+ *
+ * Jonathan Walker, j.walker@cantab.net
+ *
+ * Performs Optical Character Recognition on Old Church Slavonic letters in 
+ * the top-left corner of a BMP3 file
+ ***************************************************************************/
+       
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+
+#include "ocsstring.h"
+#include "alphabet.h"
+#include "bmpimage.h"
+#include "bmphelpers.h"
+#include "bmp.h"
+
+#define MAX_ARGS_NUMBER 20000
+
+/*
+	Accepts a BlackArea as input and tries various subroutines to perform OCR
+ */
+void DoOCRAnalysisOnThis(MyAlphabet* alphabet, BMPImage* theimage, BlackArea* blackarea, OCSstring* OCSstring);
+
+/*
+	Examines a black area on the image and making the assumption that it contains only ONE letter, it 
+	compares it to reference images in the alphabet.
+	bestchar gets set with a numerical value corresponding to the closest matching letter.
+	confidencescore gets set with a an an accuracy score for the letter in bestchar.
+	Return value indicates whether the operation was a success. If false, another function should be tried.
+ */
+bool FindTheBestLetter(BMPImage* image, MyAlphabet* alphabet, BlackArea* blackarea, double* confidencescore, int* bestchar);
+
+/*
+	Assumes a large black blob contains 2 letters that could not be resolved by FindTheBestLetter(), iteratively
+	hypothesises an x line along which to split the area, and examines the letters and confidence scores to choose
+	the best way to split the blob (if any). Returns true if it found a letter and stored it in bestchar 
+ */ 
+bool FindMeTwoLetters(BMPImage* image, MyAlphabet* alphabet, BlackArea* blackarea, OCSstring* OCSstring);
+
+/*
+	Assumes a large black blob contains several letters that could not be resolved by FindMeTwoLetters(), searches from
+	the left, testing x lines along which to split the blob, and from the high confidence scores selects the rightmost one (OCS м
+	can look like л if you only examine half the letter!), reduces the bounds of the black area and calls itself again. 
+ */ 
+void RecursivelyFindLettersInThisBlackArea(BMPImage* image, MyAlphabet* alphabet, BlackArea* blackarea, OCSstring* OCSstring);
+
+/*
+	Compares two images for similarity and returns a score. Image A can be restricted to a sub-area specified by the contents of Blackarea
+ */
+double HowGoodIsThisMatch(BMPImage* imageA, BlackArea* blackarea, BMPImage* imageB);
+
+/*
+	Carries out all necessary operations for OCR on one image, the filename of which is passed as a string
+ */
+int ProcessOneFile(char* filename, bool debugmode);
+
+int main(int argc, char* argv[])
+{
+       	bool debugmode = false;
+    	
+	// check command usage
+	if (argc == 3)
+    	{
+        	if (!((strcmp(argv[1], "--debug=ON") == 0) || (strcmp(argv[1], "-d") == 0)))
+		{
+			fprintf(stderr, "Error! Correct usage: middlesplit [--debug=ON] argsfile\n");
+	        	return 1;
+		}
+		else
+		{
+			debugmode = true;
+		}
+    	}
+	else if (argc != 2)
+	{
+		fprintf(stderr, "Error! Correct usage: middlesplit [--debug=ON] argsfile\n");
+		return 1;
+	}
+/*
+	// unpack the arguments file
+ 	char argsfilename[256];
+	if (argc == 3)
+		sprintf(argsfilename, "%s", argv[2]);
+	else
+		sprintf(argsfilename, "%s", argv[1]);
+	FILE* argsfile = fopen(argsfilename, "r");
+	if (argsfile == NULL)
+	{
+		fprintf(stderr, "Could not open the argument file, %s! Exiting...\n", argsfilename);
+		return 2;
+	}
+	char** args = malloc(MAX_ARGS_NUMBER * sizeof(char*));
+	char buffer[256];
+	int foundargsnumber = 0;
+	for (int i = 0; i < MAX_ARGS_NUMBER; i++)
+	{
+		if (i == MAX_ARGS_NUMBER-1) 
+		{
+			fprintf(stderr, "You can't specify more than %d files in the argfile! Exiting...\n", MAX_ARGS_NUMBER);
+			return 3;
+		}
+		if ( fgets(buffer, 256, argsfile) != NULL && buffer[i] != '\0')
+		{
+			args[i] = malloc(256 * sizeof(char));
+			for (int j = 0; j < 256; j++)
+			{
+				if (buffer[j] == '\n')
+				{
+					buffer[j] = '\0';
+					j = 256;
+				}
+			}
+			sprintf(args[i], "%s", buffer);
+		}
+		else
+		{
+			foundargsnumber = i;
+			i = MAX_ARGS_NUMBER;
+		}
+	}
+	fclose(argsfile);
+*/
+/*	// process the images specified by each of the strings in the argsfile
+	int returnvalue = 0;
+	for (int i = 0; i < foundargsnumber; i++)
+	{
+		returnvalue += ProcessOneFile(args[i], debugmode);
+		free(args[i]);
+		if (returnvalue != 0)
+		{
+			free(args);
+			return returnvalue;
+		}
+	}
+	free(args);
+	return returnvalue;
+*/
+	return ProcessOneFile(argv[2], debugmode);
+}
+
+bool FindTheBestLetter(BMPImage* image, MyAlphabet* alphabet, BlackArea* blackarea, double* confidencescore, int* bestchar)
+{
+	double scores[ALPHABET_SIZE];
+
+	for (int j = 1; j < ALPHABET_SIZE; j++)
+	{
+		scores[j] = HowGoodIsThisMatch(image, blackarea, alphabet->letters[j]);
+	}
+	double maxscore = 0;
+	int maxletter = ALPHABET_SIZE;
+	for (int i = 1; i < ALPHABET_SIZE ; i++)
+	{
+		if (scores[i] > maxscore && scores[i] > 3)
+		{
+			maxscore = scores[i];
+			maxletter = i;
+		}
+
+	}
+	*confidencescore = maxscore;
+	*bestchar = maxletter;
+	if (*bestchar != ALPHABET_SIZE)
+		return true;
+	else 
+		return false;
+}
+
+bool FindMeTwoLetters(BMPImage* image, MyAlphabet* alphabet, BlackArea* blackarea, OCSstring* OCSstring)
+{
+	BlackPixel* ablackpixel = malloc(sizeof(BlackPixel));
+	ablackpixel->x = -1;
+	ablackpixel->y = -1;
+	double confidencescoreA;
+	double confidencescoreB;
+	int bestcharA = ALPHABET_SIZE;
+	int bestcharB = ALPHABET_SIZE;
+	BlackArea** blackareaA = malloc(sizeof(BlackArea*) * (blackarea->xmax - blackarea->xmin + 1));
+	BlackArea** blackareaB = malloc(sizeof(BlackArea*) * (blackarea->xmax - blackarea->xmin + 1));
+	for (int zz = 0; zz < blackarea->xmax - blackarea->xmin + 1; zz++)
+	{
+		blackareaA[zz] = malloc(sizeof(BlackArea));
+		blackareaB[zz] = malloc(sizeof(BlackArea));
+	}
+	double* confidenceproducts = malloc(sizeof(double) * ((blackarea->xmax - blackarea->xmin) + 1));
+	for (int o = 0; o < ((blackarea->xmax - blackarea->xmin) + 1); o++)
+	{
+		int indexx = blackarea->xmin;
+		while (ablackpixel->x == -1)
+		{
+			for (int r = blackarea->ymin; r < blackarea->ymax; r++)
+			{
+				if (image->pixels[r][indexx] == false)
+				{
+					ablackpixel->x = indexx;
+					ablackpixel->y = r;
+				}
+			}
+			indexx++;
+		}
+		GetFrameOfBlackArea(image, ablackpixel, blackareaA[o], blackarea->xmin, blackarea->xmin+o);
+		blackareaA[o]->xmax = blackarea->xmin+o;
+		indexx = blackarea->xmin+o+1;
+		ablackpixel->x = -1;
+		while (ablackpixel->x == -1)
+		{
+			for (int r = blackarea->ymin; r < blackarea->ymax; r++)
+			{
+				if (image->pixels[r][indexx] == false)
+				{
+					ablackpixel->x = indexx;
+					ablackpixel->y = r;
+				}
+			}
+			indexx++;
+		}
+
+		GetFrameOfBlackArea(image, ablackpixel, blackareaB[o], blackarea->xmin+o+1, blackarea->xmax);
+		FindTheBestLetter(image, alphabet, blackareaA[o], &confidencescoreA, &bestcharA);
+		FindTheBestLetter(image, alphabet, blackareaB[o], &confidencescoreB, &bestcharB);
+		confidenceproducts[o] = confidencescoreA * confidencescoreB;
+	}
+	int bestsplit = 0;
+	double bestproduct = 0;						
+	for (int p = 0; p < ((blackarea->xmax-blackarea->xmin)+1); p++)
+	{
+		if (bestproduct < confidenceproducts[p])
+		{
+			bestproduct = confidenceproducts[p];
+			bestsplit = p;
+		}
+	}
+	FindTheBestLetter(image, alphabet, blackareaA[bestsplit], &confidencescoreA, &bestcharA);
+	FindTheBestLetter(image, alphabet, blackareaB[bestsplit], &confidencescoreB, &bestcharB);
+	
+	free(blackareaA);
+	free(blackareaB);
+	free(ablackpixel);
+	free(confidenceproducts);
+	
+	if (bestcharA != ALPHABET_SIZE &&  bestcharB != ALPHABET_SIZE)
+	{
+		int x = 0;
+		while (OCSstring->letters[x] != 0)
+		{
+			x++;	
+		}
+		OCSstring->letters[x] = bestcharA;
+		x++;
+		OCSstring->letters[x] = bestcharB;
+		x++;
+		OCSstring->letters[x] = 0;
+		return true;
+	}
+	else 
+	{				
+		return false;
+	}
+}
+
+void RecursivelyFindLettersInThisBlackArea(BMPImage* image, MyAlphabet* alphabet, BlackArea* blackarea, OCSstring* OCSstring)
+{
+	if (blackarea->xmax-blackarea->xmin < 10)
+		return;
+	BlackPixel* blackpixel = malloc(sizeof(BlackPixel));
+	for (int i = blackarea->ymin; i <= blackarea->ymax; i++)
+	{
+		if (image->pixels[i][blackarea->xmin] == false)
+		{
+			blackpixel->y = i;
+			blackpixel->x = blackarea->xmin;
+			i = blackarea->ymax+1;
+		}
+	}
+
+	BlackArea* tmpblackarea = malloc(sizeof(BlackArea));
+	double confidencebywidth[blackarea->xmax - blackarea->xmin+1];
+	int bestchar[blackarea->xmax - blackarea->xmin+1];
+	for (int i = 0; i <= blackarea->xmax-blackarea->xmin; i++)
+	{
+		GetFrameOfBlackArea(image, blackpixel, tmpblackarea, blackarea->xmin, blackarea->xmin+i);
+		FindTheBestLetter(image, alphabet, tmpblackarea, &confidencebywidth[i], &bestchar[i]);
+		if (bestchar[i] == ALPHABET_SIZE)
+			confidencebywidth[i] = 0;
+		confidencebywidth[i] *= 500+i; // creates bias in favour of recognising the widest viable letter (greatest i value)
+	}
+	double bestconfidencescore = 0;
+	int bestindex = 0;
+	for (int i = 0; i <=blackarea->xmax-blackarea->xmin; i++)
+	{
+		if (bestconfidencescore < confidencebywidth[i])
+		{
+			bestconfidencescore = confidencebywidth[i];
+			bestindex = i;
+		}
+	}
+	if (bestchar[bestindex] != ALPHABET_SIZE)
+	{
+		int x = 0;
+		while (OCSstring->letters[x] != 0)
+		{
+			x++;
+		}
+		OCSstring->letters[x] = bestchar[bestindex];
+		x++;
+		OCSstring->letters[x] = 0;
+		BlackPixel* newblackpixel = malloc(sizeof(BlackPixel));
+		newblackpixel->x = 0;
+		newblackpixel->y = 0;
+		for (int i = blackarea->ymin; i <= blackarea->ymax; i++)
+		{
+			if (image->pixels[i][blackarea->xmin+bestindex+1] == false)
+			{
+				BlackPixel* tmpblackpixel = malloc(sizeof(BlackPixel));				
+				tmpblackpixel->x = blackarea->xmin+bestindex+1;
+				tmpblackpixel->y = i;
+				GetFrameOfBlackArea(image, tmpblackpixel, tmpblackarea, blackarea->xmin, blackarea->xmax);
+				newblackpixel->x = blackarea->xmin+bestindex+1;
+				newblackpixel->y = i;
+				i = blackarea->ymax+1;
+				free(tmpblackpixel);
+			}
+		}
+		if (newblackpixel->x != 0 && newblackpixel->y != 0)
+		{
+			GetFrameOfBlackArea(image, newblackpixel, tmpblackarea, blackarea->xmin+bestindex+1, image->bi.biWidth);
+			RecursivelyFindLettersInThisBlackArea(image, alphabet, tmpblackarea, OCSstring);
+		}
+		free(newblackpixel);
+	}
+	free(tmpblackarea);
+	free(blackpixel);
+	return;
+}
+
+double HowGoodIsThisMatch(BMPImage* imageA, BlackArea* blackarea, BMPImage* imageB)
+{
+	int matches = 0;
+	int misses = 0;
+	int referencex = 0;
+	double suspectx = 0;
+	int suspectletterheight = 1 + blackarea->ymax - blackarea->ymin;
+	int suspectletterwidth = 1 + blackarea->xmax - blackarea->xmin;
+	while (referencex < imageB->bi.biWidth && suspectx < suspectletterwidth) //scanning across
+	{
+		int referencey = 0;
+		double suspecty = 0;
+		while (referencey < imageB->bi.biHeight && suspecty < suspectletterheight) // scanning down
+		{
+			if (imageA->pixels[(int) (blackarea->ymin + suspecty)][(int) (blackarea->xmin + suspectx)] == imageB->pixels[referencey][referencex])
+			{
+				matches++;
+			}
+			else
+			{
+				misses++;
+			}
+			referencey++;
+			suspecty += (double) suspectletterheight/imageB->bi.biHeight;
+		}
+		referencex++;
+		suspectx += (double) suspectletterwidth/imageB->bi.biWidth;
+	}
+	return (double) matches/(misses + 1);
+}
+
+int ProcessOneFile(char* filename, bool debugmode)
+{
+	OCSstring* OCSstring = InitialiseOCSstring();
+
+	char shortfilename[256];
+	bool foundslash = false;
+	int shortfileindex = 0;
+	for (int i = 0; i < 256; i++)
+	{
+		if (filename[i] == '/')
+		{
+			foundslash = true;
+			i++;
+		}
+		if (foundslash && filename[i] == '.')
+		{
+			shortfilename[shortfileindex] = '\0';
+			i = 256;
+		}
+		else if (foundslash)
+		{
+			shortfilename[shortfileindex] = filename[i];
+			shortfileindex++;
+		} 
+	}
+	
+	BMPImage* theimage = InitialiseImage(filename);
+	if (theimage == NULL)
+	{
+		fprintf(stderr, "Error! Failed to initialise image at %s! Exitiing...\n", filename);
+		return 17;
+	}
+	
+	// Work out whether this image contains small or large print and load the corresponding alphabet
+	bool bigword = false;
+	bool smallword = false;
+	MyAlphabet* thealphabet = NULL;
+	BlackPixel* firstblackpixel = malloc(sizeof(BlackPixel));
+	BlackArea* firstblackarea = malloc(sizeof(BlackArea));
+	for (int i = 0; i < theimage->bi.biWidth; i++)
+	{
+		if (theimage->pixels[SEARCH_DEPTH][i] == false || theimage->pixels[SEARCH_DEPTH-20][i] == false)
+		{
+			if (theimage->pixels[SEARCH_DEPTH][i] == false)
+			{
+			 	firstblackpixel->y = SEARCH_DEPTH;
+			}
+			else
+			{
+				firstblackpixel->y = SEARCH_DEPTH-20;
+			}
+			firstblackpixel->x = i;
+	
+			GetFrameOfBlackArea(theimage, firstblackpixel, firstblackarea, 0, theimage->bi.biWidth);
+	
+			if (firstblackarea->ymax-firstblackarea->ymin > 40 /*&& xmax-xmin > 30*/) // the second half of this check is too problematic with the various OCS letters
+			{	
+				bigword = true;
+				smallword = false;
+				thealphabet = InitialiseMyAlphabet('l');
+				if (thealphabet == NULL)
+				{
+					fprintf(stderr, "The large alphabet failed to initialise! Exiting...\n");
+					return 4;
+				}
+				i = theimage->bi.biWidth;
+			}
+			else
+			{
+				bigword = false;
+				smallword = true;
+				thealphabet = InitialiseMyAlphabet('s');
+				if (thealphabet == NULL)
+				{
+					fprintf(stderr, "The small alphabet failed to initialise! Exiting...\n");
+					return 5;
+				}
+				i = theimage->bi.biWidth;
+			}
+	
+		}
+		
+	}
+	free(firstblackpixel);
+	free(firstblackarea);
+	
+	// find and store all the seperate black areas on the first line
+	BlackArea* areasforOCRanalysis = malloc(50 * sizeof(BlackArea));
+	int areasindex = 0;
+	BlackArea* currentblackarea = malloc(sizeof(BlackArea));
+	BlackPixel* currentblackpixel = malloc(sizeof(BlackPixel));
+	BlackPixel* lastblackpixel = malloc(sizeof(BlackPixel));
+	if (areasforOCRanalysis == NULL || currentblackarea == NULL || currentblackpixel == NULL || lastblackpixel == NULL)
+	{
+		fprintf(stderr, "Error! malloc() failed! Exiting...\n");
+		return 6;
+	}
+	for (int i = 0; i < 50; i++)
+	{
+		areasforOCRanalysis[i].xmin = -1;
+		areasforOCRanalysis[i].xmax = -1;
+		areasforOCRanalysis[i].ymin = -1;
+		areasforOCRanalysis[i].ymax = -1;
+	}
+	lastblackpixel->x = -0xffffff;
+	lastblackpixel->y = -0xffffff;
+
+	for (int i = 0; i < theimage->bi.biWidth && areasindex < 50; i++)
+	{
+		if (theimage->pixels[SEARCH_DEPTH][i] == false || theimage->pixels[SEARCH_DEPTH-20][i] == false) 
+		{	
+			if (theimage->pixels[SEARCH_DEPTH][i] == false)
+			 	currentblackpixel->y = SEARCH_DEPTH;
+			else
+				currentblackpixel->y = SEARCH_DEPTH-20;
+			currentblackpixel->x = i;
+
+			if (lastblackpixel->x == -0xffffff)
+			{
+				lastblackpixel->x = currentblackpixel->x;
+				lastblackpixel->y = currentblackpixel->y;
+				GetFrameOfBlackArea(theimage, currentblackpixel, currentblackarea, 0, theimage->bi.biWidth);
+				if ((currentblackarea->ymax-currentblackarea->ymin > 40 && bigword) || (currentblackarea->ymax-currentblackarea->ymin > 30 && smallword)) 
+				{
+					areasforOCRanalysis[areasindex].xmin = currentblackarea->xmin;
+					areasforOCRanalysis[areasindex].xmax = currentblackarea->xmax;
+					areasforOCRanalysis[areasindex].ymin = currentblackarea->ymin;
+					areasforOCRanalysis[areasindex].ymax = currentblackarea->ymax;
+					areasindex++;	
+				}		
+			}	
+			else if (!BlackPixelsConnected(theimage, currentblackpixel, lastblackpixel) && GetFrameOfBlackArea(theimage, currentblackpixel, currentblackarea, 0, theimage->bi.biWidth) > SMUDGE_SIZE)
+			{
+				if ((currentblackarea->ymax-currentblackarea->ymin > 40 && bigword) || (currentblackarea->ymax-currentblackarea->ymin > 30 && smallword)) 
+				{
+					areasforOCRanalysis[areasindex].xmin = currentblackarea->xmin;
+					areasforOCRanalysis[areasindex].xmax = currentblackarea->xmax;
+					areasforOCRanalysis[areasindex].ymin = currentblackarea->ymin;
+					areasforOCRanalysis[areasindex].ymax = currentblackarea->ymax;
+					areasindex++;	
+				}		
+				else if (currentblackarea->ymax-currentblackarea->ymin > 30 && bigword)
+				{
+					i = theimage->bi.biWidth;
+				}
+			}
+			else
+			{
+				GetFrameOfBlackArea(theimage, currentblackpixel, currentblackarea, 0, theimage->bi.biWidth);
+				i = currentblackarea->xmax;
+			}
+			lastblackpixel->x = currentblackpixel->x;
+			lastblackpixel->y = currentblackpixel->y;
+		}
+	}
+	free(currentblackarea);
+	free(currentblackpixel);
+	free(lastblackpixel);
+
+	
+	
+	for (int i = 0; i < areasindex && areasforOCRanalysis[i].xmin != -1; i++)
+	{
+		DoOCRAnalysisOnThis(thealphabet, theimage, &areasforOCRanalysis[i], OCSstring);
+		if (i < 49 && areasforOCRanalysis[i+1].xmin != -1 && areasforOCRanalysis[i+1].xmin - areasforOCRanalysis[i].xmax > 27)
+		{
+			if (smallword)
+				i = areasindex;
+			else
+			{
+				int x = 0; 
+				while (OCSstring->letters[x] != 0)
+				{
+					x++;
+				}
+				OCSstring->letters[x] = 100;
+				x++;
+				OCSstring->letters[x] = 0;
+			} 
+		}
+	}
+	
+	free(areasforOCRanalysis);
+	DestroyMyAlphabet(thealphabet);
+	DestroyImage(theimage);
+	
+	char finalfilename[512];
+	finalfilename[0] = '\0';
+	BuildOCSCharString(OCSstring, finalfilename);
+
+	FILE* renameinstructions = fopen("rename.sh", "a");
+	if (renameinstructions == NULL)
+	{
+		fprintf(stderr, "Error! Failed to open rename.sh! Exiting...\n");
+		return 18;
+	}
+	fprintf(renameinstructions, "mv images/%s.png images/%s-%s.png\n", shortfilename, shortfilename, finalfilename);
+	fclose(renameinstructions);
+
+    	return 0;
+}
+
+void DoOCRAnalysisOnThis(MyAlphabet* alphabet, BMPImage* image, BlackArea* blackarea, OCSstring* OCSstring)
+{
+	double confidencescore;
+	int bestchar;
+	if (FindTheBestLetter(image, alphabet, blackarea, &confidencescore, &bestchar))
+	{
+		int x = 0;
+		while (OCSstring->letters[x] != 0)
+		{
+			x++;
+		}
+		OCSstring->letters[x] = bestchar;
+		x++;
+		OCSstring->letters[x] = 0;
+		return;
+	}
+	else if (FindMeTwoLetters(image, alphabet, blackarea, OCSstring))
+	{
+		return;
+	}
+	else	
+	{
+		RecursivelyFindLettersInThisBlackArea(image, alphabet, blackarea, OCSstring);
+		return;
+	}
+}	
+
+

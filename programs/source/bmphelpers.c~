@@ -1,0 +1,123 @@
+/**************************************************************************
+ * bmphelpers.c
+ *
+ * Jonathan Walker, j.walker@cantab.net
+ *
+ * Certain helper functions for working with bmp images
+ *************************************************************************/
+
+bool BlackPixelsConnected(BMPImage* image, BlackPixel* blackpixelA, BlackPixel* blackpixelB)
+{
+	if (image->pixels[blackpixelA->y][blackpixelA->x] || image->pixels[blackpixelB->y][blackpixelB->x])
+		return false;
+
+	int* Xlist = malloc(sizeof(int) * MAX_BLACK_AREA_SIZE);
+	int* Ylist = malloc(sizeof(int) * MAX_BLACK_AREA_SIZE);
+	for (int k = 0; k < MAX_BLACK_AREA_SIZE; k++)
+	{
+		Xlist[k] = -1;	
+		Ylist[k] = -1;
+	}
+	int i = 0;
+	
+	RecursiveSearchBlack(image, Xlist, Ylist, blackpixelA->x, blackpixelA->y, &i, 0, image->bi.biWidth);
+
+	for (int m = 0; m < MAX_BLACK_AREA_SIZE; m++)
+	{
+		if (blackpixelB->x == Xlist[m] && blackpixelB->y == Ylist[m])
+		{
+			free(Xlist);
+			free(Ylist);
+			return true;
+		}
+	}
+	free(Xlist);
+	free(Ylist);
+	return false;
+}
+
+int GetFrameOfBlackArea(BMPImage* image, BlackPixel* blackpixel, BlackArea* blackarea, int lowerlimit, int upperlimit) 
+{
+	if (image->pixels[blackpixel->y][blackpixel->x] != false)
+	{
+		fprintf(stderr, "A white pixel was passed to GetFrameOfBlackArea!\n");
+		return 0;
+	}
+	int* Xlist = malloc(sizeof(int) * MAX_BLACK_AREA_SIZE);
+	int* Ylist = malloc(sizeof(int) * MAX_BLACK_AREA_SIZE); 
+	
+	for (int k = 0; k < MAX_BLACK_AREA_SIZE; k++)
+	{
+		Xlist[k] = -1;	
+		Ylist[k] = -1;
+	}
+	int i = 0;
+	
+	RecursiveSearchBlack(image, Xlist, Ylist, blackpixel->x, blackpixel->y, &i, lowerlimit, upperlimit);
+
+	blackarea->xmin = 10000;
+	blackarea->xmax = 0;
+	blackarea->ymin = 10000;
+	blackarea->ymax = 0;
+	int tmpx;
+	int tmpy;
+	int totalpixels = MAX_BLACK_AREA_SIZE;
+	for (int m = 0; m < totalpixels; m++)
+	{
+		tmpx = Xlist[m];
+		if (tmpx == -1)
+			totalpixels = m;
+		else if (tmpx < blackarea->xmin)
+			blackarea->xmin = tmpx;
+		if (tmpx > blackarea->xmax)
+			blackarea->xmax = tmpx;
+		tmpy = Ylist[m];
+		if (tmpy < blackarea->ymin && tmpy != -1)
+			blackarea->ymin = tmpy;
+		if (tmpy > blackarea->ymax)
+			blackarea->ymax = tmpy;
+	}
+	free(Xlist);
+	free(Ylist);
+	return totalpixels;	
+}
+
+bool AlreadyFound(int* Xlist, int* Ylist, BlackPixel* blackpixel)
+{
+	for (int i = 0; i < MAX_BLACK_AREA_SIZE; i++)
+	{
+		if (Xlist[i] == -1)
+		{	
+			return false;
+		}
+		if (Xlist[i] == blackpixel->x && Ylist[i] == blackpixel->y)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+void RecursiveSearchBlack(BMPImage* image, int* Xlist, int* Ylist, int x, int y, int* i, int lowerlimit, int upperlimit)
+{
+	BlackPixel* blackpixel = malloc(sizeof(BlackPixel));
+	blackpixel->x = x;
+	blackpixel->y = y;
+	if (!(*i < MAX_BLACK_AREA_SIZE) ||  x == -1 || x >= image->bi.biWidth || y == -1 || y >= image->bi.biHeight || image->pixels[y][x] || AlreadyFound(Xlist, Ylist, blackpixel) || x < lowerlimit || x > upperlimit)	
+	{	
+		free(blackpixel);
+		return;
+	}
+	else
+	{
+		Xlist[*i] = x;
+		Ylist[*i] = y;
+		*i += 1;
+		RecursiveSearchBlack(image, Xlist, Ylist, x+1, y, i, lowerlimit, upperlimit);
+		RecursiveSearchBlack(image, Xlist, Ylist, x-1, y, i, lowerlimit, upperlimit);
+		RecursiveSearchBlack(image, Xlist, Ylist, x, y+1, i, lowerlimit, upperlimit);
+		RecursiveSearchBlack(image, Xlist, Ylist, x, y-1, i, lowerlimit, upperlimit);
+		free(blackpixel);
+		return;  
+	}
+}
