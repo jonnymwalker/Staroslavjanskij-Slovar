@@ -206,10 +206,10 @@ void AddOCSLetterToString(int j, char* string)
 			strcat(string, "ѵ");
 			break;
 		case 100:
-			strcat(string, " ");
+			strcat(string, "_");
 			break;
 		default:
-			fprintf(stderr, "Warning! Invalid int value passed to AddOCSLetterToString()!\n");
+			fprintf(stderr, "Warning! Invalid int value of %d passed to AddOCSLetterToString()!\n", j);
 			break;
 	}
 	return;
