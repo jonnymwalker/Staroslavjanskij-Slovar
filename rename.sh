@@ -599,7 +599,7 @@ mv images/OCS-92-B-9.png images/OCS-92-B-9-бльвотина.png
 mv images/OCS-92-B-10.png images/OCS-92-B-10-бльщаниѥ.png
 mv images/OCS-92-B-11.png images/OCS-92-B-11-бльщати_сѧ.png
 mv images/OCS-93-A-0.png images/OCS-93-A-0-блѣдъ.png
-mv images/OCS-93-A-1.png images/OCS-93-A-1-блѣдѣти_д.png
+mv images/OCS-93-A-1.png images/OCS-93-A-1-блѣдѣти.png
 mv images/OCS-93-A-2.png images/OCS-93-A-2-блюдо.png
 mv images/OCS-93-A-3.png images/OCS-93-A-3-блюдъ.png
 mv images/OCS-93-A-4.png images/OCS-93-A-4-блюсти.png
@@ -7189,7 +7189,7 @@ mv images/OCS-497-B-3.png images/OCS-497-B-3-праздьнъ.png
 mv images/OCS-498-A-1.png images/OCS-498-A-1-праздьньствиѥ.png
 mv images/OCS-498-A-2.png images/OCS-498-A-2-праздьньство.png
 mv images/OCS-498-A-3.png images/OCS-498-A-3-праздьньствовати.png
-mv images/OCS-498-A-4.png images/OCS-498-A-4-празн.png
+mv images/OCS-498-A-4.png images/OCS-498-A-4-празн_празън.png
 mv images/OCS-498-A-5.png images/OCS-498-A-5-праотьць_прѣотьць.png
 mv images/OCS-498-A-6.png images/OCS-498-A-6-прапрѫда_прѣпрѫда.png
 mv images/OCS-498-A-7.png images/OCS-498-A-7-прапрѫдьнъ_прѣпрѫдьнъ.png
