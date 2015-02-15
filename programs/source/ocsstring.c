@@ -205,6 +205,9 @@ void AddOCSLetterToString(int j, char* string)
 		case 44:
 			strcat(string, "ѵ");
 			break;
+		case 45:
+			strcat(string, "у");
+			break;
 		case 100:
 			strcat(string, "_");
 			break;

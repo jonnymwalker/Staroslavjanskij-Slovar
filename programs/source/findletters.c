@@ -550,7 +550,8 @@ int ProcessOneFile(char* filename, bool debugmode)
 	}
 	
 	free(areasforOCRanalysis);
-	DestroyMyAlphabet(thealphabet);
+	if (thealphabet != NULL)
+		DestroyMyAlphabet(thealphabet);
 	DestroyImage(theimage);
 	
 	char finalfilename[512];
