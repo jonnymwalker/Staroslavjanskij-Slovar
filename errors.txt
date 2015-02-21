@@ -1,0 +1,44 @@
+обнавлꙗти #FIXED
+ѹслꙑшаниѥ #FIXED
+клирикъ #FIXED
+богатѣти #FIXED
+витьлеемь #FIXED
+-нѫти < -иѫти х7 #FIXED
+387 B 4/5 #FIXED
+497 A missing #FIXED
+499 при #FIXED
+223 '%' in filename #FIXED
+602 си #FIXED
+489-A-7-погръгнѫги.png #FIXED
+чнстн > чисти #FIXED
+541-A-3-прѣезъваниѥ.png #FIXED
+порѫгитисѧ #FIXED
+ѹмѣситиѹ # FIXED
+обоиство > ѹ #FIXED
+вечерьнѩ > ꙗ #FIXED
+крьстиꙗнъ > и крьтсиꙗнинъ #FIXED
+напльшати > напльнꙗти #FIXED
+желѣзиин > желѣзнии #FIXED
+протварꙗтиг #FIXED
+непрѣстаѩн #FIXED
+обльчеин #FIXED
+знꙗти #FIXED
+OCS-116-B-6-витьлеемъ_виѳлеемь.png misnamed #FIXED
+прѣполовлѥниѥ #FIXED
+милостꙑви #FIXED
+зѫбьнъ > trim image #FIXED
+плесно < плесио	#FIXED
+ноготь #CHANGED TO НОГЪТЬ
+наѹтрнꙗ x2 & next #FIXED
+скѫдьлъскѫдълъ > _ #FIXED
+граждьвьи > -н #FIXED
+нꙗдежда > надежда #FIXED
+подражаннѥ & -ннѥ #FIXED 11 occurences
+_сѫ #FIXED 10 occurences
+исѧ. > и_сѧ. #FIXED 2 occurences
+архиереискъ_архверѣискъ #FIXED
+пролнѣти > и #FIXED
+лъжесъвѣдѣтельствоватилъжи #FIXED
+врьхъѹ #FIXED
+принкиѱь #FIXED
+OCS-356-B-2-наѹтрнꙗ.png cropped wrong #FIXED
