@@ -17,7 +17,8 @@
 		});		
 
 		$(document).ready( function() {
-			$(".box").height($(window).height()-16);
+			$(".box").height($(window).height() - 16);
+
 			$("#ButtonsSpaceHolder").height($("#ButtonsContainer").height()+10);
 
 			$("#SearchBox").keyup(function(event){
@@ -25,7 +26,11 @@
 			});
 
 			$(".z").click( function () {
-				fnDrawImage($(this).text().substring(0, $(this).text().length - 1));
+				if ($(this).text().substring($(this).text().length -1, $(this).text().length) == "_") {
+					fnDrawImage($(this).text().substring(0, $(this).text().length - 1));
+				} else {
+					fnDrawImage($(this).text().substring(5));
+				}				
 			});
 		});
 
